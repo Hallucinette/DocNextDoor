@@ -11,7 +11,6 @@ struct Favourites: View {
                     Rectangle().frame(width: 600, height: 3, alignment: .center).foregroundColor(Color("Lightblue"))
                 }.padding(30)
                 
-                /*
                     if (profilUser.adsFav != nil) { //si on a des favoris
                         NavigationView {
                             List(profilUser.adsFav!) { ad in //affichage en liste
@@ -44,14 +43,15 @@ struct Favourites: View {
                             }
                             }.accentColor(Color("RED"))
                     }
-                    else { //si pas de favoris */
+                    else { //si pas de favoris
                         VStack {
                             Spacer()
-                            Image("NoFav").resizable().frame(width: 230, height: 330, alignment: .center).padding(30)
-                            Text("Vous n'avez pas encore d'annonce favorite : continuez d'explorer les opportunités !").foregroundColor(Color("Txtgrey")).font(.body).frame(width: 330, height: 70, alignment: .center)
+                            Image("NoFav").resizable().frame(width: 280, height: 240, alignment: .center).padding(30)
+                            Text("Vous n'avez pas encore d'annonce favorite : continuez d'explorer les opportunités !").foregroundColor(Color("Txtgrey")).font(.body).italic().frame(width: 335, height: 70, alignment: .center).multilineTextAlignment(.center)
+                            Spacer()
                             Spacer()
                         }
-                    //}
+                    }
                     
                 }
             }
@@ -60,6 +60,6 @@ struct Favourites: View {
 
 struct Favourites_Previews: PreviewProvider {
     static var previews: some View {
-        Favourites(profilUser: .init(isDoc: true, name: "Annie lhation", pp: "P1", speciality: "Médecin généraliste", description: "Ecole de médecine de Marseille", contact: .init(name:  "Annie lhation", mail: "monmail@gg.com"), allowNotif: true, adsApplied: [], adsFav : []))
+        Favourites(profilUser: .init(isDoc: true, name: "Annie lhation", pp: "P1", speciality: "Médecin généraliste", description: "Ecole de médecine de Marseille", contact: .init(name:  "Annie lhation", mail: "monmail@gg.com"), allowNotif: true))
     }
 }
