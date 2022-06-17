@@ -36,7 +36,7 @@ struct Advertisement : Identifiable {
 
     var town : String
 
-    var zipCode : Int
+    var zipCode : String
 
     var description : String
 
@@ -82,7 +82,7 @@ struct ProfilUser {
 
     var allowNotif : Bool
         
-        var adsApplied : [Advertisement]?
+    var adsApplied : [Advertisement]?
         
-        var adsFav : [Advertisement]?
+    var adsFav : [Advertisement]?
 }
