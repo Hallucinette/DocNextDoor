@@ -11,7 +11,7 @@ struct Favourites: View {
                     Rectangle().frame(width: 600, height: 3, alignment: .center).foregroundColor(Color("Lightblue"))
                 }.padding(30)
                 
-                
+                /*
                     if (profilUser.adsFav != nil) { //si on a des favoris
                         NavigationView {
                             List(profilUser.adsFav!) { ad in //affichage en liste
@@ -44,12 +44,14 @@ struct Favourites: View {
                             }
                             }.accentColor(Color("RED"))
                     }
-                    else {
+                    else { //si pas de favoris */
                         VStack {
-                            Image("").resizable().frame(width: 200, height: 200, alignment: .center)
-                            Text("Vous n'avez pas encore d'annonce favorite : continuez d'explorer les opportunités !").foregroundColor(Color("Txtgrey"))
+                            Spacer()
+                            Image("NoFav").resizable().frame(width: 230, height: 330, alignment: .center).padding(30)
+                            Text("Vous n'avez pas encore d'annonce favorite : continuez d'explorer les opportunités !").foregroundColor(Color("Txtgrey")).font(.body).frame(width: 330, height: 70, alignment: .center)
+                            Spacer()
                         }
-                    }
+                    //}
                     
                 }
             }
