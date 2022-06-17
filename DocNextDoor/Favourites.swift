@@ -3,17 +3,18 @@ import SwiftUI
 struct Favourites: View {
     var profilUser : ProfilUser
     var body: some View {
-        ZStack {
+        ZStack { //background
             Color("BackG").ignoresSafeArea()
             VStack {
-                VStack {
+                VStack { //Header
                     Text("Annonces sauvegardées").bold().font(.title2)
                     Rectangle().frame(width: 600, height: 3, alignment: .center).foregroundColor(Color("Lightblue"))
                 }.padding(30)
                 
-                NavigationView {
-                    if (profilUser.adsFav != nil) {
-                        List(profilUser.adsFav!) { ad in
+                
+                    if (profilUser.adsFav != nil) { //si on a des favoris
+                        NavigationView {
+                            List(profilUser.adsFav!) { ad in //affichage en liste
                             //NavigationLink(destination: DetailledAd(ad: ad)){
                                     HStack {
                                     Image(ad.pict[0]).resizable().overlay(Circle().stroke(Color("Darkblue"), lineWidth: 4)).clipShape(Circle())
@@ -40,8 +41,8 @@ struct Favourites: View {
                                             Spacer()
                                         }
                                     }
-                            //}
                             }
+                            }.accentColor(Color("RED"))
                     }
                     else {
                         VStack {
@@ -50,10 +51,9 @@ struct Favourites: View {
                         }
                     }
                     
-                }.accentColor(Color("RED"))
+                }
             }
         }
-    }
 }
 
 struct Favourites_Previews: PreviewProvider {
