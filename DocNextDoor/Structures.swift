@@ -29,7 +29,9 @@ struct Speciality {
     let subCategory: [String]
 }
 
-struct Advertisement {
+struct Advertisement : Identifiable {
+    var id = UUID()
+    
     var title : String
 
     var town : String
@@ -40,7 +42,7 @@ struct Advertisement {
 
     var benefits : String?
 
-    var contact : String
+    var contact :  Contact
 
     var icons : [String]? //nom image : logo école, vie culturelle…
 
