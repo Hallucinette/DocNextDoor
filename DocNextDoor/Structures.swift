@@ -29,18 +29,18 @@ struct Speciality {
     let subCategory: [String]
 }
 
-struct Ad {
+struct Advertisement {
     var title : String
 
     var town : String
 
-    var zipCode : String
+    var zipCode : Int
 
-    var descritpion : String
+    var description : String
 
     var benefits : String?
 
-    var contact : Contact
+    var contact : String
 
     var icons : [String]? //nom image : logo école, vie culturelle…
 
@@ -72,7 +72,7 @@ struct ProfilUser {
 
     var contact : Contact
 
-    var adsPublished : [Ad]?
+    var adsPublished : [Advertisement]?
     
     var cv : String? //nom du fichier ?? a voir au niveau implementation
 
@@ -80,7 +80,7 @@ struct ProfilUser {
 
     var allowNotif : Bool
         
-        var adsApplied : [Ad]?
+        var adsApplied : [Advertisement]?
         
-        var adsFav : [Ad]?
+        var adsFav : [Advertisement]?
 }
