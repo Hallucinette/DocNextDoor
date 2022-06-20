@@ -3,19 +3,19 @@ import SwiftUI
 struct Favourites: View {
     var profilUser : ProfilUser
     var body: some View {
+        NavigationView {
         ZStack { //background
             Color("BackG").ignoresSafeArea()
             VStack {
                 VStack { //Header
-                    Text("Annonces sauvegardées").bold().font(.title2)
+                    Text("Annonces sauvegardées").bold().font(.title2).padding(15)
                     Rectangle().frame(width: 600, height: 3, alignment: .center).foregroundColor(Color("Lightblue"))
-                    }.padding(20)
-                
+                    }
+                VStack {
                     if (profilUser.adsFav != nil) { //si on a des favoris
-                        NavigationView {
                             List {
                             ForEach(profilUser.adsFav!) {  ad in //affichage en liste
-                            //NavigationLink(destination: DetailledAd(ad: ad)){
+                            NavigationLink(destination: DetailledAd()){ //add parametre (ad: ad) --> DetailledAd((ad: ad))
                                 HStack {
                                     VStack {
                                         Image(ad.pict[0]).resizable().overlay(Circle().stroke(Color("Darkblue"), lineWidth: 4)).clipShape(Circle())
@@ -38,14 +38,25 @@ struct Favourites: View {
                                                 alignment: .leading)
                                             HStack {
                                                 Text(ad.description).foregroundColor(Color("Txtgrey")).font(.footnote).padding(3)
-                                            }.frame(width: 260, height: 50)
+                                            }.frame(width: 245, height: 50)
                                             
                                         }//fin Vsatck txt liste = titre, specialités, ville + CP et debut description
+                                }.swipeActions(allowsFullSwipe: false) { //action on swipe
+                                    Button() {
+                                        print("Annonce retirée des favoris")
+                                    } label: {
+                                        Label("Supprimer", systemImage: "trash.fill")
+                                    }.tint(.red)
+                                    Button () {
+                                        print("Annonce deplacée dans Annonces candidatées")
+                                    } label: {
+                                        Label("Candidatée", systemImage: "paperplane.fill")
+                                    }
+                                    .tint(Color("Lightblue"))
                                 }//fin Hstack 1 element de la liste
-                            
+                            }.navigationTitle("")
                             }.listRowBackground(Color("BackG"))//fin For Each
-                            }.frame(width: 400, height: 700, alignment: .center).accentColor(Color("RED")) //fin list
-                            }//fin navigation view
+                            }.frame(width: 400, height: 700, alignment: .center) //fin list
                         }//fin if
                     else { //si pas de favoris
                         VStack {
@@ -57,8 +68,11 @@ struct Favourites: View {
                         }//fin Vstack illu + txt no favorite
                     }//fin else
                     
+                Spacer()
+                }//fin VStack full screen w/out header
                 }//fin VStack full screen
             }//fin Zstack pour le backgroud
+        }.accentColor(Color("Darkblue"))//fin navigation view
         }//fin body
 }//fin Favourites view
 
