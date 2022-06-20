@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+
+// Ici on cree la tab bar et ces effets.
+
 struct BubbleTabbarView: View {
     var body: some View {
             Home()
@@ -37,10 +40,9 @@ struct Home: View{
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)) {
             TabView(selection: $selectedtab){
                     
-                    Color.red
+                    Color.red //mettre ici la page
                         .ignoresSafeArea(.all, edges: .all)
                         .tag("list.bullet.circle")
-                    
                     Color.blue
                         .ignoresSafeArea(.all, edges: .all)
                         .tag("map")
@@ -60,17 +62,19 @@ struct Home: View{
                     
                     GeometryReader {reader in
                         Button(action: {
+                            //permet l'effet de "glisade" de la vague d'une icone a l'autre
                             withAnimation(.spring()){
                                 selectedtab = image
                                 xAxis = reader.frame(in: .global).minX
                             }
                         }, label: {
+                            // fait apparait chaque icone contenue dans tabs. Leurs donne les meme contraintes.
                             Image(systemName: image)
                                 .resizable()
                                 .renderingMode(.template)
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: 25, height: 25)
-                                .foregroundColor(selectedtab == image ? getColor(image: image) : Color.gray)
+                                .foregroundColor(selectedtab == image ? getColor(image: image) : Color.gray) // couleurs gris si pas selectionné
                                 .padding(selectedtab == image ? 15 : 0)
                                 .background(Color.white.opacity(selectedtab == image ? 1 : 0) .clipShape(Circle()))
                                 .matchedGeometryEffect(id: image, in:animation)
@@ -86,12 +90,14 @@ struct Home: View{
                     }
                     .frame(width: 25, height: 25)
                     
+                    //On rajoute un spacer quand on a finit de parcourir le tableau image.
                     if image != tabs.last{Spacer(minLength: 0)}
                 }
             }
-            .padding(.horizontal,30)
-            .padding(.vertical)
-            .background(Color.white.clipShape(CustomShape(xAxis: xAxis)).cornerRadius(12))
+            // rectangle blanc derriere la tab bar
+            .padding(.horizontal,34) // sa position horizontal
+            .padding(.vertical) // sa position hauteur
+            .background(Color.white.clipShape(CustomShape(xAxis: xAxis)).cornerRadius(12)) // rounded
             .padding(.horizontal)
             // Bottom Edge...
             .padding(.bottom,34)
@@ -99,7 +105,7 @@ struct Home: View{
         .ignoresSafeArea(.all, edges: .bottom)
     }
     
-        // getting Image Color
+// Permet de choisir la couleur de l'icone quand elle est active. ici on passe du gris par default a la couleur choisi. par exemple map = blue
     
     func getColor(image: String)->Color{
         
@@ -118,6 +124,7 @@ struct Home: View{
     }
 }
 
+//ici je cree un tableau de mes icone. elle me permet d'en quitter un ou d 'en mettre plus sans trop impacteer le reste du cote
     var tabs = ["list.bullet.circle", "map", "bookmark", "person.circle"]
 
 //Curve...
@@ -133,6 +140,7 @@ struct CustomShape : Shape {
         set{xAxis = newValue}
     }
     
+    //cette fonction permet de cree l'effet du creux dans la tab bar.
     func path(in rect: CGRect) -> Path {
         
         return Path{path in
@@ -146,10 +154,12 @@ struct CustomShape : Shape {
             
             path.move(to: CGPoint(x: center - 50, y: 0))
             
+            //cote gauche
             let to1 = CGPoint(x: center, y: 35)
             let control1 = CGPoint(x: center - 25, y: 0)
             let control2 = CGPoint(x: center - 25, y: 35)
             
+            //cote droit
             let to2 = CGPoint(x: center + 50, y: 0)
             let control3 = CGPoint(x: center + 25, y: 35)
             let control4 = CGPoint(x: center + 25, y: 0)
