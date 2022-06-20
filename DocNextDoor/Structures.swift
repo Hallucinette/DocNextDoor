@@ -85,7 +85,7 @@ struct ProfilUser {
         
         var adsApplied : [Advertisement]?
         
-        var adsFav : [Advertisement]?
+        var adsFav : [Advertisement]
     
     var userPosition : CLLocationCoordinate2D? // coordonnees GPS pour MapKit
 }
