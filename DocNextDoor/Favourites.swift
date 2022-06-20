@@ -15,8 +15,8 @@ struct Favourites: View {
                     if (profilUser.adsFav != nil) { //si on a des favoris
                             List {
                             ForEach(profilUser.adsFav!) {  ad in //affichage en liste
-                            NavigationLink(destination: DetailledAd()){ //add parametre (ad: ad) --> DetailledAd((ad: ad))
                                 HStack {
+                                    NavigationLink(destination: DetailledAd()){ //add parametre (ad: ad) --> DetailledAd((ad: ad))
                                     VStack {
                                         Image(ad.pict[0]).resizable().overlay(Circle().stroke(Color("Darkblue"), lineWidth: 4)).clipShape(Circle())
                                             .frame(width: 55, height: 55).padding(3)
@@ -41,21 +41,21 @@ struct Favourites: View {
                                             }.frame(width: 245, height: 50)
                                             
                                         }//fin Vsatck txt liste = titre, specialités, ville + CP et debut description
-                                }.swipeActions(allowsFullSwipe: false) { //action on swipe
-                                    Button() {
-                                        print("Annonce retirée des favoris")
-                                    } label: {
-                                        Label("Supprimer", systemImage: "trash.fill")
-                                    }.tint(.red)
-                                    Button () {
-                                        print("Annonce deplacée dans Annonces candidatées")
-                                    } label: {
-                                        Label("Candidatée", systemImage: "paperplane.fill")
-                                    }
-                                    .tint(Color("Lightblue"))
-                                }//fin Hstack 1 element de la liste
-                            }.navigationTitle("")
-                            }.listRowBackground(Color("BackG"))//fin For Each
+                                }.navigationTitle("")//fin navigationLink
+                                }//fin HSatck 1 element de la liste
+                            }.listRowBackground(Color("BackG")).swipeActions(allowsFullSwipe: false) { //action on swipe
+                                Button() {
+                                    print("Annonce retirée des favoris")
+                                } label: {
+                                    Label("Supprimer", systemImage: "trash.fill")
+                                }.tint(.red)
+                                Button () {
+                                    print("Annonce deplacée dans Annonces candidatées")
+                                } label: {
+                                    Label("Candidatée", systemImage: "paperplane.fill")
+                                }
+                                .tint(Color("Lightblue"))//fin Hstack 1 element de la list
+                            }//fin For Each
                             }.frame(width: 400, height: 700, alignment: .center) //fin list
                         }//fin if
                     else { //si pas de favoris
