@@ -12,7 +12,6 @@
 		4F6B098C285B78E700F06DCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F6B098B285B78E700F06DCC /* Assets.xcassets */; };
 		4F6B098F285B78E700F06DCC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F6B098E285B78E700F06DCC /* Preview Assets.xcassets */; };
 		4FE7FE61285CC5420086E37F /* BubbleTabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE7FE60285CC5420086E37F /* BubbleTabbarView.swift */; };
-		4FE8756A28608591008ABB98 /* favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE8756928608591008ABB98 /* favorite.swift */; };
 		7BE0D0A4285CABF700F2A614 /* Structures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE0D0A3285CABF700F2A614 /* Structures.swift */; };
 		DB236C2B285CB12400DD5E75 /* AdDiscoverUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB236C2A285CB12400DD5E75 /* AdDiscoverUIView.swift */; };
 /* End PBXBuildFile section */
@@ -24,7 +23,6 @@
 		4F6B098B285B78E700F06DCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F6B098E285B78E700F06DCC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4FE7FE60285CC5420086E37F /* BubbleTabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleTabbarView.swift; sourceTree = "<group>"; };
-		4FE8756928608591008ABB98 /* favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favorite.swift; sourceTree = "<group>"; };
 		7BE0D0A3285CABF700F2A614 /* Structures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structures.swift; sourceTree = "<group>"; };
 		DB236C2A285CB12400DD5E75 /* AdDiscoverUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdDiscoverUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,7 +80,6 @@
 			isa = PBXGroup;
 			children = (
 				4FE7FE60285CC5420086E37F /* BubbleTabbarView.swift */,
-				4FE8756928608591008ABB98 /* favorite.swift */,
 			);
 			path = BubbleTabbar;
 			sourceTree = "<group>";
@@ -157,7 +154,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FE8756A28608591008ABB98 /* favorite.swift in Sources */,
 				4F6B098A285B78E600F06DCC /* ContentView.swift in Sources */,
 				7BE0D0A4285CABF700F2A614 /* Structures.swift in Sources */,
 				DB236C2B285CB12400DD5E75 /* AdDiscoverUIView.swift in Sources */,
