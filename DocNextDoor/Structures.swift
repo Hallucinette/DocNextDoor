@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import MapKit
 
 struct ColoredIcons {
     let nameIcon : String
@@ -58,7 +59,7 @@ struct Advertisement : Identifiable {
     
     var accomodationProvided : Bool //si True alors logement compris
     
-    //?? coordonnees GPS pour MapKit ??
+    let adLocation : CLLocationCoordinate2D? // coordonnees GPS pour MapKit
 }
 
 struct ProfilUser {
@@ -85,4 +86,6 @@ struct ProfilUser {
         var adsApplied : [Advertisement]?
         
         var adsFav : [Advertisement]?
+    
+    var userPosition : CLLocationCoordinate2D? // coordonnees GPS pour MapKit
 }
