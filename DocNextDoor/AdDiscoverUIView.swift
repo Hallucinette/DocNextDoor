@@ -9,10 +9,13 @@ import SwiftUI
 
 struct AdDiscoverUIView: View {
     var body: some View {
+        ZStack {
+            Color("BackG").ignoresSafeArea()
         VStack {
         Text("Annonces à la une")
                 .bold()
-                .font(.largeTitle)
+                .font(.title2)
+        }
         }
     }
 }
