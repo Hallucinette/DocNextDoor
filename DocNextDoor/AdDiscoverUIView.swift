@@ -11,80 +11,85 @@ struct AdDiscoverUIView: View {
     var ads : [Advertisement]
     
     var body: some View {
+        
         ZStack {
             Color("BackG").ignoresSafeArea()
-            VStack {
-                HStack (spacing: 25){
-                    Text("Annonces à la une")
-                        .bold()
-                        .font(.title2)
-                    
-                    Image(systemName: "pencil.circle")
-                        .resizable()
-                        .renderingMode(.template)
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 25, height: 25)
-                        .foregroundColor(Color("Darkblue"))
+           // ScrollView {
+                VStack {
+                    HStack (spacing: 25){
+                        Text("Annonces à la une")
+                            .bold()
+                            .font(.title2)
+                        Spacer()
+                            .frame(width : 5)
+                        Image(systemName: "pencil.circle")
+                            .resizable()
+                            .renderingMode(.template)
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 25, height: 25)
+                            .foregroundColor(Color("Darkblue"))
+                    }
+                    Rectangle().frame(width: 600, height: 3, alignment: .center).foregroundColor(Color("Lightblue"))
+                    List(ads) { ad in
+                        AdView(ad: ad)
+                    }
                 }
-                Rectangle().frame(width: 600, height: 3, alignment: .center).foregroundColor(Color("Lightblue"))
-                List(ads) { ad in
-                    AdRow(ad: ad)
-                }
-            }
+            //}
         }
     }
 }
 
 
+
 // A view that shows the data for one Ad.
-struct AdRow: View {
+struct AdView: View {
     var ad: Advertisement
     
     var body: some View {
-        ScrollView {
-            HStack{
+        
+        HStack{
+            VStack {
+                Text(ad.title).font(.headline).frame(
+                    maxWidth: .infinity,
+                    maxHeight: .infinity)
+                Image(ad.pict[0]).resizable() .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color("Darkblue"), lineWidth: 4)
+                )
+                .frame(width: 350, height: 150).padding(5)
+            }
+        }
+        Spacer()
+        
+        ForEach((1...4).reversed(), id: \.self) {_ in
+            HStack {
                 VStack {
                     Text(ad.title).font(.headline).frame(
                         maxWidth: .infinity,
                         maxHeight: .infinity)
-                    Image(ad.pict[0]).resizable() .overlay(
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color("Darkblue"), lineWidth: 4)
-                    )
-                    .frame(width: 350, height: 150).padding(5)
+                    Image(ad.pict[0]).resizable()
+                        .frame(width: 120, height: 80).padding(5)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color("Darkblue"), lineWidth: 4)
+                        )
                 }
-            }
-            Spacer()
-            
-            ForEach((1...4).reversed(), id: \.self) {_ in
-                HStack {
-                    VStack {
-                        Text(ad.title).font(.headline).frame(
-                            maxWidth: .infinity,
-                            maxHeight: .infinity)
-                        Image(ad.pict[0]).resizable()
-                            .frame(width: 90, height: 50).padding(5)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .stroke(Color("Darkblue"), lineWidth: 4)
-                            )
-                    }
-                    VStack {
-                        Text(ad.title).font(.headline).frame(
-                            maxWidth: .infinity,
-                            maxHeight: .infinity)
-                        Image(ad.pict[0]).resizable()
-                            .frame(width: 90, height: 50).padding(5)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .stroke(Color("Darkblue"), lineWidth: 4)
-                            )
-                    }
+                VStack {
+                    Text(ad.title).font(.headline).frame(
+                        maxWidth: .infinity,
+                        maxHeight: .infinity)
+                    Image(ad.pict[0]).resizable()
+                        .frame(width: 120, height: 80).padding(5)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color("Darkblue"), lineWidth: 4)
+                        )
                 }
             }
         }
     }
 }
+
 
 
 struct AdDiscoverUIView_Previews: PreviewProvider {
