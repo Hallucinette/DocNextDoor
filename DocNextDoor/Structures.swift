@@ -9,6 +9,7 @@ import Foundation
 import MapKit
 
 struct ColoredIcons {
+    
     let nameIcon : String
 
     let nameIconColored : String
@@ -17,6 +18,7 @@ struct ColoredIcons {
 }
 
 struct Contact {
+    
     var name  : String
 
     var mail : String
@@ -25,12 +27,14 @@ struct Contact {
 }
 
 struct Speciality {
+    
     let nameCategory: String
 
     let subCategory: [String]
 }
 
 struct Advertisement : Identifiable {
+    
     var id = UUID()
     
     var title : String
@@ -60,9 +64,14 @@ struct Advertisement : Identifiable {
     var accomodationProvided : Bool //si True alors logement compris
     
     let adLocation : CLLocationCoordinate2D? // coordonnees GPS pour MapKit
+    
+    let adShowing: Bool = true
 }
 
-struct ProfilUser {
+struct ProfilUser : Identifiable {
+    
+    var id = UUID()
+    
     let isDoc : Bool //gérer le double profil commune/docteur ??
 
     let name : String
@@ -88,4 +97,6 @@ struct ProfilUser {
         var adsFav : [Advertisement]
     
     var userPosition : CLLocationCoordinate2D? // coordonnees GPS pour MapKit
+    
+    let userShowing: Bool = true
 }

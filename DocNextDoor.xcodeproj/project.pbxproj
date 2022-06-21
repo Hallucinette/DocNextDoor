@@ -13,7 +13,8 @@
 		4F6B098F285B78E700F06DCC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F6B098E285B78E700F06DCC /* Preview Assets.xcassets */; };
 		4FE7FE61285CC5420086E37F /* BubbleTabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE7FE60285CC5420086E37F /* BubbleTabbarView.swift */; };
 		5F2EF9CD2860A7F100CF9C70 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2EF9CC2860A7F100CF9C70 /* MapView.swift */; };
-		5F2EF9CF2860ACAC00CF9C70 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2EF9CE2860ACAC00CF9C70 /* MapViewModel.swift */; };
+		5F2EF9D12861B63200CF9C70 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2EF9D02861B63200CF9C70 /* MapViewModel.swift */; };
+		5F2EF9D52861D39700CF9C70 /* SlidersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2EF9D42861D39700CF9C70 /* SlidersView.swift */; };
 		7BE0D0A4285CABF700F2A614 /* Structures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE0D0A3285CABF700F2A614 /* Structures.swift */; };
 		7BE0D0AA285CC28600F2A614 /* Favourites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE0D0A9285CC28600F2A614 /* Favourites.swift */; };
 		DB236C2B285CB12400DD5E75 /* AdDiscoverUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB236C2A285CB12400DD5E75 /* AdDiscoverUIView.swift */; };
@@ -28,7 +29,8 @@
 		4F6B098E285B78E700F06DCC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4FE7FE60285CC5420086E37F /* BubbleTabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleTabbarView.swift; sourceTree = "<group>"; };
 		5F2EF9CC2860A7F100CF9C70 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
-		5F2EF9CE2860ACAC00CF9C70 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapViewModel.swift; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/MapViewModel.swift"; sourceTree = "<group>"; };
+		5F2EF9D02861B63200CF9C70 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		5F2EF9D42861D39700CF9C70 /* SlidersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidersView.swift; sourceTree = "<group>"; };
 		7BE0D0A3285CABF700F2A614 /* Structures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structures.swift; sourceTree = "<group>"; };
 		7BE0D0A9285CC28600F2A614 /* Favourites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favourites.swift; sourceTree = "<group>"; };
 		DB236C2A285CB12400DD5E75 /* AdDiscoverUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdDiscoverUIView.swift; sourceTree = "<group>"; };
@@ -73,8 +75,9 @@
 				7BE0D0A9285CC28600F2A614 /* Favourites.swift */,
 				DB236C2C285CB78300DD5E75 /* DataFile.swift */,
 				5F2EF9CC2860A7F100CF9C70 /* MapView.swift */,
-				5F2EF9CE2860ACAC00CF9C70 /* MapViewModel.swift */,
+				5F2EF9D42861D39700CF9C70 /* SlidersView.swift */,
 				4F6B098B285B78E700F06DCC /* Assets.xcassets */,
+				5F2EF9D02861B63200CF9C70 /* MapViewModel.swift */,
 				4F6B098D285B78E700F06DCC /* Preview Content */,
 			);
 			path = DocNextDoor;
@@ -167,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F6B098A285B78E600F06DCC /* ContentView.swift in Sources */,
+				5F2EF9D52861D39700CF9C70 /* SlidersView.swift in Sources */,
 				5F2EF9CD2860A7F100CF9C70 /* MapView.swift in Sources */,
 				7BE0D0AA285CC28600F2A614 /* Favourites.swift in Sources */,
 				7BE0D0A4285CABF700F2A614 /* Structures.swift in Sources */,
@@ -174,7 +178,7 @@
 				4F6B0988285B78E600F06DCC /* DocNextDoorApp.swift in Sources */,
 				4FE7FE61285CC5420086E37F /* BubbleTabbarView.swift in Sources */,
 				DB236C2D285CB78300DD5E75 /* DataFile.swift in Sources */,
-				5F2EF9CF2860ACAC00CF9C70 /* MapViewModel.swift in Sources */,
+				5F2EF9D12861B63200CF9C70 /* MapViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +309,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"DocNextDoor/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "DocNextDoor a besoin de connaître votre position pour afficher les résultats selon vos critères et votre position.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -333,6 +338,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"DocNextDoor/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "DocNextDoor a besoin de connaître votre position pour afficher les résultats selon vos critères et votre position.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

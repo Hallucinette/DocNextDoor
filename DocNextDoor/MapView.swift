@@ -29,21 +29,35 @@ struct MapView: View {
     @StateObject var viewModel = MapViewModel()
     
     
-    let computeLocations: [String] = + + // concatenate (and compute) all Strings arrays to display on Map
+    var computeLocations: [String] = ads + contacts // concatenate all Strings arrays to display on Map.
     let locations = [
         Location(name: "DoctorOnVacation", color: .red, coordinate: CLLocationCoordinate2D(latitude: 40.005514, longitude: -105.192256))
-        // boycker for userLocation in Location Ads.location || Users.location
+        // boucler for userLocation in Location Ads.location || Users.location
     ]
     
     var body: some View {
-        Map(coordinateRegion: $mapRegion, showsUserLocation = true, annotationsItems: computeLocations/locations) { computeLocation / location
-            MapMarker(coordinate: computeLocation.coordinate / location.coordinate, tint: computeLocation.color / location.color)
+        Map(coordinateRegion: $viewModel.mapRegion, showsUserLocation = true, annotationsItems: computeLocations) { computeLocation
+            MapMarker(coordinate: computeLocation.coordinate / location.coordinate, tint: computeLocations.color / location.color)
         }
         .ignoresSafeArea()
-        .accentColor(Color(.systemBlue))
+        .accentColor(Color(.systemRed))
         .onAppear {
             viewModel.checkUserLocationAuthorization()
         }
+        
+        /* func distance(to b: MKMapPoint) -> CLLocationDistance
+        
+        Parameters
+
+        a
+
+            The first map point.
+        b
+
+            The second map point.
+        */
+
+
     }
 }
 
