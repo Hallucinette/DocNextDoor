@@ -13,13 +13,13 @@ struct ContentView: View {
     var body: some View {
         TabView(selection: $selectedTab) {
             
-            AdDiscoverUIView()
+            CreationAdUIView()
                 .tabItem {
                     Label("Offers", systemImage: "map")
                 }
                 .tag("Offers")
            
-            AdDiscoverUIView()
+            CreationAdUIView()
                 .onTapGesture {
                     selectedTab = "Discover"
                 }
@@ -28,13 +28,13 @@ struct ContentView: View {
                 }
                 .tag("Discover")
             
-            AdDiscoverUIView()
+            CreationAdUIView()
                 .tabItem {
                     Label("Favorites", systemImage: "star.fill")
                 }
                 .tag("Favorites")
             
-            AdDiscoverUIView()
+            CreationAdUIView()
                 .tabItem {
                     Label("Profile", systemImage: "person.crop.circle")
                 }
