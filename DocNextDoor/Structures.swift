@@ -61,7 +61,9 @@ struct Advertisement : Identifiable {
     //?? coordonnees GPS pour MapKit ??
 }
 
-struct ProfilUser {
+struct ProfilUser : Identifiable {
+    var id = UUID()
+    
     let isDoc : Bool //gérer le double profil commune/docteur ??
 
     let name : String
@@ -82,7 +84,7 @@ struct ProfilUser {
 
     var allowNotif : Bool
         
-    var adsApplied : [Advertisement]?
+    var adsApplied : [Advertisement]
         
-    var adsFav : [Advertisement]?
+    var adsFav : [Advertisement]
 }
