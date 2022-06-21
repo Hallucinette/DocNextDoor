@@ -12,28 +12,37 @@ struct AdDiscoverUIView: View {
     
     var body: some View {
         
-        ZStack {
+        ZStack {//background color
             Color("BackG").ignoresSafeArea()
-           // ScrollView {
-                VStack {
-                    HStack (spacing: 25){
-                        Text("Annonces à la une")
-                            .bold()
-                            .font(.title2)
-                        Spacer()
-                            .frame(width : 5)
-                        Image(systemName: "pencil.circle")
-                            .resizable()
-                            .renderingMode(.template)
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 25, height: 25)
-                            .foregroundColor(Color("Darkblue"))
+            // ScrollView {
+            VStack {//full view
+                HStack (spacing: 25){//Hstack header
+                    Text("Annonces à la une")
+                        .bold()
+                        .font(.title2)
+                    Spacer()
+                        .frame(width : 5)
+                    Image(systemName: "pencil.circle")
+                        .resizable()
+                        .renderingMode(.template)
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 25, height: 25)
+                        .foregroundColor(Color("Lightblue"))
+                }//fin Hstack header
+                addBlueLine()
+                
+                HStack {
+                    VStack {
+                        Text(ads[0].title).formatLargeText()
+                        Image(ads[0].pict[0]).resizable().formatMediumImage()
                     }
-                    Rectangle().frame(width: 550, height: 3, alignment: .center).foregroundColor(Color("Lightblue"))
-                    List(ads) { ad in
-                        AdView(ad: ad)
-                    }
+                }.background(.white)
+                
+                List(ads) { ad in
+                    AdView(ad: ad)
                 }
+            }
+            
             //}
         }
     }
@@ -47,24 +56,16 @@ struct AdView: View {
     
     var body: some View {
         
-        HStack{
-            VStack {
+        HStack(alignment: .bottom, spacing: 16) {
+            VStack(alignment: .leading, spacing: 16) {
                 Text(ad.title).formatText()
-                Image(ad.pict[0]).resizable().formatMediumImage()
-            }
-        }
-        
-        ForEach((1...4).reversed(), id: \.self) {_ in
-            HStack {
-                VStack {
-                    Text(ad.title).formatText()
-                    Image(ad.pict[0]).resizable().formatSmallImage()
-                }.padding(.leading, 62.0)
-                VStack {
-                    Text(ad.title).formatText()
-                    Image(ad.pict[0]).resizable().formatSmallImage()
-                }.padding(.trailing, 62.0)
-            }
+                Image(ad.pict[0]).resizable().formatSmallImage()
+            }.padding(.leading, 28.0)
+            
+            VStack(alignment: .leading, spacing: 16) {
+                Text(ad.title).formatText()
+                Image(ad.pict[0]).resizable().formatSmallImage()
+            }.padding(.trailing, 28.0)
         }
     }
 }

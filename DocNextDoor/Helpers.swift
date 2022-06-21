@@ -10,26 +10,29 @@ import SwiftUI
 // view formating extension
 extension View {
     func formatText()  -> some View {
-        self.font(.headline).frame(
+        self.font(.subheadline).frame(
             maxWidth: .infinity,
             maxHeight: .infinity)
     }
+    func formatLargeText()  -> some View {
+        self.font(.headline)
+    }
     func formatSmallImage()  -> some View {
-        self.frame(width: 120, height: 80).padding(5)
+        self.frame(width: 120, height: 90).padding(5)
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
-                    .stroke(Color("Darkblue"), lineWidth: 4)
+                    .stroke(Color("Darkblue"), lineWidth: 2)
             )
     }
     func formatMediumImage()  -> some View {
         self.overlay(
             RoundedRectangle(cornerRadius: 10)
-                .stroke(Color("Darkblue"), lineWidth: 4)
+                .stroke(Color("Darkblue"), lineWidth: 2)
         )
-        .frame(width: 350, height: 150).padding(5)
+        .frame(width: 300, height: 150).padding(5)
     }
     func addBlueLine()  -> some View {
-        Rectangle().frame(width: 600, height: 3, alignment: .center).foregroundColor(Color("Lightblue"))
+        Rectangle().frame(width: 450, height: 3, alignment: .center).foregroundColor(Color("Lightblue"))
     }
 }
 
