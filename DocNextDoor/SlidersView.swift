@@ -8,75 +8,87 @@
 import SwiftUI
 
 struct SlidersView: View {
+    
+    @State var maxRent = 0.0
+    @State var maxDistSchool = 0.0
+    @State var maxDistIDZ = 0.0
+    @State var maxDistHospital = 0.0
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            //            Spacer()
+            //            Spacer()
+            VStack {
+                Text("Montant maximum du loyer")
+                HStack {
+                    Slider(value: $maxRent, in: 0...10_000, step: 50)
+                        .tint(.red)
+                    //                        .Color("LightBlue")
+                    Text("\(Int(maxRent)) EUR")
+                        .foregroundColor(.gray)
+                }
+                
+            }
+            VStack {
+                Text("Distance maximum école / crèche")
+                HStack {
+                    Slider(value: $maxDistSchool, in: 0...100, step: 10)
+                    Text("\(Int(maxDistSchool)) Km")
+                        .foregroundColor(.gray)
+                }
+            }
+            VStack {
+                Text("Distance maximum centre commercial / ZAC")
+                HStack {
+                    Slider(value: $maxDistIDZ, in: 0...100, step: 10)
+                    Text("\(Int(maxDistIDZ)) Km")
+                        .foregroundColor(.gray)
+                }
+            }
+            VStack {
+                HStack {
+                    Text("Distance maximum hôpital / maison médicale de garde")
+                    Slider(value: $maxDistHospital, in: 0...100, step: 10)
+                    Text("\(Int(maxDistHospital)) Km")
+                        .foregroundColor(.gray)
+                }
+            }
+            
+            
+        }.padding()
     }
 }
 
-/*
- @State private var valueRed = 0.0
- @State private var valueGreen = 0.0
- @State private var valueBlue = 0.0
 
- */
-/*
- VStack {
-     Spacer()
-     Color(red: valueRed/255, green: valueGreen/255, blue: valueBlue/255)
-         .frame(maxWidth: 200, maxHeight: 200)
-     Spacer()
-     HStack {
-         VStack {
-             HStack {
-                 Text("0")
-                 Slider(value: $valueRed, in: 0...255, step: 1)
-                 Text("255")
-             }
-             Text("Red: \(Int(valueRed))")
-         }
-         VStack {
-             HStack {
-                 Text("0")
-                 Slider(value: $valueGreen, in: 0...255, step: 1)
-                 Text("255")
-             }
-             Text("Green: \(Int(valueGreen))")
-         }
-         VStack {
-             HStack {
-                 Text("0")
-                 Slider(value: $valueBlue, in: 0...255, step: 1)
-                 Text("255")
-             }
-             Text("Blue: \(Int(valueBlue))")
-         }
-     }
-     .padding()
- }
- */
+
+
+
+
+
+
 
 /*
  struct SpeedLimit: View {
-     @State private var speed = 0.0
-     
-     var isOverpeed: Bool {
-         speed > 90
-     }
-
+ @State private var speed = 0.0
+ 
+ var isOverpeed: Bool {
+ speed > 90
+ }
+ 
  */
 
 /*
  VStack {
-     Circle()
-         .stroke(isOverpeed ? .red : .blue, lineWidth: 20)
-         .overlay(
-             Text("\(Int(speed))")
-                 .font(.largeTitle)
-                 .bold()
-         )
-     Text("\(isOverpeed ? "Excès vitesse" : "Vitesse règlementaire")")
-         .font(.title)
-     Slider(value: $speed, in: 0...300, step: 1)
+ Circle()
+ .stroke(isOverpeed ? .red : .blue, lineWidth: 20)
+ .overlay(
+ Text("\(Int(speed))")
+ .font(.largeTitle)
+ .bold()
+ )
+ Text("\(isOverpeed ? "Excès vitesse" : "Vitesse règlementaire")")
+ .font(.title)
+ Slider(value: $speed, in: 0...300, step: 1)
  }
  .padding()
  
