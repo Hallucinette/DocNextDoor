@@ -29,7 +29,7 @@ struct AdDiscoverUIView: View {
                             .frame(width: 25, height: 25)
                             .foregroundColor(Color("Darkblue"))
                     }
-                    Rectangle().frame(width: 600, height: 3, alignment: .center).foregroundColor(Color("Lightblue"))
+                    Rectangle().frame(width: 550, height: 3, alignment: .center).foregroundColor(Color("Lightblue"))
                     List(ads) { ad in
                         AdView(ad: ad)
                     }
@@ -49,42 +49,21 @@ struct AdView: View {
         
         HStack{
             VStack {
-                Text(ad.title).font(.headline).frame(
-                    maxWidth: .infinity,
-                    maxHeight: .infinity)
-                Image(ad.pict[0]).resizable() .overlay(
-                    RoundedRectangle(cornerRadius: 10)
-                        .stroke(Color("Darkblue"), lineWidth: 4)
-                )
-                .frame(width: 350, height: 150).padding(5)
+                Text(ad.title).formatText()
+                Image(ad.pict[0]).resizable().formatMediumImage()
             }
         }
-        Spacer()
         
         ForEach((1...4).reversed(), id: \.self) {_ in
             HStack {
                 VStack {
-                    Text(ad.title).font(.headline).frame(
-                        maxWidth: .infinity,
-                        maxHeight: .infinity)
-                    Image(ad.pict[0]).resizable()
-                        .frame(width: 120, height: 80).padding(5)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color("Darkblue"), lineWidth: 4)
-                        )
-                }
+                    Text(ad.title).formatText()
+                    Image(ad.pict[0]).resizable().formatSmallImage()
+                }.padding(.leading, 62.0)
                 VStack {
-                    Text(ad.title).font(.headline).frame(
-                        maxWidth: .infinity,
-                        maxHeight: .infinity)
-                    Image(ad.pict[0]).resizable()
-                        .frame(width: 120, height: 80).padding(5)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color("Darkblue"), lineWidth: 4)
-                        )
-                }
+                    Text(ad.title).formatText()
+                    Image(ad.pict[0]).resizable().formatSmallImage()
+                }.padding(.trailing, 62.0)
             }
         }
     }
