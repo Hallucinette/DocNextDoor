@@ -15,10 +15,10 @@ struct Profile: View {
             VStack {
                 HStack {
                     Spacer()
-                    NavigationLink(destination: Settings()){ //add param profilUser
+                    NavigationLink(destination: Settings(profilUser: profilUser)){ //add param profilUser
                         Image(systemName: "gearshape").foregroundColor(Color("Darkblue")).font(.system(size: 30))
                     }//fin navigation view
-                }.frame(width: 380)//fin Hstack param
+                }.frame(width: 370)//fin Hstack param
                 HStack {
                     Image(profilUser.pp).resizable().overlay(Circle().stroke(Color("Darkblue"), lineWidth: 7)).clipShape(Circle())
                         .foregroundColor(Color("Lightblue")).frame(width: 100, height: 100).padding(3)
@@ -28,7 +28,7 @@ struct Profile: View {
                             .foregroundColor(Color("Darkblue")).padding(1)
                     }.padding(20)
                 }//fin Hstack PP et nom
-                Rectangle().frame(width: 400, height: 3, alignment: .center).foregroundColor(Color("Lightblue")).padding(25)
+                Rectangle().frame(width: 400, height: 3, alignment: .center).foregroundColor(Color("Lightblue")).padding(15)
                 VStack {
                     Text("Coordonnées").font(.body).bold().frame(
                         maxWidth: .infinity,
@@ -39,12 +39,10 @@ struct Profile: View {
                     Text(profilUser.contact.phone ?? "").font(.footnote).frame(
                         maxWidth: .infinity,
                         alignment: .leading).padding(1)
-                    Text("Biographie").font(.body).bold().frame(
+                    Text("Curriculum Vitæ").font(.body).bold().frame(
                         maxWidth: .infinity,
                         alignment: .leading).padding(1)
-                    Text(profilUser.description).font(.footnote).frame(
-                        maxWidth: .infinity,
-                        alignment: .leading).padding(1)
+                    
                 }.frame(width: 350)//Fin Vstcak coord + biographie
                 Spacer()
             }//fin VSTACK full view
