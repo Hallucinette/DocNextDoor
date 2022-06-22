@@ -15,33 +15,46 @@ struct AdDiscoverUIView: View {
         ZStack {//background color
             Color("BackG").ignoresSafeArea()
             // ScrollView {
-            VStack {//full view
-                HStack (spacing: 25){//Hstack header
-                    Text("Annonces à la une")
-                        .bold()
-                        .font(.title2)
-                    Spacer()
-                        .frame(width : 5)
-                    Image(systemName: "pencil.circle")
-                        .resizable()
-                        .renderingMode(.template)
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 25, height: 25)
-                        .foregroundColor(Color("Lightblue"))
-                }//fin Hstack header
-                addBlueLine()
-                
-                HStack {
-                    VStack {
-                        Text(ads[0].title).formatLargeText()
-                        Image(ads[0].pict[0]).resizable().formatMediumImage()
+            NavigationView {
+                VStack {//full view vstck
+                    HStack (spacing: 25){//Hstack header
+                        Text("Annonces à la une")
+                            .bold()
+                            .font(.title2)
+                        Spacer().frame(width : 5)
+                        
+                        
+                        HStack{
+                            NavigationLink(destination:CreationAdUIView()) {
+                                Image(systemName: "pencil.circle")
+                                    .resizable()
+                                    .renderingMode(.template)
+                                    .formatIcon()
+                                
+                            }.navigationBarTitleDisplayMode(.inline)
+                        }
+                    }//fin Hstack header
+                    addBlueLine()
+                    
+                    HStack {
+                        
+                        NavigationLink(destination:DetailedAdUIView()) {
+                            VStack {
+                                Text(ads[0].title).formatLargeText()
+                                Image(ads[0].pict[0]).resizable().formatMediumImage()
+                            }
+                        }.navigationBarTitleDisplayMode(.inline)
+                        
+                    }.background(.white)
+                    
+                    List(ads) { ad in
+                        NavigationLink(destination:DetailedAdUIView()) {
+                            AdView(ad: ad)
+                        }.navigationBarTitleDisplayMode(.inline)
                     }
-                }.background(.white)
-                
-                List(ads) { ad in
-                    AdView(ad: ad)
-                }
-            }
+                }//end full view vstck
+                .navigationBarHidden(true)
+            }// nav link
             
             //}
         }

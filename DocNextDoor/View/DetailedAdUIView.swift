@@ -11,7 +11,14 @@ struct DetailedAdUIView: View {
    // var ad: Advertisement
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView {
+                VStack(alignment: .leading) {
+                    ForEach(0..<100) {
+                        Text("Row \($0)")
+                            .frame(maxWidth: .infinity)
+                    }
+                }
+            }
     }
 }
 

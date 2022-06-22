@@ -17,6 +17,11 @@ extension View {
     func formatLargeText()  -> some View {
         self.font(.headline)
     }
+    func formatIcon()  -> some View {
+        self.aspectRatio(contentMode: .fit)
+            .frame(width: 25, height: 25)
+            .foregroundColor(Color("Lightblue"))
+    }
     func formatSmallImage()  -> some View {
         self.frame(width: 120, height: 90).padding(5)
             .overlay(
