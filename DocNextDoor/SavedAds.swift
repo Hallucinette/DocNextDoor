@@ -61,7 +61,7 @@ struct SavedAds : View {
                 }
                 else if profilUser.adsFav.isEmpty && pickerList == 0 {
                     VStack {
-                        Image("NoFav").resizable().aspectRatio(contentMode: .fit).frame(width: 310, height: 350, alignment: .center)
+                        Image("NoFav").resizable().aspectRatio(contentMode: .fit).frame(width: 280, height: 350, alignment: .center)
                         Text("Vous n'avez pas encore d'annonce favorite : continuez d'explorer les opportunités !").font(.body).italic().multilineTextAlignment(.center).foregroundColor(Color("Txtgrey")).frame(width: 350)
                         Spacer()
                     }
