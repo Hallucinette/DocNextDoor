@@ -13,7 +13,7 @@ struct ContentView: View {
     var body: some View {
         TabView(selection: $selectedTab) {
             
-            DetailedAdUIView()
+            CreationAdUIView()
                 .tabItem {
                     Label("Offers", systemImage: "map")
                 }

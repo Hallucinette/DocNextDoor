@@ -9,13 +9,23 @@ import SwiftUI
 
 // view formating extension
 extension View {
+    func formatTinyGreyText()  -> some View {
+        self.font(.footnote)
+            .foregroundColor(.gray)
+    }
+    func formatTinyOrangeText()  -> some View {
+        self.font(.footnote)
+            .foregroundColor(.orange)
+            .frame(alignment: .center)
+    }
     func formatText()  -> some View {
-        self.font(.subheadline).frame(
-            maxWidth: .infinity,
-            maxHeight: .infinity)
+        self.font(.subheadline)
     }
     func formatLargeText()  -> some View {
         self.font(.headline)
+    }
+    func formatTitle()  -> some View {
+        self.font(.caption)
     }
     func formatIcon()  -> some View {
         self.aspectRatio(contentMode: .fit)
@@ -30,11 +40,11 @@ extension View {
             )
     }
     func formatMediumImage()  -> some View {
-        self.overlay(
+        self.frame(width: 300, height: 150).padding(5)
+            .overlay(
             RoundedRectangle(cornerRadius: 10)
                 .stroke(Color("Darkblue"), lineWidth: 2)
         )
-        .frame(width: 300, height: 150).padding(5)
     }
     func addBlueLine()  -> some View {
         Rectangle().frame(width: 450, height: 3, alignment: .center).foregroundColor(Color("Lightblue"))
