@@ -15,84 +15,47 @@ struct SlidersView: View {
     @State var maxDistHospital = 0.0
     
     var body: some View {
+        
         VStack {
-            //            Spacer()
-            //            Spacer()
-            VStack {
-                Text("Montant maximum du loyer")
-                HStack {
-                    Slider(value: $maxRent, in: 0...10_000, step: 50)
-                        .tint(.red)
-                    //                        .Color("LightBlue")
-                    Text("\(Int(maxRent)) EUR")
-                        .foregroundColor(.gray)
+//            Text("Filtres").font(.title2)
+            List {
+                Group {
+                    Text("Spécialité")
+                    Text("Type de structure")
                 }
-                
-            }
-            VStack {
-                Text("Distance maximum école / crèche")
-                HStack {
-                    Slider(value: $maxDistSchool, in: 0...100, step: 10)
-                    Text("\(Int(maxDistSchool)) Km")
-                        .foregroundColor(.gray)
+                Group {
+                    Text("Vente patientelle")  // toggleswitch
+                    Text("Logement mis à disposition")  // toggleswitch
                 }
-            }
-            VStack {
-                Text("Distance maximum centre commercial / ZAC")
-                HStack {
-                    Slider(value: $maxDistIDZ, in: 0...100, step: 10)
-                    Text("\(Int(maxDistIDZ)) Km")
-                        .foregroundColor(.gray)
+                Group {
+                    SlidersViewRow(sliderValue: maxRent, sliderLabel: "Montant maximum du loyer", sliderUnit: "EUR", sliderRangeMin: 0.0, sliderRangeMax: 10_000.0, sliderStep: 50.0)
+                    SlidersViewRow(sliderValue: maxDistSchool, sliderLabel: "Distance maximum école / crèche", sliderUnit: "Km", sliderRangeMin: 0.0, sliderRangeMax: 100.0, sliderStep: 5.0)
+                    SlidersViewRow(sliderValue: maxDistIDZ, sliderLabel: "Distance maximum centre commercial / ZAC", sliderUnit: "Km", sliderRangeMin: 0.0, sliderRangeMax: 100.0, sliderStep: 5.0)
+                    SlidersViewRow(sliderValue: maxDistHospital, sliderLabel: "Distance maximum hôpital / maison médicale de garde", sliderUnit: "Km", sliderRangeMin: 0.0, sliderRangeMax: 100.0, sliderStep: 5.0)
+              
+                }
+                Group {
+                    Text("Transports à proximité") // Logos
+                    Text("Quartiers prioritaires") // Logos
                 }
             }
-            VStack {
-                HStack {
-                    Text("Distance maximum hôpital / maison médicale de garde")
-                    Slider(value: $maxDistHospital, in: 0...100, step: 10)
-                    Text("\(Int(maxDistHospital)) Km")
-                        .foregroundColor(.gray)
-                }
+            .padding()
+            .navigationTitle("Filtres")
+            Button {
+                // apply and save userFilters
+                //                .onTapGesture {
+                //                       print("Filtres appliqués")
+            } label: {
+                Text("Appliquer les filtres")
+                    .padding()
+                    .background(.blue)
+                    .foregroundColor(.white)
+                    .clipShape(Capsule())
             }
-            
-            
-        }.padding()
+        }
     }
 }
 
-
-
-
-
-
-
-
-
-/*
- struct SpeedLimit: View {
- @State private var speed = 0.0
- 
- var isOverpeed: Bool {
- speed > 90
- }
- 
- */
-
-/*
- VStack {
- Circle()
- .stroke(isOverpeed ? .red : .blue, lineWidth: 20)
- .overlay(
- Text("\(Int(speed))")
- .font(.largeTitle)
- .bold()
- )
- Text("\(isOverpeed ? "Excès vitesse" : "Vitesse règlementaire")")
- .font(.title)
- Slider(value: $speed, in: 0...300, step: 1)
- }
- .padding()
- 
- */
 
 struct SlidersView_Previews: PreviewProvider {
     static var previews: some View {
