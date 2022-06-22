@@ -34,7 +34,7 @@ struct AdDetailView: View {
             VStack(spacing: 16) {
                 Group{
                     Text(ad.speciality).formatTinyOrangeText()
-                    Text(ad.zipCode"" ad.town).formatTinyGreyText()
+                    Text("\(ad.zipCode)- \(ad.town)").formatTinyGreyText()
                     Text(ad.title).formatText()
                     Image(ad.pict[0]).resizable().formatMediumImage()
                 }
@@ -42,7 +42,7 @@ struct AdDetailView: View {
                     Text("Contact").bold().underline().formatTitle()
                     Text(ad.contact.name).formatText()
                     Text(ad.contact.mail).formatText()
-                   
+                    
                 }
                 Group{
                     Text("Description du poste").bold().underline().formatTitle()
@@ -50,21 +50,35 @@ struct AdDetailView: View {
                 }
                 Group{
                     Text("Avantages de la ville").bold().underline().formatTitle()
-                   // Text(ad.patientsList).formatText()
+                    HStack{
+                        Image(systemName: "facemask.fill")
+                            .resizable()
+                            .renderingMode(.template)
+                            .formatIcon()
+                        Text("La patientèle est cédée (à voir les modalieties ensemble : ) \(ad.patientsList ? "Oui" : "Non")")
+                    }
+                    HStack{
+                        Image(systemName: "house.circle")
+                            .resizable()
+                            .renderingMode(.template)
+                            .formatIcon()
+                        Text("Logement disponible pour l'installation : \(ad.accomodationProvided ? "Oui" : "Non")").formatText()
+                    }
                 }
                 Group{
                     Button {
                         print("Pressed!")
                     } label: {
-                        Image(systemName: "paperplane.circle")
+                        Text("Postuler")
+                            .font(.headline)
                             .foregroundColor(.white)
-                            .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))
+                            .bold()
+                            .frame(width: 150, height: 50)
                             .background(Color("Darkblue"))
-                            .clipShape(Capsule())
+                            .cornerRadius(15)
                     }
                 }
             }
-            
             
         }
     }
