@@ -77,13 +77,14 @@ struct AdView: View {
                 VStack{
                     Text(ad.title).padding(.horizontal).formatText()
                     Image(ad.pict[0]).resizable().formatSmallImage()
-                }.border(.pink, width: 5)
+                }
+                
                 Spacer()
                 VStack {
                     Text(ad.title).padding(.horizontal).formatText()
                     Image(ad.pict[0]).resizable().formatSmallImage()
-                }//.border(.pink, width: 5)
-            }//.frame(width: 250.0, height: 150.0)
+                }
+            }
             HStack {
                 Rectangle()
                     .fill(Color.white)

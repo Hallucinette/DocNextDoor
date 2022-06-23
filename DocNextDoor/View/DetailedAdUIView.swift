@@ -52,8 +52,8 @@ struct AdDetailView: View {
                             .shadow(color: .white, radius: 5)
                         VStack{
                             Text("Contact").bold().padding(.horizontal).formatTitle()
-                            Text(ad.contact.name).padding(.top, -15.0).formatText()
-                            Text(ad.contact.mail).underline().padding(.top, -16.0).formatText()
+                            Text(ad.contact.name).padding(.top, -10.0).formatText()
+                            Text(ad.contact.mail).underline().padding(.top, -10.0).formatText()
                         }
                     }
                 }
