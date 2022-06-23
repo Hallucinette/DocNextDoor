@@ -6,10 +6,40 @@
 //
 
 import SwiftUI
+import PDFKit
+
+struct PDFUIView : View {
+    let pdfDoc: PDFDocument
+    var pdfName = "CV"
+    init() {
+        let url = Bundle.main.url(forResource: pdfName, withExtension: "pdf")!
+                pdfDoc = PDFDocument(url: url)!
+        
+}
+    var body: some View {
+        PDFKitView(showing: pdfDoc)
+    }
+}
+struct PDFKitView: UIViewRepresentable {
+    let pdfDocument: PDFDocument
+    init(showing pdfDoc: PDFDocument) {
+        self.pdfDocument = pdfDoc
+    }
+    func makeUIView(context: Context) -> PDFView {
+        let pdfView = PDFView()
+        pdfView.document = pdfDocument
+        pdfView.autoScales = true
+        return pdfView
+    }
+    func updateUIView(_ pdfView: PDFView, context: Context) {
+        pdfView.document = pdfDocument
+    }
+}
 
 struct Profile: View {
     @State var profilUser : ProfilUser
     var body: some View {
+        NavigationView {
         ZStack { //background
             Color("BackG").ignoresSafeArea()
             VStack {
@@ -33,20 +63,30 @@ struct Profile: View {
                     Text("Coordonnées").font(.body).bold().frame(
                         maxWidth: .infinity,
                         alignment: .leading).padding(1)
-                    Text(profilUser.contact.mail).font(.footnote).italic().underline().frame(
+                    Text(profilUser.contact.mail).font(.callout).italic().underline().frame(
                         maxWidth: .infinity,
                         alignment: .leading).padding(1)
-                    Text(profilUser.contact.phone ?? "").font(.footnote).frame(
+                    Text(profilUser.contact.phone ?? "").font(.callout).frame(
                         maxWidth: .infinity,
                         alignment: .leading).padding(1)
-                    Text("Curriculum Vitæ").font(.body).bold().frame(
-                        maxWidth: .infinity,
-                        alignment: .leading).padding(1)
-                    
                 }.frame(width: 350)//Fin Vstcak coord + biographie
+                HStack {
+                    NavigationLink(destination: PDFUIView()) {
+                        ZStack {
+                            Color(.white)
+                            HStack {
+                                Image(systemName: "doc.append").resizable().frame(width: 30, height: 35).foregroundColor(Color("Lightblue")).padding(.leading, 15)
+                                Text("Curriculum Vitæ").font(.body).bold().foregroundColor(Color(.black)).padding(5)
+                                Spacer()
+                                Image(systemName: "chevron.right").foregroundColor(Color("Txtgrey")).padding(.trailing, 10)
+                            }//fin Hstack contenu CV
+                        }.frame(width: 350, height: 60, alignment: .center).cornerRadius(18)
+                    }//fin NavigationLink
+                }.padding(20)//fin Hstack CV
                 Spacer()
             }//fin VSTACK full view
         }//fin ZStack background
+        }.accentColor(Color("Darkblue"))
     }//fin body
 }//fin Profile view
 

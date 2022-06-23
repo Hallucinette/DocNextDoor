@@ -23,6 +23,8 @@
 		7B0A7ABB286300D900E8DEA6 /* FredokaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B0A7ABA286300D900E8DEA6 /* FredokaOne-Regular.ttf */; };
 		7B0A7ABE2863039D00E8DEA6 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0A7ABD2863039D00E8DEA6 /* Profile.swift */; };
 		7B0A7AC0286318B700E8DEA6 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0A7ABF286318B700E8DEA6 /* Settings.swift */; };
+		7B0A7AC4286460FD00E8DEA6 /* testPDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0A7AC3286460FD00E8DEA6 /* testPDF.swift */; };
+		7B339C782864769800696C89 /* CV.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7B339C772864769800696C89 /* CV.pdf */; };
 		7BE0D0A4285CABF700F2A614 /* Structures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE0D0A3285CABF700F2A614 /* Structures.swift */; };
 		DB236C2B285CB12400DD5E75 /* AdDiscoverUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB236C2A285CB12400DD5E75 /* AdDiscoverUIView.swift */; };
 		DB236C2F2860AC1800DD5E75 /* CreationAdUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB236C2E2860AC1800DD5E75 /* CreationAdUIView.swift */; };
@@ -48,6 +50,8 @@
 		7B0A7ABA286300D900E8DEA6 /* FredokaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FredokaOne-Regular.ttf"; sourceTree = "<group>"; };
 		7B0A7ABD2863039D00E8DEA6 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		7B0A7ABF286318B700E8DEA6 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		7B0A7AC3286460FD00E8DEA6 /* testPDF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testPDF.swift; sourceTree = "<group>"; };
+		7B339C772864769800696C89 /* CV.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = CV.pdf; sourceTree = "<group>"; };
 		7BE0D0A3285CABF700F2A614 /* Structures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structures.swift; sourceTree = "<group>"; };
 		DB236C2A285CB12400DD5E75 /* AdDiscoverUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdDiscoverUIView.swift; sourceTree = "<group>"; };
 		DB236C2E2860AC1800DD5E75 /* CreationAdUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationAdUIView.swift; sourceTree = "<group>"; };
@@ -96,7 +100,9 @@
 				5F2EF9D62862411D00CF9C70 /* SlidersViewRow.swift */,
 				7B0A7AB22862FB2400E8DEA6 /* AdPublished.swift */,
 				7B0A7AB42862FDF300E8DEA6 /* CVSent.swift */,
+				7B339C772864769800696C89 /* CV.pdf */,
 				7B0A7AB62862FEB900E8DEA6 /* Loading.swift */,
+				7B0A7AC3286460FD00E8DEA6 /* testPDF.swift */,
 				7B0A7AB02862176A00E8DEA6 /* SavedAds.swift */,
 				7B0A7ABD2863039D00E8DEA6 /* Profile.swift */,
 				7B0A7ABF286318B700E8DEA6 /* Settings.swift */,
@@ -195,6 +201,7 @@
 				4F6B098F285B78E700F06DCC /* Preview Assets.xcassets in Resources */,
 				4F6B098C285B78E700F06DCC /* Assets.xcassets in Resources */,
 				7B0A7ABB286300D900E8DEA6 /* FredokaOne-Regular.ttf in Resources */,
+				7B339C782864769800696C89 /* CV.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +224,7 @@
 				7B0A7AC0286318B700E8DEA6 /* Settings.swift in Sources */,
 				DB236C312861C05500DD5E75 /* Helpers.swift in Sources */,
 				DB236C2F2860AC1800DD5E75 /* CreationAdUIView.swift in Sources */,
+				7B0A7AC4286460FD00E8DEA6 /* testPDF.swift in Sources */,
 				4F6B0988285B78E600F06DCC /* DocNextDoorApp.swift in Sources */,
 				4FE7FE61285CC5420086E37F /* BubbleTabbarView.swift in Sources */,
 				5F2EF9D72862411D00CF9C70 /* SlidersViewRow.swift in Sources */,
