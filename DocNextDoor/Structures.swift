@@ -80,7 +80,7 @@ struct ProfilUser : Identifiable {
     
     var cv : String? //nom du fichier ?? a voir au niveau implementation
 
-    var allowContact : Bool?
+    var allowContact : Bool
 
     var allowNotif : Bool
         
