@@ -25,7 +25,7 @@ extension View {
         self.font(.headline)
     }
     func formatTitle()  -> some View {
-        self.font(.caption)
+        self.font(.body)
     }
     func formatIcon()  -> some View {
         self.aspectRatio(contentMode: .fit)
@@ -33,14 +33,16 @@ extension View {
             .foregroundColor(Color("Lightblue"))
     }
     func formatSmallImage()  -> some View {
-        self.frame(width: 120, height: 90).padding(5)
+        self.frame(width: 120, height: 90)
+            .cornerRadius(10.0)
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
                     .stroke(Color("Darkblue"), lineWidth: 2)
             )
     }
     func formatMediumImage()  -> some View {
-        self.frame(width: 300, height: 150).padding(5)
+        self.frame(width: 300, height: 150)
+            .cornerRadius(10.0)
             .overlay(
             RoundedRectangle(cornerRadius: 10)
                 .stroke(Color("Darkblue"), lineWidth: 2)

@@ -23,7 +23,6 @@ struct AdDiscoverUIView: View {
                             .font(.title2)
                         Spacer().frame(width : 5)
                         
-                        
                         HStack{
                             NavigationLink(destination:CreationAdUIView()) {
                                 Image(systemName: "pencil.circle")
@@ -32,6 +31,7 @@ struct AdDiscoverUIView: View {
                                     .formatIcon()
                                 
                             }.navigationBarTitleDisplayMode(.inline)
+                                .buttonStyle(PlainButtonStyle())
                         }
                     }//fin Hstack header
                     addBlueLine()
@@ -40,7 +40,10 @@ struct AdDiscoverUIView: View {
                         
                         NavigationLink(destination:DetailedAdUIView(ad: ads[0])) {
                             VStack {
-                                Text(ads[0].title).formatLargeText()
+                                Text(ads[0].title)
+                                    .padding(.horizontal)
+                                    .formatLargeText()
+                                    .foregroundColor(.black)
                                 Image(ads[0].pict[0]).resizable().formatMediumImage()
                             }
                         }.navigationBarTitleDisplayMode(.inline)
@@ -69,16 +72,24 @@ struct AdView: View {
     
     var body: some View {
         
-        HStack(alignment: .bottom, spacing: 16) {
-            VStack(alignment: .leading, spacing: 16) {
-                Text(ad.title).formatText()
-                Image(ad.pict[0]).resizable().formatSmallImage()
-            }.padding(.leading, 28.0)
+        VStack{
+            HStack {
+                VStack{
+                    Text(ad.title).padding(.horizontal).formatText()
+                    Image(ad.pict[0]).resizable().formatSmallImage()
+                }.border(.pink, width: 5)
+                Spacer()
+                VStack {
+                    Text(ad.title).padding(.horizontal).formatText()
+                    Image(ad.pict[0]).resizable().formatSmallImage()
+                }//.border(.pink, width: 5)
+            }//.frame(width: 250.0, height: 150.0)
+            HStack {
+                Rectangle()
+                    .fill(Color.white)
+            }
             
-            VStack(alignment: .leading, spacing: 16) {
-                Text(ad.title).formatText()
-                Image(ad.pict[0]).resizable().formatSmallImage()
-            }.padding(.trailing, 28.0)
+            
         }
     }
 }

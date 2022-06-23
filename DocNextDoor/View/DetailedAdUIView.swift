@@ -35,29 +35,46 @@ struct AdDetailView: View {
                 Group{
                     Text(ad.speciality).formatTinyOrangeText()
                     Text("\(ad.zipCode)- \(ad.town)").formatTinyGreyText()
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 25, style: .continuous)
+                            .stroke(Color.white , lineWidth: 1)
+                            .frame(width: 350, height: 45, alignment: Alignment.top   )
                     Text(ad.title).formatText()
+                    }
                     Image(ad.pict[0]).resizable().formatMediumImage()
                 }
                 Group{
-                    Text("Contact").bold().underline().formatTitle()
-                    Text(ad.contact.name).formatText()
-                    Text(ad.contact.mail).formatText()
                     
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 25, style: .continuous)
+                            .stroke(Color.white , lineWidth: 1)
+                            .frame(width: 350, height: 100, alignment: Alignment.top   )
+                            .shadow(color: .white, radius: 5)
+                        VStack{
+                            Text("Contact").bold().padding(.horizontal).formatTitle()
+                            Text(ad.contact.name).padding(.top, -15.0).formatText()
+                            Text(ad.contact.mail).underline().padding(.top, -16.0).formatText()
+                        }
+                    }
                 }
                 Group{
-                    Text("Description du poste").bold().underline().formatTitle()
-                    Text(ad.description).formatText()
+                    Text("Description du poste").bold().padding(.horizontal).formatTitle()
+                    Text(ad.description)
+                        .padding(.horizontal)
+                        .formatText()
                 }
                 Group{
-                    Text("Avantages de la ville").bold().underline().formatTitle()
-                    HStack{
+                    Text("Avantages de la ville").bold().padding(.horizontal).formatTitle()
+                    HStack(alignment: .center){
                         Image(systemName: "facemask.fill")
                             .resizable()
                             .renderingMode(.template)
                             .formatIcon()
-                        Text("La patientèle est cédée (à voir les modalieties ensemble : ) \(ad.patientsList ? "Oui" : "Non")")
+                        Text("La patientèle est cédée (à voir les modalieties ensemble : ) \(ad.patientsList ? "Oui" : "Non")").formatText()
                     }
-                    HStack{
+                    
+                    
+                    HStack(alignment: .center){
                         Image(systemName: "house.circle")
                             .resizable()
                             .renderingMode(.template)
