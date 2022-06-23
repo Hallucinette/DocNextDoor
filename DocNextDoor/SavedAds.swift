@@ -70,7 +70,7 @@ struct SavedAds : View {
                     List {
                         ForEach( pickerList == 1 ? profilUser.adsApplied : profilUser.adsFav) {  ad in //affichage en liste
                             HStack {
-                                NavigationLink(destination: DetailledAd()){ //add parametre (ad: ad) --> DetailledAd((ad: ad))
+                                NavigationLink(destination: DetailedAdUIView(ad: ad)){ //add parametre (ad: ad) --> DetailledAd((ad: ad))
                                     Image(ad.pict[0]).resizable().overlay(Circle().stroke(Color("Darkblue"), lineWidth: 4)).clipShape(Circle())//stroke Color = "\(ad.speciality)Color"
                                         .frame(width: 55, height: 55).padding(5)
                                     VStack {

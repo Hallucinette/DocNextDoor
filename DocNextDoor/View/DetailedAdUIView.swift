@@ -16,7 +16,7 @@ struct DetailedAdUIView: View {
             Color("BackG").ignoresSafeArea()
             ScrollView {
                 VStack(alignment: .leading) {// vstack header
-                    //Text("gckutdu")
+                    
                     AdDetailView(ad: ad)
                 }//end vstack header
             }// end ScrollView
