@@ -84,13 +84,8 @@ struct ProfilUser : Identifiable {
 
     var allowNotif : Bool
         
-<<<<<<< HEAD
     var adsApplied : [Advertisement]
         
     var adsFav : [Advertisement]
-=======
-    var adsApplied : [Advertisement]?
-        
-    var adsFav : [Advertisement]?
->>>>>>> pdg
+
 }
