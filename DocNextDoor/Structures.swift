@@ -41,7 +41,7 @@ struct Advertisement : Identifiable {
 
     var town : String
 
-    var zipCode : Int
+    var zipCode : String
 
     var description : String
 
@@ -69,7 +69,10 @@ struct Advertisement : Identifiable {
 }
 
 struct ProfilUser : Identifiable {
+<<<<<<< HEAD
     
+=======
+>>>>>>> 169fe2f0b29bebf88aa5e4dba647caf0baf6eaea
     var id = UUID()
     
     let isDoc : Bool //gérer le double profil commune/docteur ??
@@ -92,11 +95,16 @@ struct ProfilUser : Identifiable {
 
     var allowNotif : Bool
         
-        var adsApplied : [Advertisement]?
+    var adsApplied : [Advertisement]
         
+<<<<<<< HEAD
         var adsFav : [Advertisement]
     
     var userPosition : CLLocationCoordinate2D? // coordonnees GPS pour MapKit
     
     let userShowing: Bool = true
+=======
+    var adsFav : [Advertisement]
+
+>>>>>>> 169fe2f0b29bebf88aa5e4dba647caf0baf6eaea
 }
