@@ -22,6 +22,10 @@
 		7B0A7AC0286318B700E8DEA6 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0A7ABF286318B700E8DEA6 /* Settings.swift */; };
 		7BE0D0A4285CABF700F2A614 /* Structures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE0D0A3285CABF700F2A614 /* Structures.swift */; };
 		DB236C2B285CB12400DD5E75 /* AdDiscoverUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB236C2A285CB12400DD5E75 /* AdDiscoverUIView.swift */; };
+		DB236C2D285CB78300DD5E75 /* DataFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB236C2C285CB78300DD5E75 /* DataFile.swift */; };
+		DB236C2F2860AC1800DD5E75 /* CreationAdUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB236C2E2860AC1800DD5E75 /* CreationAdUIView.swift */; };
+		DB236C312861C05500DD5E75 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB236C302861C05500DD5E75 /* Helpers.swift */; };
+		DB236C372861CF5D00DD5E75 /* DetailedAdUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB236C362861CF5D00DD5E75 /* DetailedAdUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +45,10 @@
 		7B0A7ABF286318B700E8DEA6 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		7BE0D0A3285CABF700F2A614 /* Structures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structures.swift; sourceTree = "<group>"; };
 		DB236C2A285CB12400DD5E75 /* AdDiscoverUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdDiscoverUIView.swift; sourceTree = "<group>"; };
+		DB236C2C285CB78300DD5E75 /* DataFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFile.swift; sourceTree = "<group>"; };
+		DB236C2E2860AC1800DD5E75 /* CreationAdUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationAdUIView.swift; sourceTree = "<group>"; };
+		DB236C302861C05500DD5E75 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		DB236C362861CF5D00DD5E75 /* DetailedAdUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedAdUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,9 +83,9 @@
 		4F6B0986285B78E600F06DCC /* DocNextDoor */ = {
 			isa = PBXGroup;
 			children = (
+				DB236C342861CBE900DD5E75 /* View */,
 				4F6B0987285B78E600F06DCC /* DocNextDoorApp.swift */,
 				4F6B0989285B78E600F06DCC /* ContentView.swift */,
-				DB236C2A285CB12400DD5E75 /* AdDiscoverUIView.swift */,
 				7BE0D0A3285CABF700F2A614 /* Structures.swift */,
 				7B0A7AB22862FB2400E8DEA6 /* AdPublished.swift */,
 				7B0A7AB42862FDF300E8DEA6 /* CVSent.swift */,
@@ -88,6 +96,8 @@
 				7B0A7A9028606A3800E8DEA6 /* DetailledAd.swift */,
 				4F6B098B285B78E700F06DCC /* Assets.xcassets */,
 				4F6B098D285B78E700F06DCC /* Preview Content */,
+				DB236C2E2860AC1800DD5E75 /* CreationAdUIView.swift */,
+				DB236C302861C05500DD5E75 /* Helpers.swift */,
 			);
 			path = DocNextDoor;
 			sourceTree = "<group>";
@@ -106,6 +116,15 @@
 				4FE7FE60285CC5420086E37F /* BubbleTabbarView.swift */,
 			);
 			path = BubbleTabbar;
+			sourceTree = "<group>";
+		};
+		DB236C342861CBE900DD5E75 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DB236C2A285CB12400DD5E75 /* AdDiscoverUIView.swift */,
+				DB236C362861CF5D00DD5E75 /* DetailedAdUIView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,8 +203,11 @@
 				7B0A7AB72862FEB900E8DEA6 /* Loading.swift in Sources */,
 				7B0A7AB52862FDF300E8DEA6 /* CVSent.swift in Sources */,
 				7BE0D0A4285CABF700F2A614 /* Structures.swift in Sources */,
+				DB236C372861CF5D00DD5E75 /* DetailedAdUIView.swift in Sources */,
 				DB236C2B285CB12400DD5E75 /* AdDiscoverUIView.swift in Sources */,
 				7B0A7AC0286318B700E8DEA6 /* Settings.swift in Sources */,
+				DB236C312861C05500DD5E75 /* Helpers.swift in Sources */,
+				DB236C2F2860AC1800DD5E75 /* CreationAdUIView.swift in Sources */,
 				4F6B0988285B78E600F06DCC /* DocNextDoorApp.swift in Sources */,
 				4FE7FE61285CC5420086E37F /* BubbleTabbarView.swift in Sources */,
 				7B0A7AB12862176A00E8DEA6 /* SavedAds.swift in Sources */,
