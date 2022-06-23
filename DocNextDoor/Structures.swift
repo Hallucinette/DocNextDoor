@@ -63,16 +63,13 @@ struct Advertisement : Identifiable {
     
     var accomodationProvided : Bool //si True alors logement compris
     
-    let adLocation : CLLocationCoordinate2D? // coordonnees GPS pour MapKit
+//    let adLocation : CLLocationCoordinate2D? // coordonnees GPS pour MapKit
     
-    let adShowing: Bool = true
+//    let adShowing: Bool = true
 }
 
 struct ProfilUser : Identifiable {
-<<<<<<< HEAD
     
-=======
->>>>>>> 169fe2f0b29bebf88aa5e4dba647caf0baf6eaea
     var id = UUID()
     
     let isDoc : Bool //gérer le double profil commune/docteur ??
@@ -97,14 +94,11 @@ struct ProfilUser : Identifiable {
         
     var adsApplied : [Advertisement]
         
-<<<<<<< HEAD
         var adsFav : [Advertisement]
     
-    var userPosition : CLLocationCoordinate2D? // coordonnees GPS pour MapKit
+ //   var userPosition : CLLocationCoordinate2D? // coordonnees GPS pour MapKit
     
-    let userShowing: Bool = true
-=======
-    var adsFav : [Advertisement]
+ //  let userShowing: Bool = true
+   var adsFav : [Advertisement]
 
->>>>>>> 169fe2f0b29bebf88aa5e4dba647caf0baf6eaea
 }
