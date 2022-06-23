@@ -133,7 +133,7 @@ struct Settings: View {
                         Button () {
                             profilUser.pp = "Male4"
                         } label: {
-                            if profilUser.pp == "Female4" {
+                            if profilUser.pp == "Male4" {
                                 Image("Male4").resizable().overlay(Circle().stroke( Color("Darkblue"), lineWidth: 5)).clipShape(Circle())
                                     .frame(width: 60, height: 60)
                             }//fin if
