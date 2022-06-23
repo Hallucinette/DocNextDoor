@@ -24,6 +24,7 @@
 		7B0A7ABE2863039D00E8DEA6 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0A7ABD2863039D00E8DEA6 /* Profile.swift */; };
 		7B0A7AC0286318B700E8DEA6 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0A7ABF286318B700E8DEA6 /* Settings.swift */; };
 		7B339C82286494E600696C89 /* CV3.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7B339C81286494E600696C89 /* CV3.pdf */; };
+		7B339C862864BBE200696C89 /* Apply.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B339C852864BBE200696C89 /* Apply.swift */; };
 		7BE0D0A4285CABF700F2A614 /* Structures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE0D0A3285CABF700F2A614 /* Structures.swift */; };
 		DB236C2B285CB12400DD5E75 /* AdDiscoverUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB236C2A285CB12400DD5E75 /* AdDiscoverUIView.swift */; };
 		DB236C2F2860AC1800DD5E75 /* CreationAdUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB236C2E2860AC1800DD5E75 /* CreationAdUIView.swift */; };
@@ -50,6 +51,7 @@
 		7B0A7ABD2863039D00E8DEA6 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		7B0A7ABF286318B700E8DEA6 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		7B339C81286494E600696C89 /* CV3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = CV3.pdf; sourceTree = "<group>"; };
+		7B339C852864BBE200696C89 /* Apply.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apply.swift; sourceTree = "<group>"; };
 		7BE0D0A3285CABF700F2A614 /* Structures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structures.swift; sourceTree = "<group>"; };
 		DB236C2A285CB12400DD5E75 /* AdDiscoverUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdDiscoverUIView.swift; sourceTree = "<group>"; };
 		DB236C2E2860AC1800DD5E75 /* CreationAdUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationAdUIView.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				7B0A7AB42862FDF300E8DEA6 /* CVSent.swift */,
 				7B0A7AB62862FEB900E8DEA6 /* Loading.swift */,
 				7B0A7AB02862176A00E8DEA6 /* SavedAds.swift */,
+				7B339C852864BBE200696C89 /* Apply.swift */,
 				7B0A7ABD2863039D00E8DEA6 /* Profile.swift */,
 				7B0A7ABF286318B700E8DEA6 /* Settings.swift */,
 				4F6B098B285B78E700F06DCC /* Assets.xcassets */,
@@ -212,6 +215,7 @@
 				4F6B098A285B78E600F06DCC /* ContentView.swift in Sources */,
 				5F2EF9D52861D39700CF9C70 /* SlidersView.swift in Sources */,
 				5F2EF9CD2860A7F100CF9C70 /* MapView.swift in Sources */,
+				7B339C862864BBE200696C89 /* Apply.swift in Sources */,
 				7B0A7AB32862FB2400E8DEA6 /* AdPublished.swift in Sources */,
 				7B0A7AB72862FEB900E8DEA6 /* Loading.swift in Sources */,
 				7B0A7AB52862FDF300E8DEA6 /* CVSent.swift in Sources */,
