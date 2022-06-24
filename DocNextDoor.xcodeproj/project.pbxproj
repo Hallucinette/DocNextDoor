@@ -12,8 +12,9 @@
 		4F6B098C285B78E700F06DCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F6B098B285B78E700F06DCC /* Assets.xcassets */; };
 		4F6B098F285B78E700F06DCC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F6B098E285B78E700F06DCC /* Preview Assets.xcassets */; };
 		4FE788252865C0AF00FEA223 /* BubbleTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE788242865C0AF00FEA223 /* BubbleTabBarView.swift */; };
-		5F2EF9D52861D39700CF9C70 /* SlidersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2EF9D42861D39700CF9C70 /* SlidersView.swift */; };
-		5F2EF9D72862411D00CF9C70 /* SlidersViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2EF9D62862411D00CF9C70 /* SlidersViewRow.swift */; };
+		5F07CB2A2865ECDC006ECA2A /* FiltersViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F07CB292865ECDC006ECA2A /* FiltersViewRow.swift */; };
+		5F07CB2D2865EEF3006ECA2A /* FiltersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F07CB2C2865EEF3006ECA2A /* FiltersView.swift */; };
+		5F07CB2F2865EF76006ECA2A /* DataFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F07CB2E2865EF76006ECA2A /* DataFile.swift */; };
 		7B0A7AB12862176A00E8DEA6 /* SavedAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0A7AB02862176A00E8DEA6 /* SavedAds.swift */; };
 		7B0A7AB32862FB2400E8DEA6 /* AdPublished.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0A7AB22862FB2400E8DEA6 /* AdPublished.swift */; };
 		7B0A7AB52862FDF300E8DEA6 /* CVSent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0A7AB42862FDF300E8DEA6 /* CVSent.swift */; };
@@ -37,8 +38,9 @@
 		4F6B098B285B78E700F06DCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F6B098E285B78E700F06DCC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4FE788242865C0AF00FEA223 /* BubbleTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleTabBarView.swift; sourceTree = "<group>"; };
-		5F2EF9D42861D39700CF9C70 /* SlidersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidersView.swift; sourceTree = "<group>"; };
-		5F2EF9D62862411D00CF9C70 /* SlidersViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidersViewRow.swift; sourceTree = "<group>"; };
+		5F07CB292865ECDC006ECA2A /* FiltersViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewRow.swift; sourceTree = "<group>"; };
+		5F07CB2C2865EEF3006ECA2A /* FiltersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersView.swift; sourceTree = "<group>"; };
+		5F07CB2E2865EF76006ECA2A /* DataFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataFile.swift; path = Filters/DataFile.swift; sourceTree = "<group>"; };
 		7B0A7AB02862176A00E8DEA6 /* SavedAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedAds.swift; sourceTree = "<group>"; };
 		7B0A7AB22862FB2400E8DEA6 /* AdPublished.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdPublished.swift; sourceTree = "<group>"; };
 		7B0A7AB42862FDF300E8DEA6 /* CVSent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVSent.swift; sourceTree = "<group>"; };
@@ -91,13 +93,13 @@
 				4F6B0987285B78E600F06DCC /* DocNextDoorApp.swift */,
 				4F6B0989285B78E600F06DCC /* ContentView.swift */,
 				7BE0D0A3285CABF700F2A614 /* Structures.swift */,
-				5F2EF9D42861D39700CF9C70 /* SlidersView.swift */,
-				5F2EF9D62862411D00CF9C70 /* SlidersViewRow.swift */,
 				7B0A7AB22862FB2400E8DEA6 /* AdPublished.swift */,
 				7B339C81286494E600696C89 /* CV3.pdf */,
 				7B0A7AB42862FDF300E8DEA6 /* CVSent.swift */,
 				7B0A7AB62862FEB900E8DEA6 /* Loading.swift */,
 				7B0A7AB02862176A00E8DEA6 /* SavedAds.swift */,
+				5F07CB2B2865ED1E006ECA2A /* Filters */,
+				5F07CB2E2865EF76006ECA2A /* DataFile.swift */,
 				7B339C852864BBE200696C89 /* Apply.swift */,
 				7B0A7ABD2863039D00E8DEA6 /* Profile.swift */,
 				7B0A7ABF286318B700E8DEA6 /* Settings.swift */,
@@ -123,6 +125,15 @@
 				4FE788242865C0AF00FEA223 /* BubbleTabBarView.swift */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		5F07CB2B2865ED1E006ECA2A /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				5F07CB292865ECDC006ECA2A /* FiltersViewRow.swift */,
+				5F07CB2C2865EEF3006ECA2A /* FiltersView.swift */,
+			);
+			path = Filters;
 			sourceTree = "<group>";
 		};
 		DB236C342861CBE900DD5E75 /* View */ = {
@@ -207,22 +218,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F6B098A285B78E600F06DCC /* ContentView.swift in Sources */,
-				5F2EF9D52861D39700CF9C70 /* SlidersView.swift in Sources */,
 				7B339C862864BBE200696C89 /* Apply.swift in Sources */,
+				5F07CB2A2865ECDC006ECA2A /* FiltersViewRow.swift in Sources */,
 				7B0A7AB32862FB2400E8DEA6 /* AdPublished.swift in Sources */,
 				7B0A7AB72862FEB900E8DEA6 /* Loading.swift in Sources */,
 				7B0A7AB52862FDF300E8DEA6 /* CVSent.swift in Sources */,
 				7BE0D0A4285CABF700F2A614 /* Structures.swift in Sources */,
 				DB236C372861CF5D00DD5E75 /* DetailedAdUIView.swift in Sources */,
 				DB236C2B285CB12400DD5E75 /* AdDiscoverUIView.swift in Sources */,
+				5F07CB2D2865EEF3006ECA2A /* FiltersView.swift in Sources */,
 				7B0A7AC0286318B700E8DEA6 /* Settings.swift in Sources */,
 				DB236C312861C05500DD5E75 /* Helpers.swift in Sources */,
 				DB236C2F2860AC1800DD5E75 /* CreationAdUIView.swift in Sources */,
 				4F6B0988285B78E600F06DCC /* DocNextDoorApp.swift in Sources */,
 				4FE788252865C0AF00FEA223 /* BubbleTabBarView.swift in Sources */,
-				5F2EF9D72862411D00CF9C70 /* SlidersViewRow.swift in Sources */,
 				7B0A7AB12862176A00E8DEA6 /* SavedAds.swift in Sources */,
 				7B0A7ABE2863039D00E8DEA6 /* Profile.swift in Sources */,
+				5F07CB2F2865EF76006ECA2A /* DataFile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

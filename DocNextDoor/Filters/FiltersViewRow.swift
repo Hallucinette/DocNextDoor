@@ -1,14 +1,13 @@
 //
-//  SlidersViewRow.swift
+//  FiltersViewRow.swift
 //  DocNextDoor
 //
-//  Created by apprenant55 on 21/06/2022.
+//  Created by apprenant55 on 24/06/2022.
 //
 
 import SwiftUI
 
-
-struct SlidersViewRow: View {
+struct FiltersViewRow: View {
     
     @State var sliderValue: Double
     var sliderLabel: String
@@ -30,8 +29,8 @@ struct SlidersViewRow: View {
     }
 }
 
-struct SlidersViewRow_Previews: PreviewProvider {
+struct FiltersViewRow_Previews: PreviewProvider {
     static var previews: some View {
-        SlidersViewRow(sliderValue: 0.0, sliderLabel: "Descriptif", sliderUnit: "EUR", sliderRangeMin: 0.0, sliderRangeMax: 10_000.0, sliderStep: 50.0)
+        FiltersViewRow(sliderValue: 0.0, sliderLabel: "Descriptif", sliderUnit: "EUR", sliderRangeMin: 0.0, sliderRangeMax: 10_000.0, sliderStep: 50.0)
     }
 }
