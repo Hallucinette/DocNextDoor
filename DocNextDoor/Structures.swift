@@ -69,7 +69,11 @@ struct Advertisement : Identifiable {
 }
 
 struct ProfilUser : Identifiable {
+<<<<<<< Updated upstream
     
+=======
+
+>>>>>>> Stashed changes
     var id = UUID()
     
     let isDoc : Bool //gérer le double profil commune/docteur ??
@@ -93,12 +97,11 @@ struct ProfilUser : Identifiable {
     var allowNotif : Bool
         
     var adsApplied : [Advertisement]
-        
-        var adsFav : [Advertisement]
     
  //   var userPosition : CLLocationCoordinate2D? // coordonnees GPS pour MapKit
     
+
  //  let userShowing: Bool = true
-   var adsFav : [Advertisement]
+
 
 }
