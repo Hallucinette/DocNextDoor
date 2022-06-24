@@ -40,7 +40,6 @@ struct PDFKitView: UIViewRepresentable {
 struct Profile: View {
     @State var profilUser : ProfilUser
     var body: some View {
-        NavigationView { //a suppr
         ZStack { //background
             Color("BackG").ignoresSafeArea()
             VStack {
@@ -93,7 +92,6 @@ struct Profile: View {
                 Spacer()
             }//fin VSTACK full view
         }//fin ZStack background
-        }.accentColor(Color("Darkblue"))//fin navigview, a suppr
     }//fin body
 }//fin Profile view
 
