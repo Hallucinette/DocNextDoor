@@ -13,7 +13,7 @@ struct Apply: View {
             .font(.headline)
                 .padding(15)
                 .background(Color("Darkblue"))
-                .cornerRadius(40)
+                .cornerRadius(45)
                 .foregroundColor(.white)
                 .padding(30)
     }
