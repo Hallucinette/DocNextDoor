@@ -31,7 +31,7 @@
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="UrD-aB-v10">
                                 <rect key="frame" x="62" y="707" width="291" height="4"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" name="Lightblue"/>
+                                <color key="tintColor" name="BackG"/>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DocNextDoor" textAlignment="center" lineBreakMode="middleTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1XA-TC-mv6">
                                 <rect key="frame" x="58" y="444" width="299" height="67"/>
@@ -79,11 +79,11 @@
     <resources>
         <image name="BackG" width="2358" height="1525"/>
         <image name="Loading" width="3184" height="1607"/>
+        <namedColor name="BackG">
+            <color red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Darkblue">
             <color red="0.0" green="0.10980392156862745" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Lightblue">
-            <color red="0.51372549019607838" green="0.82745098039215681" blue="0.83137254901960789" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

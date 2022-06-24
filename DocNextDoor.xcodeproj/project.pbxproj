@@ -96,10 +96,9 @@
 				5F2EF9D62862411D00CF9C70 /* SlidersViewRow.swift */,
 				7B0A7AB22862FB2400E8DEA6 /* AdPublished.swift */,
 				7B339C81286494E600696C89 /* CV3.pdf */,
-				7B0A7AB42862FDF300E8DEA6 /* CVSent.swift */,
+				7B31E49B286603B800DDBCF8 /* Apply */,
 				7B0A7AB02862176A00E8DEA6 /* SavedAds.swift */,
 				7B31E4922865EE6000DDBCF8 /* Profile */,
-				7B339C852864BBE200696C89 /* Apply.swift */,
 				4F6B098B285B78E700F06DCC /* Assets.xcassets */,
 				4F6B098D285B78E700F06DCC /* Preview Content */,
 				DB236C2E2860AC1800DD5E75 /* CreationAdUIView.swift */,
@@ -131,6 +130,15 @@
 				7B0A7ABF286318B700E8DEA6 /* Settings.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		7B31E49B286603B800DDBCF8 /* Apply */ = {
+			isa = PBXGroup;
+			children = (
+				7B339C852864BBE200696C89 /* Apply.swift */,
+				7B0A7AB42862FDF300E8DEA6 /* CVSent.swift */,
+			);
+			path = Apply;
 			sourceTree = "<group>";
 		};
 		DB236C342861CBE900DD5E75 /* View */ = {
