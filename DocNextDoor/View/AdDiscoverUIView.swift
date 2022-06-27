@@ -52,7 +52,9 @@ struct AdDiscoverUIView: View {
                     
                     List(ads) { ad in
                         NavigationLink(destination:DetailedAdUIView(ad: ad)) {
-                            AdView(ad: ad)
+                            HStack{
+                                AdView(ad: ad)
+                            }
                         }.navigationBarTitleDisplayMode(.inline)
                     }
                 }//end full view vstck
@@ -72,28 +74,42 @@ struct AdView: View {
     
     var body: some View {
         
-        VStack{
-            HStack {
-                VStack{
-                    Text(ad.title).padding(.horizontal).formatText()
-                    Image(ad.pict[0]).resizable().formatSmallImage()
-                }
-                
-                Spacer()
-                VStack {
-                    Text(ad.title).padding(.horizontal).formatText()
-                    Image(ad.pict[0]).resizable().formatSmallImage()
-                }
-            }
-            HStack {
-                Rectangle()
-                    .fill(Color.white)
-            }
-            
+        /*VStack{
+         HStack {
+         VStack{
+         Text(ad.title).padding(.horizontal).formatText()
+         Image(ad.pict[0]).resizable().formatSmallImage()
+         }
+         
+         Spacer()
+         VStack {
+         Text(ad.title).padding(.horizontal).formatText()
+         Image(ad.pict[0]).resizable().formatSmallImage()
+         }
+         }
+         HStack {
+         Rectangle()
+         .fill(Color.white)
+         }
+         
+         
+         }*/
+        //HStack (spacing: 0) {
+        
+        VStack {
+            Text(ad.title).padding(.horizontal).formatText()
+            Image(ad.pict[0]).resizable().formatSmallImage()
             
         }
+        Divider()
+        
+        
     }
+    
+    
 }
+
+
 
 
 

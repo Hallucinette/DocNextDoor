@@ -27,7 +27,6 @@
 		DB236C2F2860AC1800DD5E75 /* CreationAdUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB236C2E2860AC1800DD5E75 /* CreationAdUIView.swift */; };
 		DB236C312861C05500DD5E75 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB236C302861C05500DD5E75 /* Helpers.swift */; };
 		DB236C372861CF5D00DD5E75 /* DetailedAdUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB236C362861CF5D00DD5E75 /* DetailedAdUIView.swift */; };
-		DBE0AAFC2869E59A00FA1946 /* ColoredIconsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE0AAFB2869E59A00FA1946 /* ColoredIconsModel.swift */; };
 		DBE0AAFE2869E5A600FA1946 /* Structures.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE0AAFD2869E5A500FA1946 /* Structures.swift */; };
 		DBE0AB012869E61D00FA1946 /* DataFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE0AB002869E61D00FA1946 /* DataFile.swift */; };
 /* End PBXBuildFile section */
@@ -54,7 +53,6 @@
 		DB236C2E2860AC1800DD5E75 /* CreationAdUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationAdUIView.swift; sourceTree = "<group>"; };
 		DB236C302861C05500DD5E75 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		DB236C362861CF5D00DD5E75 /* DetailedAdUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedAdUIView.swift; sourceTree = "<group>"; };
-		DBE0AAFB2869E59A00FA1946 /* ColoredIconsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColoredIconsModel.swift; sourceTree = "<group>"; };
 		DBE0AAFD2869E5A500FA1946 /* Structures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structures.swift; sourceTree = "<group>"; };
 		DBE0AB002869E61D00FA1946 /* DataFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataFile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,7 +149,6 @@
 			isa = PBXGroup;
 			children = (
 				DBE0AAFD2869E5A500FA1946 /* Structures.swift */,
-				DBE0AAFB2869E59A00FA1946 /* ColoredIconsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -246,7 +243,6 @@
 				DB236C372861CF5D00DD5E75 /* DetailedAdUIView.swift in Sources */,
 				DB236C2B285CB12400DD5E75 /* AdDiscoverUIView.swift in Sources */,
 				5F07CB2D2865EEF3006ECA2A /* FiltersView.swift in Sources */,
-				DBE0AAFC2869E59A00FA1946 /* ColoredIconsModel.swift in Sources */,
 				7B0A7AC0286318B700E8DEA6 /* Settings.swift in Sources */,
 				DB236C312861C05500DD5E75 /* Helpers.swift in Sources */,
 				DB236C2F2860AC1800DD5E75 /* CreationAdUIView.swift in Sources */,
@@ -383,6 +379,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DocNextDoor/Preview Content\"";
+				DEVELOPMENT_TEAM = TBWB22V7RD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DocNextDoor/Info.plist;
@@ -413,6 +410,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DocNextDoor/Preview Content\"";
+				DEVELOPMENT_TEAM = TBWB22V7RD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DocNextDoor/Info.plist;

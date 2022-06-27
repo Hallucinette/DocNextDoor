@@ -19,7 +19,7 @@ import SwiftUI
 
 struct BubbleTabBarView: View {
     var body: some View {
-            Home()
+        Home()
         
     }
 }
@@ -46,18 +46,18 @@ struct Home: View{
     var body: some View{
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)) {
             TabView(selection: $selectedtab){
-                    
-                    Color.red //mettre ici la page
-                        .ignoresSafeArea(.all, edges: .all)
-                        .tag("list.bullet.circle")
+                
+                Color.red //mettre ici la page
+                    .ignoresSafeArea(.all, edges: .all)
+                    .tag("list.bullet.circle")
                 AdDiscoverUIView(ads: ads)
-                        .tag("map")
-                    Color.yellow
-                        .ignoresSafeArea(.all, edges: .all)
-                        .tag("bookmark")
-                    Color.brown
-                        .ignoresSafeArea(.all, edges: .all)
-                        .tag("person.circle")
+                    .tag("map")
+                Color.yellow
+                    .ignoresSafeArea(.all, edges: .all)
+                    .tag("bookmark")
+                Color.brown
+                    .ignoresSafeArea(.all, edges: .all)
+                    .tag("person.circle")
             }
             
             // Custom tab Bar...
@@ -65,37 +65,40 @@ struct Home: View{
             HStack(spacing: 0){
                 
                 ForEach(tabs, id: \.self){image in
-                    
-                    GeometryReader {reader in
-                        Button(action: {
-                            //permet l'effet de "glisade" de la vague d'une icone a l'autre
-                            withAnimation(.spring()){
-                                selectedtab = image
-                                xAxis = reader.frame(in: .global).minX
-                            }
-                        }, label: {
-                            // fait apparait chaque icone contenue dans tabs. Leurs donne les meme contraintes.
-                            Image(systemName: image)
-                                .resizable()
-                                .renderingMode(.template)
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 25, height: 25)
-                                .foregroundColor(selectedtab == image ? getColor(image: image) : Color.gray) // couleurs gris si pas selectionné
-                                .padding(selectedtab == image ? 15 : 0)
-                                .background(Color.white.opacity(selectedtab == image ? 1 : 0) .clipShape(Circle()))
-                                .matchedGeometryEffect(id: image, in:animation)
-                                .offset(x: selectedtab == image ? (reader.frame(in: .global).minX - reader.frame(in: .global).midX) : 0,y: selectedtab == image ? -50 : 0)
-                        })
-                        .onAppear(perform: {
-                                    
-                            if image == tabs.first{
-                                xAxis = reader.frame(in: .global).minX
-                            }
-                            
-                        })
+                    VStack{
+                        GeometryReader {reader in
+                            Button(action: {
+                                //permet l'effet de "glisade" de la vague d'une icone a l'autre
+                                withAnimation(.spring()){
+                                    selectedtab = image
+                                    xAxis = reader.frame(in: .global).minX
+                                }
+                            }, label: {
+                                // fait apparait chaque icone contenue dans tabs. Leurs donne les meme contraintes.
+                                
+                                Image(systemName: image)
+                                    .resizable()
+                                    .renderingMode(.template)
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 25, height: 25)
+                                    .foregroundColor(selectedtab == image ? getColor(image: image) : Color.gray) // couleurs gris si pas selectionné
+                                    .padding(selectedtab == image ? 15 : 0)
+                                    .background(Color.white.opacity(selectedtab == image ? 1 : 0) .clipShape(Circle()))
+                                    .matchedGeometryEffect(id: image, in:animation)
+                                    .offset(x: selectedtab == image ? (reader.frame(in: .global).minX - reader.frame(in: .global).midX) : 0,y: selectedtab == image ? -50 : 0)
+                            })
+                            .onAppear(perform: {
+                                
+                                if image == tabs.first{
+                                    xAxis = reader.frame(in: .global).minX
+                                }
+                                
+                            })
+                        }
+                        .frame(width: 25, height: 25)
+                        Text(image)
+                        
                     }
-                    .frame(width: 25, height: 25)
-                    
                     //On rajoute un spacer quand on a finit de parcourir le tableau image.
                     if image != tabs.last{Spacer(minLength: 0)}
                 }
@@ -111,7 +114,7 @@ struct Home: View{
         .ignoresSafeArea(.all, edges: .bottom)
     }
     
-// Permet de choisir la couleur de l'icone quand elle est active. ici on passe du gris par default a la couleur choisi. par exemple map = blue
+    // Permet de choisir la couleur de l'icone quand elle est active. ici on passe du gris par default a la couleur choisi. par exemple map = blue
     
     func getColor(image: String)->Color{
         
@@ -131,7 +134,7 @@ struct Home: View{
 }
 
 //ici je cree un tableau de mes icone. elle me permet d'en quitter un ou d 'en mettre plus sans trop impacteer le reste du cote
-    var tabs = ["list.bullet.circle", "map", "bookmark", "person.circle"]
+var tabs = ["list.bullet.circle", "map", "bookmark", "person.circle"]
 
 //Curve...
 
