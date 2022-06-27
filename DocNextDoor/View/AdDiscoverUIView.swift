@@ -52,7 +52,9 @@ struct AdDiscoverUIView: View {
                     
                     List(ads) { ad in
                         NavigationLink(destination:DetailedAdUIView(ad: ad)) {
-                            AdView(ad: ad)
+                            HStack{
+                                AdView(ad: ad)
+                            }
                         }.navigationBarTitleDisplayMode(.inline)
                     }
                 }//end full view vstck
@@ -72,33 +74,47 @@ struct AdView: View {
     
     var body: some View {
         
-        VStack{
-            HStack {
-                VStack{
-                    Text(ad.title).padding(.horizontal).formatText()
-                    Image(ad.pict[0]).resizable().formatSmallImage()
-                }
-                
-                Spacer()
-                VStack {
-                    Text(ad.title).padding(.horizontal).formatText()
-                    Image(ad.pict[0]).resizable().formatSmallImage()
-                }
-            }
-            HStack {
-                Rectangle()
-                    .fill(Color.white)
-            }
-            
+        /*VStack{
+         HStack {
+         VStack{
+         Text(ad.title).padding(.horizontal).formatText()
+         Image(ad.pict[0]).resizable().formatSmallImage()
+         }
+         
+         Spacer()
+         VStack {
+         Text(ad.title).padding(.horizontal).formatText()
+         Image(ad.pict[0]).resizable().formatSmallImage()
+         }
+         }
+         HStack {
+         Rectangle()
+         .fill(Color.white)
+         }
+         
+         
+         }*/
+        //HStack (spacing: 0) {
+        
+        VStack {
+            Text(ad.title).padding(.horizontal).formatText()
+            Image(ad.pict[0]).resizable().formatSmallImage()
             
         }
+        Divider()
+        
+        
     }
+    
+    
 }
+
+
 
 
 
 struct AdDiscoverUIView_Previews: PreviewProvider {
     static var previews: some View {
-        AdDiscoverUIView(ads: [ Advertisement( title: "Médecin généraliste à Plumebec (51420)", town: "Plumebec", zipCode: "51420", description: "En Morbihan Sud, la commune de Plumelec se situant à 20 min de Vannes,1 heure de Rennes et 1heure30 de Nantes recherche un médecin généraliste. Cette commune de 2750 habitants concilie tranquillité de la campagne, vitalité économique et touristique . En effet Plumelec regroupe tous les services nécessaire pour bien y vivre : nombreux artisans et commerces; nombreuses associations; nombreux équipements sportifs et culturels; un nouveau centre de secours comptant 33 pompiers volontaires ainsi qu'un pôle médical regroupant plusieurs professionnels de la santé : 1 médecin, un pédicure podologue, 4 infirmières, 3 kinés et un orthophoniste. Hors pôle médical la commune compte également un dentiste, un ostéopathe, un service associatif de soins et de maintien à domicile, un service", contact: .init(name:  "Annie lhation", mail: "monmail@gg.com"), pict: ["Plumebec"], speciality: "Médecin généraliste", patientsList: true, accomodationProvided: true)])
+        AdDiscoverUIView(ads: ads)
     }
 }
