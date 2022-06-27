@@ -48,7 +48,9 @@ struct FiltersView: View {
                             .tag("IDZValue")
                         FiltersViewRow(sliderValue: maxDistHospital, sliderLabel: "Distance maximum hôpital / maison médicale de garde", sliderUnit: "Km", sliderRangeMin: 0.0, sliderRangeMax: 100.0, sliderStep: 5.0).tag("DistHospitalSlider")
                             .tag("hospitalValue")
-                        
+                        FiltersViewRow(sliderValue: maxDistSchool, sliderLabel: "Distance maximum école / crèche", sliderUnit: "Km", sliderRangeMin: 0.0, sliderRangeMax: 100.0, sliderStep: 5.0).tag("DistSchoolSlider")
+                        FiltersViewRow(sliderValue: maxDistIDZ, sliderLabel: "Distance maximum centre commercial / ZAC", sliderUnit: "Km", sliderRangeMin: 0.0, sliderRangeMax: 100.0, sliderStep: 5.0).tag("DistIDZSlider")
+                        FiltersViewRow(sliderValue: maxDistHospital, sliderLabel: "Distance maximum hôpital / maison médicale de garde", sliderUnit: "Km", sliderRangeMin: 0.0, sliderRangeMax: 100.0, sliderStep: 5.0).tag("DistHospitalSlider")
                     }
                     Group {
                         Text("Transports à proximité") // Logos
