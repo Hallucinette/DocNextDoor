@@ -11,7 +11,7 @@ struct AdsEdit: View {
     var body: some View {
         NavigationView{
             Home_ok()
-                .navigationTitle("Material Design")
+              //  .navigationTitle("Material Design")
         }
     }
 }
@@ -103,6 +103,9 @@ struct Home_ok: View{
 }
 
 class TFManager : ObservableObject {
+    
+   // var maxCount: Int
+    
     @Published var text = ""{
         //were going to use didSet Function before assigning the new value...
         //so that we can check the count...
