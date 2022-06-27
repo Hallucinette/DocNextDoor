@@ -13,14 +13,19 @@ struct TransportsRow: View {
     
     var body: some View {
         
+        VStack {
+            Text("Transports à proximité")
         HStack {
-            AdsPicto(nameIcon: "Airplane", nameIconColored: "airplane.circle", isColored: false)
-            AdsPicto(nameIcon: "Train", nameIconColored: "snowflake", isColored: false)
+            AdsPicto(nameIcon: "Aéroport", nameIconColored: "airplane.circle", isColored: false)
+            AdsPicto(nameIcon: "Gare", nameIconColored: "snowflake", isColored: false)
+            AdsPicto(nameIcon: "Tram / Métro", nameIconColored: "sun.fill", isColored: false)
+            
         }
         //        VStack {
         //            Image(systemName: "airplane.circle")
         //            Text("Aéroport")
         //        }
+        }
     }
 }
 
