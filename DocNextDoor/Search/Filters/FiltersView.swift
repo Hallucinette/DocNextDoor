@@ -80,7 +80,9 @@ struct FiltersView: View {
 
 struct FiltersView_Previews: PreviewProvider {
     static var previews: some View {
-        FiltersView()
+        NavigationView{
+            FiltersView()
+        }
     }
 }
 
