@@ -11,7 +11,6 @@ struct Apply: View {
     @State var profilUser : ProfilUser
     @State var ad : Advertisement
     var body: some View {
-        NavigationView {
         ZStack { //background
             Color("BackG").ignoresSafeArea()
             VStack { //full view
@@ -63,7 +62,6 @@ struct Apply: View {
                 //}//fin navLink
             }.frame(width: 400)//fin VStcak full view
         }//fin Zstack backG
-        }
     }
 }
 
