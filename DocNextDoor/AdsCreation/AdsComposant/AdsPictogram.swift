@@ -12,19 +12,19 @@
 ////   var transport : [ColoredIcons]? //avec [Bool = True]
 //
 //struct AdsPictogram: View {
-//    
-//    
+//
+//
 //   // ColoredIcons.init(nameIcon: "figure.walk.circle", nameIconColored: "figure.wave", isColored: false)
 //    var nameIcon: String
 //    var nameIconColored: String
 //    var isColored: Bool
-//    
-//    
+//
+//
 //    @State private var color: Color = .gray
 //    @State var boolTransport: Bool = false
 //  //  @State var test33: String
 //    var body: some View {
-//        
+//
 //       VStack{
 //            Button {
 //                if color == .gray{
@@ -53,7 +53,7 @@
 //func test(color: Color, boolTransport: Bool) -> Bool {
 //
 //    @State var boolTrans = boolTransport
-//    
+//
 //    if color == .gray{
 //        //color = .red
 //        boolTrans = true
@@ -61,7 +61,7 @@
 //        //color = .gray
 //        boolTrans = false
 //    }
-//    
+//
 //    return boolTrans
 //}
 //

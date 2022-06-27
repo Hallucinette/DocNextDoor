@@ -39,6 +39,7 @@ struct FiltersView: View {
                     }
                     Group {
                         FiltersViewRow(sliderValue: maxRent, sliderLabel: "Montant maximum du loyer", sliderUnit: "EUR", sliderRangeMin: 0.0, sliderRangeMax: 10_000.0, sliderStep: 50.0).tag("RentSlider")
+<<<<<<< HEAD:DocNextDoor/Search/Filters/FiltersView.swift
                             .tag("rentValue")
                         FiltersViewRow(sliderValue: maxDistSchool, sliderLabel: "Distance maximum école / crèche", sliderUnit: "Km", sliderRangeMin: 0.0, sliderRangeMax: 100.0, sliderStep: 5.0).tag("DistSchoolSlider")
                             .tag("schoolValue")
@@ -48,6 +49,11 @@ struct FiltersView: View {
                             .tag("IDZValue")
                         FiltersViewRow(sliderValue: maxDistHospital, sliderLabel: "Distance maximum hôpital / maison médicale de garde", sliderUnit: "Km", sliderRangeMin: 0.0, sliderRangeMax: 100.0, sliderStep: 5.0).tag("DistHospitalSlider")
                             .tag("hospitalValue")
+=======
+                        FiltersViewRow(sliderValue: maxDistSchool, sliderLabel: "Distance maximum école / crèche", sliderUnit: "Km", sliderRangeMin: 0.0, sliderRangeMax: 100.0, sliderStep: 5.0).tag("DistSchoolSlider")
+                        FiltersViewRow(sliderValue: maxDistIDZ, sliderLabel: "Distance maximum centre commercial / ZAC", sliderUnit: "Km", sliderRangeMin: 0.0, sliderRangeMax: 100.0, sliderStep: 5.0).tag("DistIDZSlider")
+                        FiltersViewRow(sliderValue: maxDistHospital, sliderLabel: "Distance maximum hôpital / maison médicale de garde", sliderUnit: "Km", sliderRangeMin: 0.0, sliderRangeMax: 100.0, sliderStep: 5.0).tag("DistHospitalSlider")
+>>>>>>> 77d0121bf8bcd2baadf79e01e17a8e6d53bc160c:DocNextDoor/Filters/FiltersView.swift
                         
                     }
                     Group {
