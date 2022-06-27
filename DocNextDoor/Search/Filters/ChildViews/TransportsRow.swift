@@ -8,26 +8,26 @@
 import SwiftUI
 
 struct TransportsRow: View {
-    
-    //    @Binding var
-    
+
     var body: some View {
         
         VStack {
             Text("Transports à proximité")
-        HStack {
-            AdsPicto(nameIcon: "Aéroport", nameIconColored: "airplane.circle", isColored: false)
-            AdsPicto(nameIcon: "Gare", nameIconColored: "snowflake", isColored: false)
-            AdsPicto(nameIcon: "Tram / Métro", nameIconColored: "sun.fill", isColored: false)
-            
-        }
-        //        VStack {
-        //            Image(systemName: "airplane.circle")
-        //            Text("Aéroport")
-        //        }
+            HStack {
+                AdsPicto(nameIcon: "Aéroport", nameIconColored: "airplane.circle", isColored: false)
+                AdsPicto(nameIcon: "Gare", nameIconColored: "snowflake", isColored: false)
+                AdsPicto(nameIcon: "Tram / Métro", nameIconColored: "sun.fill", isColored: false)
+            }
         }
     }
 }
+//        VStack {
+//            Image(systemName: "airplane.circle")
+//            Text("Aéroport")
+//        }
+
+
+
 
 struct TransportsRow_Previews: PreviewProvider {
     static var previews: some View {
