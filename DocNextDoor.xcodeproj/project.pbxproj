@@ -29,7 +29,7 @@
 		DB236C372861CF5D00DD5E75 /* DetailedAdUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB236C362861CF5D00DD5E75 /* DetailedAdUIView.swift */; };
 		DBE0AAF52869A89F00FA1946 /* Data in Resources */ = {isa = PBXBuildFile; fileRef = DBE0AAF42869A89F00FA1946 /* Data */; };
 		DBE0AAF72869A9AB00FA1946 /* Model in Resources */ = {isa = PBXBuildFile; fileRef = DBE0AAF62869A9AB00FA1946 /* Model */; };
-		DBE0AAF92869AA4F00FA1946 /* ColoredIconsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE0AAF82869AA4F00FA1946 /* ColoredIconsModel.swift */; };
+		DBE0AAF92869AA4F00FA1946 /* Model in Sources */ = {isa = PBXBuildFile; fileRef = DBE0AAF82869AA4F00FA1946 /* Model */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,7 +56,7 @@
 		DB236C362861CF5D00DD5E75 /* DetailedAdUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedAdUIView.swift; sourceTree = "<group>"; };
 		DBE0AAF42869A89F00FA1946 /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Data; sourceTree = "<group>"; };
 		DBE0AAF62869A9AB00FA1946 /* Model */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Model; path = DocNextDoor/Model; sourceTree = SOURCE_ROOT; };
-		DBE0AAF82869AA4F00FA1946 /* ColoredIconsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoredIconsModel.swift; sourceTree = "<group>"; };
+		DBE0AAF82869AA4F00FA1946 /* Model */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Model; path = DocNextDoor/Model; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +109,7 @@
 				4F6B098D285B78E700F06DCC /* Preview Content */,
 				DB236C2E2860AC1800DD5E75 /* CreationAdUIView.swift */,
 				DB236C302861C05500DD5E75 /* Helpers.swift */,
-				DBE0AAF82869AA4F00FA1946 /* ColoredIconsModel.swift */,
+				DBE0AAF82869AA4F00FA1946 /* Model */,
 			);
 			path = DocNextDoor;
 			sourceTree = "<group>";
@@ -233,7 +233,7 @@
 				5F07CB2D2865EEF3006ECA2A /* FiltersView.swift in Sources */,
 				7B0A7AC0286318B700E8DEA6 /* Settings.swift in Sources */,
 				DB236C312861C05500DD5E75 /* Helpers.swift in Sources */,
-				DBE0AAF92869AA4F00FA1946 /* ColoredIconsModel.swift in Sources */,
+				DBE0AAF92869AA4F00FA1946 /* Model in Sources */,
 				DB236C2F2860AC1800DD5E75 /* CreationAdUIView.swift in Sources */,
 				4F6B0988285B78E600F06DCC /* DocNextDoorApp.swift in Sources */,
 				4FE788252865C0AF00FEA223 /* BubbleTabBarView.swift in Sources */,
