@@ -9,13 +9,18 @@ import SwiftUI
 
 struct TransportsRow: View {
     
-//    @Binding var 
+    //    @Binding var
     
     var body: some View {
-        VStack {
-            Image(systemName: "airplane.circle")
-            Text("Aéroport")
+        
+        HStack {
+            AdsPicto(nameIcon: "Airplane", nameIconColored: "airplane.circle", isColored: false)
+            AdsPicto(nameIcon: "Train", nameIconColored: "snowflake", isColored: false)
         }
+        //        VStack {
+        //            Image(systemName: "airplane.circle")
+        //            Text("Aéroport")
+        //        }
     }
 }
 
