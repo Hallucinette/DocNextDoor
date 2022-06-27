@@ -90,19 +90,18 @@
 				4FE788232865C07A00FEA223 /* TabBar */,
 				DB236C342861CBE900DD5E75 /* View */,
 				4F6B0987285B78E600F06DCC /* DocNextDoorApp.swift */,
-				4F6B0989285B78E600F06DCC /* ContentView.swift */,
+				7B31E49B286603B800DDBCF8 /* Apply */,
+				7B31E4922865EE6000DDBCF8 /* Profile */,
 				7BE0D0A3285CABF700F2A614 /* Structures.swift */,
 				5F2EF9D42861D39700CF9C70 /* SlidersView.swift */,
+				4F6B0989285B78E600F06DCC /* ContentView.swift */,
 				5F2EF9D62862411D00CF9C70 /* SlidersViewRow.swift */,
 				7B0A7AB22862FB2400E8DEA6 /* AdPublished.swift */,
-				7B339C81286494E600696C89 /* CV3.pdf */,
-				7B31E49B286603B800DDBCF8 /* Apply */,
 				7B0A7AB02862176A00E8DEA6 /* SavedAds.swift */,
-				7B31E4922865EE6000DDBCF8 /* Profile */,
-				4F6B098B285B78E700F06DCC /* Assets.xcassets */,
-				4F6B098D285B78E700F06DCC /* Preview Content */,
 				DB236C2E2860AC1800DD5E75 /* CreationAdUIView.swift */,
 				DB236C302861C05500DD5E75 /* Helpers.swift */,
+				4F6B098B285B78E700F06DCC /* Assets.xcassets */,
+				4F6B098D285B78E700F06DCC /* Preview Content */,
 			);
 			path = DocNextDoor;
 			sourceTree = "<group>";
@@ -126,6 +125,7 @@
 		7B31E4922865EE6000DDBCF8 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				7B339C81286494E600696C89 /* CV3.pdf */,
 				7B0A7ABD2863039D00E8DEA6 /* Profile.swift */,
 				7B0A7ABF286318B700E8DEA6 /* Settings.swift */,
 			);
@@ -397,7 +397,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -428,7 +428,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
