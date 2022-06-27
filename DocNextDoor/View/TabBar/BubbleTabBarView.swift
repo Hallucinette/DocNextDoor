@@ -50,8 +50,7 @@ struct Home: View{
                     Color.red //mettre ici la page
                         .ignoresSafeArea(.all, edges: .all)
                         .tag("list.bullet.circle")
-                    Color.blue
-                        .ignoresSafeArea(.all, edges: .all)
+                AdDiscoverUIView(ads: ads)
                         .tag("map")
                     Color.yellow
                         .ignoresSafeArea(.all, edges: .all)

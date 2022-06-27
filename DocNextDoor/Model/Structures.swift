@@ -8,14 +8,7 @@
 import Foundation
 import MapKit
 
-struct ColoredIcons {
-    
-    let nameIcon : String
 
-    let nameIconColored : String
-
-    var isColored : Bool //si True alors = icon coloré, si False alors = icon grisé
-}
 
 struct Contact {
     
