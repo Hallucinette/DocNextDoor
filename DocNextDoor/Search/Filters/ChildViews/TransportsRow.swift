@@ -28,7 +28,6 @@ struct TransportsRow: View {
 
 
 
-
 struct TransportsRow_Previews: PreviewProvider {
     static var previews: some View {
         TransportsRow()

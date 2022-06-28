@@ -38,7 +38,7 @@ struct FiltersView: View {
                         Text("Logement mis à disposition")  // toggleswitch
                     }
                     Group {
-<<<<<<< HEAD:DocNextDoor/Search/Filters/FiltersView.swift
+
                         FiltersViewRow(sliderValue: $maxRent, sliderLabel: "Montant maximum du loyer", sliderUnit: "EUR", sliderRangeMin: 0.0, sliderRangeMax: 10_000.0, sliderStep: 50.0).tag("RentSlider")
                             .tag("rentValue")
                         FiltersViewRow(sliderValue: $maxDistSchool, sliderLabel: "Distance maximum école / crèche", sliderUnit: "Km", sliderRangeMin: 0.0, sliderRangeMax: 100.0, sliderStep: 5.0).tag("DistSchoolSlider")
@@ -47,19 +47,6 @@ struct FiltersView: View {
                             .tag("IDZValue")
                         FiltersViewRow(sliderValue: $maxDistHospital, sliderLabel: "Distance maximum hôpital / maison médicale de garde", sliderUnit: "Km", sliderRangeMin: 0.0, sliderRangeMax: 100.0, sliderStep: 5.0).tag("DistHospitalSlider")
                             .tag("hospitalValue")
-=======
-                        FiltersViewRow(sliderValue: maxRent, sliderLabel: "Montant maximum du loyer", sliderUnit: "EUR", sliderRangeMin: 0.0, sliderRangeMax: 10_000.0, sliderStep: 50.0).tag("RentSlider")
-                            .tag("rentValue")
-                        FiltersViewRow(sliderValue: maxDistSchool, sliderLabel: "Distance maximum école / crèche", sliderUnit: "Km", sliderRangeMin: 0.0, sliderRangeMax: 100.0, sliderStep: 5.0).tag("DistSchoolSlider")
-                            .tag("schoolValue")
-                        
-                        
-                        FiltersViewRow(sliderValue: maxDistIDZ, sliderLabel: "Distance maximum centre commercial / ZAC", sliderUnit: "Km", sliderRangeMin: 0.0, sliderRangeMax: 100.0, sliderStep: 5.0).tag("DistIDZSlider")
-                            .tag("IDZValue")
-                        FiltersViewRow(sliderValue: maxDistHospital, sliderLabel: "Distance maximum hôpital / maison médicale de garde", sliderUnit: "Km", sliderRangeMin: 0.0, sliderRangeMax: 100.0, sliderStep: 5.0).tag("DistHospitalSlider")
-                            .tag("hospitalValue")
-                        
->>>>>>> da2e30e (Push on self branch before pull AssistMain):DocNextDoor/Filters/FiltersView.swift
                     }
                     Group {
                         Text("Transports à proximité") // Logos
