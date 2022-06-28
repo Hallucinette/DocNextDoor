@@ -18,13 +18,14 @@ struct TransportsRow: View {
                 AdsPicto(nameIcon: "Gare", nameIconColored: "snowflake", isColored: false)
                 AdsPicto(nameIcon: "Tram / Métro", nameIconColored: "sun.fill", isColored: false)
             }
-        }
+
+        //        VStack {
+        //            Image(systemName: "airplane.circle")
+        //            Text("Aéroport")
+        //        }
     }
 }
-//        VStack {
-//            Image(systemName: "airplane.circle")
-//            Text("Aéroport")
-//        }
+
 
 
 
