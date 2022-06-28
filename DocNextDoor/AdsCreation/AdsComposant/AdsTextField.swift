@@ -26,12 +26,24 @@ struct AdsTextField: View {
     @State var isTapped = false
     var body: some View {
         VStack(alignment: .leading) {
-            Text("name")
-            TextField("name", text: $name)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .foregroundColor(isTapped ? .gray : .gray)
-                .background(Color.gray)
+            Text("Name")
+            HStack {
+                TextField("name", text: $text)
+                   // .background(Color.gray.opacity(0.09))
+                
+                Text("\(text.count)/\(maxCount)")
+                    .font(.caption)
+                    .foregroundColor(.gray)
+                    .padding(.trailing)
+                    .padding(.top,4)
+            }
+//            .background(Color.gray.opacity(0.09))
+            .textFieldStyle(RoundedBorderTextFieldStyle())
+            .frame(width: 250, height: 50)
+//            .background(Color.gray.opacity(0.09))
+//            .cornerRadius(20)
         }
+        .padding()
     }
 }
 //        VStack(alignment: .leading, spacing: 4, content: {
