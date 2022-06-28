@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct DocNextDoorApp: App {
+    @StateObject var profilControl = ProfileControl()
     var body: some Scene {
         WindowGroup {
-            BubbleTabBarView()
+            BubbleTabBarView().environmentObject(profilControl)
         }
     }
 }

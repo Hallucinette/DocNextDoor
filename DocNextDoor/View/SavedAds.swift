@@ -8,31 +8,31 @@ import SwiftUI
 import Foundation
 
 struct SavedAds : View {
-    @Binding var profilUser : ProfilUser //a passer en binding ?
+    @EnvironmentObject var profilControl : ProfileControl//a passer en binding ?
     @State var pickerList = 0
     
     func deleteAdF(ad: Advertisement) {
-        profilUser.adsFav.removeAll { ad2 in
+        profilControl.profilUser.adsFav.removeAll { ad2 in
             return ad.id == ad2.id
         }
     }
     
     func deleteAdA(ad: Advertisement) {
-        profilUser.adsApplied.removeAll { ad2 in
+        profilControl.profilUser.adsApplied.removeAll { ad2 in
             return ad.id == ad2.id
         }
     }
     
     func transfAdF2ADA(ad: Advertisement) {
-        profilUser.adsApplied.append(ad)
-        profilUser.adsFav.removeAll { ad2 in
+        profilControl.profilUser.adsApplied.append(ad)
+        profilControl.profilUser.adsFav.removeAll { ad2 in
             return ad.id == ad2.id
         }
     }
     
     func transfAdA2AdF(ad: Advertisement) {
-        profilUser.adsFav.append(ad)
-        profilUser.adsApplied.removeAll { ad2 in
+        profilControl.profilUser.adsFav.append(ad)
+        profilControl.profilUser.adsApplied.removeAll { ad2 in
             return ad.id == ad2.id
         }
     }
@@ -52,14 +52,14 @@ struct SavedAds : View {
                     }.frame(width: 400, height: 40).padding()
                 }//fin Vstack header
                 Spacer()
-                if profilUser.adsApplied.isEmpty && pickerList == 1 {
+                if profilControl.profilUser.adsApplied.isEmpty && pickerList == 1 {
                     VStack {
                         Image("NoFav").resizable().aspectRatio(contentMode: .fit).frame(width: 280, height: 350, alignment: .center)
                         Text("Vous n'avez encore candidaté à aucune annonce : continuez d'explorer les opportunités !").font(.body).italic().multilineTextAlignment(.center).foregroundColor(Color("Txtgrey")).frame(width: 350)
                         Spacer()
                     }
                 }
-                else if profilUser.adsFav.isEmpty && pickerList == 0 {
+                else if profilControl.profilUser.adsFav.isEmpty && pickerList == 0 {
                     VStack {
                         Image("NoFav").resizable().aspectRatio(contentMode: .fit).frame(width: 280, height: 350, alignment: .center)
                         Text("Vous n'avez pas encore d'annonce favorite : continuez d'explorer les opportunités !").font(.body).italic().multilineTextAlignment(.center).foregroundColor(Color("Txtgrey")).frame(width: 350)
@@ -68,7 +68,7 @@ struct SavedAds : View {
                 }
                 else {
                     List {
-                        ForEach( pickerList == 1 ? profilUser.adsApplied : profilUser.adsFav) {  ad in //affichage en liste
+                        ForEach( pickerList == 1 ? profilControl.profilUser.adsApplied : profilControl.profilUser.adsFav) {  ad in //affichage en liste
                             HStack {
                                 NavigationLink(destination: DetailedAdUIView(ad: ad)){ //add parametre (ad: ad) --> DetailledAd((ad: ad))
                                     Image(ad.pict[0]).resizable().overlay(Circle().stroke(Color("Darkblue"), lineWidth: 4)).clipShape(Circle())//stroke Color = "\(ad.speciality)Color"

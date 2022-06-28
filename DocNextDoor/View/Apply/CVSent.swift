@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct CVSent: View {
-    @Binding var profilUser : ProfilUser
     var body: some View {
-        NavigationLink(destination: SavedAds(profilUser: $profilUser).navigationBarHidden(true).navigationBarBackButtonHidden(true)) {
+        NavigationLink(destination: SavedAds().navigationBarHidden(true).navigationBarBackButtonHidden(true)) {
         ZStack { //background
             Color("BackG").ignoresSafeArea()
             VStack {

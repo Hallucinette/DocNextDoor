@@ -26,12 +26,11 @@ struct BubbleTabBarView: View {
 
 struct BubbleTabBarView_Previews: PreviewProvider {
     static var previews: some View {
-        BubbleTabBarView()
+        BubbleTabBarView().environmentObject(ProfileControl())
     }
 }
 
 struct Home: View{
-    
     @State var selectedtab = "list.bullet.circle"
     
     init(){
@@ -42,21 +41,20 @@ struct Home: View{
     @State var xAxis: CGFloat = 0
     
     @Namespace var animation
-    
+    @EnvironmentObject var profilControl : ProfileControl
     var body: some View{
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)) {
             TabView(selection: $selectedtab){
                 
-                Color.red //mettre ici la page
+                Color.red//AdDiscoverUIView(ads: ads)
                     .ignoresSafeArea(.all, edges: .all)
                     .tag("list.bullet.circle")
-                AdDiscoverUIView(ads: ads)
+                Color.blue
                     .tag("map")
-                Color.yellow
+                SavedAds()
                     .ignoresSafeArea(.all, edges: .all)
                     .tag("bookmark")
-                Color.brown
-                    .ignoresSafeArea(.all, edges: .all)
+                Profile()
                     .tag("person.circle")
             }
             
@@ -96,11 +94,12 @@ struct Home: View{
                             })
                         }
                         .frame(width: 25, height: 25)
-                        Text(image)
+                        Text(selectedtab == image ? getNom(image: image) : getNom(image: image)).font(.footnote)
+
                         
                     }
                     //On rajoute un spacer quand on a finit de parcourir le tableau image.
-                    if image != tabs.last{Spacer(minLength: 0)}
+                    if image != tabs.last{Spacer(minLength: 10)}
                 }
             }
             // rectangle blanc derriere la tab bar
@@ -131,6 +130,23 @@ struct Home: View{
             return Color.blue
         }
     }
+    // Permet de choisir le nom de l'icone quand elle est active.
+
+        func getNom(image: String)->String{
+
+            switch image {
+            case "list.bullet.circle":
+                return "A découvrir"
+            case "map":
+                return "Recherche"
+            case "bookmark":
+                return "Favoris"
+            case "person.circle":
+                return "Profil"
+            default:
+                return ""
+            }
+        }
 }
 
 //ici je cree un tableau de mes icone. elle me permet d'en quitter un ou d 'en mettre plus sans trop impacteer le reste du cote
@@ -161,7 +177,7 @@ struct CustomShape : Shape {
             
             let center = xAxis
             
-            path.move(to: CGPoint(x: center - 50, y: 0))
+            path.move(to: CGPoint(x: center - 70, y: 0))
             
             //cote gauche
             let to1 = CGPoint(x: center, y: 35)
@@ -169,7 +185,7 @@ struct CustomShape : Shape {
             let control2 = CGPoint(x: center - 25, y: 35)
             
             //cote droit
-            let to2 = CGPoint(x: center + 50, y: 0)
+            let to2 = CGPoint(x: center + 70, y: 0)
             let control3 = CGPoint(x: center + 25, y: 35)
             let control4 = CGPoint(x: center + 25, y: 0)
             
@@ -178,3 +194,5 @@ struct CustomShape : Shape {
         }
     }
 }
+
+

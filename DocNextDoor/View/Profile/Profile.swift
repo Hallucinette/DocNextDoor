@@ -38,23 +38,23 @@ struct PDFKitView: UIViewRepresentable {
 }
 
 struct Profile: View {
-    @Binding var profilUser : ProfilUser
+    @EnvironmentObject var profilControl : ProfileControl
     var body: some View {
         ZStack { //background
             Color("BackG").ignoresSafeArea()
             VStack {
                 HStack {
                     Spacer()
-                    NavigationLink(destination: Settings(profilUser: $profilUser)){ //add param profilUser
+                    NavigationLink(destination: Settings()){ //add param profilUser
                         Image(systemName: "gearshape").foregroundColor(Color("Darkblue")).font(.system(size: 30))
                     }//fin navigation view
                 }.frame(width: 370)//fin Hstack param
                 HStack {
-                    Image(profilUser.pp).resizable().overlay(Circle().stroke(Color("Darkblue"), lineWidth: 7)).clipShape(Circle())
+                    Image(profilControl.profilUser.pp).resizable().overlay(Circle().stroke(Color("Darkblue"), lineWidth: 7)).clipShape(Circle())
                         .foregroundColor(Color("Lightblue")).frame(width: 100, height: 100).padding(3)
                     VStack {
-                        Text(profilUser.name).font(.title2).bold().padding(1)
-                        Text(profilUser.speciality ?? "").font(.callout).italic().bold()
+                        Text(profilControl.profilUser.name).font(.title2).bold().padding(1)
+                        Text(profilControl.profilUser.speciality ?? "").font(.callout).italic().bold()
                             .foregroundColor(Color("Darkblue")).padding(1)
                     }.padding(20)
                 }//fin Hstack PP et nom
@@ -63,16 +63,16 @@ struct Profile: View {
                     Text("Coordonnées").font(.body).bold().frame(
                         maxWidth: .infinity,
                         alignment: .leading).padding(1)
-                    Text(profilUser.contact.mail).font(.callout).italic().underline().frame(
+                    Text(profilControl.profilUser.contact.mail).font(.callout).italic().underline().frame(
                         maxWidth: .infinity,
                         alignment: .leading).padding(1)
-                    Text(profilUser.contact.phone ?? "").font(.callout).frame(
+                    Text(profilControl.profilUser.contact.phone ?? "").font(.callout).frame(
                         maxWidth: .infinity,
                         alignment: .leading).padding(1)
                     Text("Biographie").font(.body).bold().frame(
                         maxWidth: .infinity,
                         alignment: .leading).padding(1)
-                    Text(profilUser.description).font(.callout).frame(
+                    Text(profilControl.profilUser.description).font(.callout).frame(
                         maxWidth: .infinity,
                         alignment: .leading).padding(1)
                 }.frame(width: 350)//Fin Vstcak coord + biographie
