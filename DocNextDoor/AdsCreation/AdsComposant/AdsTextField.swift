@@ -26,8 +26,8 @@ struct AdsTextField: View {
     @State var isTapped = false
     var body: some View {
         VStack(alignment: .leading) {
-            Text(Title)
-                .foregroundColor(.gray)
+         //   Text(Title)
+                //.foregroundColor(.gray)
                // .font(Font.custom("name-of-font", size: 20))
             HStack(alignment: .center , spacing: 10, content: {
                 TextField(Title, text: $text)

@@ -14,11 +14,10 @@
 		4FB38B3B2869973A002ECF0D /* AdsCreatV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB38B3A2869973A002ECF0D /* AdsCreatV2.swift */; };
 		4FB38B3D2869AC40002ECF0D /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB38B3C2869AC40002ECF0D /* ImagePicker.swift */; };
 		4FB38B3F2869E760002ECF0D /* AdsTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB38B3E2869E760002ECF0D /* AdsTextField.swift */; };
+		4FB38B41286B3230002ECF0D /* Button_Annonce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB38B40286B3230002ECF0D /* Button_Annonce.swift */; };
 		4FE0C01D2866417300F1C855 /* AdsCreat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE0C01C2866417300F1C855 /* AdsCreat.swift */; };
 		4FE0C0212866420600F1C855 /* AdsPicto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE0C0202866420600F1C855 /* AdsPicto.swift */; };
 		4FE0C0232866422900F1C855 /* AdsImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE0C0222866422900F1C855 /* AdsImage.swift */; };
-		4FE0C0252866425300F1C855 /* AdsEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE0C0242866425300F1C855 /* AdsEdit.swift */; };
-		4FE0C0272866427A00F1C855 /* AdsPictogram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE0C0262866427A00F1C855 /* AdsPictogram.swift */; };
 		4FE788252865C0AF00FEA223 /* BubbleTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE788242865C0AF00FEA223 /* BubbleTabBarView.swift */; };
 		5F07CB2A2865ECDC006ECA2A /* FiltersViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F07CB292865ECDC006ECA2A /* FiltersViewRow.swift */; };
 		5F07CB2D2865EEF3006ECA2A /* FiltersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F07CB2C2865EEF3006ECA2A /* FiltersView.swift */; };
@@ -48,11 +47,10 @@
 		4FB38B3A2869973A002ECF0D /* AdsCreatV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsCreatV2.swift; sourceTree = "<group>"; };
 		4FB38B3C2869AC40002ECF0D /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		4FB38B3E2869E760002ECF0D /* AdsTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsTextField.swift; sourceTree = "<group>"; };
+		4FB38B40286B3230002ECF0D /* Button_Annonce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button_Annonce.swift; sourceTree = "<group>"; };
 		4FE0C01C2866417300F1C855 /* AdsCreat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsCreat.swift; sourceTree = "<group>"; };
 		4FE0C0202866420600F1C855 /* AdsPicto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsPicto.swift; sourceTree = "<group>"; };
 		4FE0C0222866422900F1C855 /* AdsImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsImage.swift; sourceTree = "<group>"; };
-		4FE0C0242866425300F1C855 /* AdsEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsEdit.swift; sourceTree = "<group>"; };
-		4FE0C0262866427A00F1C855 /* AdsPictogram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsPictogram.swift; sourceTree = "<group>"; };
 		4FE788242865C0AF00FEA223 /* BubbleTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleTabBarView.swift; sourceTree = "<group>"; };
 		5F07CB292865ECDC006ECA2A /* FiltersViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewRow.swift; sourceTree = "<group>"; };
 		5F07CB2C2865EEF3006ECA2A /* FiltersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersView.swift; sourceTree = "<group>"; };
@@ -151,10 +149,9 @@
 			children = (
 				4FE0C0202866420600F1C855 /* AdsPicto.swift */,
 				4FB38B3C2869AC40002ECF0D /* ImagePicker.swift */,
+				4FB38B40286B3230002ECF0D /* Button_Annonce.swift */,
 				4FE0C0222866422900F1C855 /* AdsImage.swift */,
-				4FE0C0242866425300F1C855 /* AdsEdit.swift */,
 				4FB38B3E2869E760002ECF0D /* AdsTextField.swift */,
-				4FE0C0262866427A00F1C855 /* AdsPictogram.swift */,
 			);
 			path = AdsComposant;
 			sourceTree = "<group>";
@@ -260,7 +257,6 @@
 				4FE0C0212866420600F1C855 /* AdsPicto.swift in Sources */,
 				4F6B098A285B78E600F06DCC /* ContentView.swift in Sources */,
 				4FB38B3D2869AC40002ECF0D /* ImagePicker.swift in Sources */,
-				4FE0C0272866427A00F1C855 /* AdsPictogram.swift in Sources */,
 				7B339C862864BBE200696C89 /* Apply.swift in Sources */,
 				5F07CB2A2865ECDC006ECA2A /* FiltersViewRow.swift in Sources */,
 				7B0A7AB32862FB2400E8DEA6 /* AdPublished.swift in Sources */,
@@ -268,11 +264,11 @@
 				7B0A7AB52862FDF300E8DEA6 /* CVSent.swift in Sources */,
 				7BE0D0A4285CABF700F2A614 /* Structures.swift in Sources */,
 				4FE0C01D2866417300F1C855 /* AdsCreat.swift in Sources */,
+				4FB38B41286B3230002ECF0D /* Button_Annonce.swift in Sources */,
 				4FB38B3B2869973A002ECF0D /* AdsCreatV2.swift in Sources */,
 				DB236C372861CF5D00DD5E75 /* DetailedAdUIView.swift in Sources */,
 				DB236C2B285CB12400DD5E75 /* AdDiscoverUIView.swift in Sources */,
 				5F07CB2D2865EEF3006ECA2A /* FiltersView.swift in Sources */,
-				4FE0C0252866425300F1C855 /* AdsEdit.swift in Sources */,
 				7B0A7AC0286318B700E8DEA6 /* Settings.swift in Sources */,
 				DB236C312861C05500DD5E75 /* Helpers.swift in Sources */,
 				4FB38B3F2869E760002ECF0D /* AdsTextField.swift in Sources */,
