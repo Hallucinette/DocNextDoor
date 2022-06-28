@@ -8,13 +8,81 @@
 import SwiftUI
 
 struct AdsTextField: View {
+    @State var name: String
+    @State var maxCount: Int
+    @State var text = ""{
+        //were going to use didSet Function before assigning the new value...
+        //so that we can check the count...
+        didSet{
+            //maxCount = text.count
+            if text.count > maxCount && oldValue.count <= maxCount{
+                text = oldValue
+            }
+        }
+    }
+    //@StateObject var manager = TFManager()
+    
+    // Animation Properites...
+    @State var isTapped = false
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading) {
+            Text("name")
+            TextField("name", text: $name)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .foregroundColor(isTapped ? .gray : .gray)
+                .background(Color.gray)
+        }
     }
 }
+//        VStack(alignment: .leading, spacing: 4, content: {
+//               // Rectangle({
+//                HStack{
+//                    TextField("", text: $text) { (status) in
+//
+//                        if status{
+//                        withAnimation(){
+////                                // moving hint to top..
+//                              // name = ""
+//                                isTapped = true
+//                            }
+//                        }
+//                    } onCommit: {
+////                        // it will fire when return button is pressed
+////                        // only if no text typed..
+//                        if text == ""{
+//                            withAnimation(){
+//                                isTapped = false
+//                            }
+//                        }
+//                   }
+//
+//                        .background(
+//
+//                            Text("\(name)")
+//                                .foregroundColor(isTapped ? .gray : .gray)
+//
+//                            ,alignment: .leading
+//
+//                        )
+//                        .frame(width: 250, height: 50)
+//
+//                    Text("\(text.count)/\(maxCount)")
+//                        .font(.caption)
+//                        .foregroundColor(.gray)
+//                        .padding(.trailing)
+//                        .padding(.top,4)
+//                }
+//            })
+//        .padding(.horizontal ,20)
+//                .background(Color.gray.opacity(0.09))
+//                .cornerRadius(20)
+//        }
+//       // .padding(.leading)
+//    }
+//}
 
 struct AdsTextField_Previews: PreviewProvider {
     static var previews: some View {
-        AdsTextField()
+        AdsTextField(name: "test", maxCount: 15)
     }
 }

@@ -8,23 +8,21 @@
 import SwiftUI
 
 struct AdsEdit: View {
-    var body: some View {
-        NavigationView{
-            Home_ok()
-              //  .navigationTitle("Material Design")
+    @State var name: String
+     var maxCount: Int
+    
+    @State var text = ""{
+        //were going to use didSet Function before assigning the new value...
+        //so that we can check the count...
+        didSet{
+            //maxCount = text.count
+            if text.count > maxCount && oldValue.count <= maxCount{
+                text = oldValue
+            }
         }
     }
-}
-
-struct AdsEdit_Previews: PreviewProvider {
-    static var previews: some View {
-        AdsEdit()
-    }
-}
-
-struct Home_ok: View{
+    //@StateObject var manager = TFManager()
     
-    @StateObject var manager = TFManager()
     // Animation Properites...
     @State var isTapped = false
     var body: some View {
@@ -36,7 +34,7 @@ struct Home_ok: View{
                     
                     //were going to limit the textfiled length...
                     
-                    TextField("", text: $manager.text) { (status) in
+                    TextField("", text: $text) { (status) in
                         // it will fire when textfield is clicked...
                         if status{
                             withAnimation(.easeIn){
@@ -47,7 +45,7 @@ struct Home_ok: View{
                     } onCommit: {
                         // it will fire when return button is pressed
                         // only if no text typed..
-                        if manager.text == ""{
+                        if text == ""{
                             withAnimation(.easeOut){
                                 isTapped = false
                             }
@@ -55,10 +53,15 @@ struct Home_ok: View{
                     }
                     // Trailing Icon Or Button...
                     
-                    Button(action: {}, label: {
-                        Image(systemName: "suit.heart")
-                            .foregroundColor(.gray)
-                    })
+                    //                    Button(action: {}, label: {
+                    //                        Image(systemName: "suit.heart")
+                    //                            .foregroundColor(.gray)
+                    Text("\(text.count)/\(maxCount)")
+                        .font(.caption)
+                        .foregroundColor(.gray)
+                        .padding(.trailing)
+                        .padding(.top,4)
+                    //       })
                 }
                 // if tapped...
                 .padding(.top,isTapped ? 15 : 0)
@@ -66,13 +69,13 @@ struct Home_ok: View{
                 // so moving it below the textfield..
                 .background(
                     
-                    Text("UserName")
+                    Text("\(name)")
                         .scaleEffect(isTapped ? 0.8 : 1)
                         .offset(x: isTapped ? -7 : 0, y: isTapped ? -15 : 0)
                         .foregroundColor(isTapped ? .accentColor : .gray)
                     
                     ,alignment: .leading
-                        
+                    
                 )
                 .padding(.horizontal)
                 //Divider Color...
@@ -81,38 +84,133 @@ struct Home_ok: View{
                     .opacity(isTapped ? 1 : 0.5)
                     .frame(height: 1)
                     .padding(.top,10)
+                   // .cornerRadius(20)
             })
             .padding(.top,12)
             .background(Color.gray.opacity(0.09))
-            .cornerRadius(5)
+            .cornerRadius(20)
             
             //Displaying Count...
-            HStack{
-                Spacer()
-                
-                Text("\(manager.text.count)/15")
-                    .font(.caption)
-                    .foregroundColor(.gray)
-                    .padding(.trailing)
-                    .padding(.top,4)
-            }
-
+            //            HStack{
+            //                Spacer()
+            //
+            //                Text("\(manager.text.count)/15")
+            //                    .font(.caption)
+            //                    .foregroundColor(.gray)
+            //                    .padding(.trailing)
+            //                    .padding(.top,4)
+            //            }
+            
         }
         .padding()
     }
 }
 
-class TFManager : ObservableObject {
-    
-   // var maxCount: Int
-    
-    @Published var text = ""{
-        //were going to use didSet Function before assigning the new value...
-        //so that we can check the count...
-        didSet{
-            if text.count > 15 && oldValue.count <= 15{
-                text = oldValue
-            }
-        }
+
+struct AdsEdit_Previews: PreviewProvider {
+    static var previews: some View {
+        AdsEdit(name : "name", maxCount: 10)
     }
 }
+
+//struct Home_ok: View{
+
+////    @State var name: String
+//
+//    @StateObject var manager = TFManager()
+//    // Animation Properites...
+//    @State var isTapped = false
+//    var body: some View {
+//
+//        VStack{
+//            VStack(alignment: .leading, spacing: 4, content: {
+//
+//                HStack(spacing: 15){
+//
+//                    //were going to limit the textfiled length...
+//
+//                    TextField("", text: $manager.text) { (status) in
+//                        // it will fire when textfield is clicked...
+//                        if status{
+//                            withAnimation(.easeIn){
+//                                // moving hint to top..
+//                                isTapped = true
+//                            }
+//                        }
+//                    } onCommit: {
+//                        // it will fire when return button is pressed
+//                        // only if no text typed..
+//                        if manager.text == ""{
+//                            withAnimation(.easeOut){
+//                                isTapped = false
+//                            }
+//                        }
+//                    }
+//                    // Trailing Icon Or Button...
+//
+////                    Button(action: {}, label: {
+////                        Image(systemName: "suit.heart")
+////                            .foregroundColor(.gray)
+//                    Text("\(manager.text.count)/15")
+//                        .font(.caption)
+//                        .foregroundColor(.gray)
+//                        .padding(.trailing)
+//                        .padding(.top,4)
+//             //       })
+//                }
+//                // if tapped...
+//                .padding(.top,isTapped ? 15 : 0)
+//                // ovelay will avoid clicking the textfiled...
+//                // so moving it below the textfield..
+//                .background(
+//
+//                    Text("\(name)")
+//                        .scaleEffect(isTapped ? 0.8 : 1)
+//                        .offset(x: isTapped ? -7 : 0, y: isTapped ? -15 : 0)
+//                        .foregroundColor(isTapped ? .accentColor : .gray)
+//
+//                    ,alignment: .leading
+//
+//                )
+//                .padding(.horizontal)
+//                //Divider Color...
+//                Rectangle()
+//                    .fill(isTapped ? Color.accentColor : Color.gray)
+//                    .opacity(isTapped ? 1 : 0.5)
+//                    .frame(height: 1)
+//                    .padding(.top,10)
+//            })
+//            .padding(.top,12)
+//            .background(Color.gray.opacity(0.09))
+//            .cornerRadius(5)
+//
+//            //Displaying Count...
+////            HStack{
+////                Spacer()
+////
+////                Text("\(manager.text.count)/15")
+////                    .font(.caption)
+////                    .foregroundColor(.gray)
+////                    .padding(.trailing)
+////                    .padding(.top,4)
+////            }
+//
+//        }
+//        .padding()
+//    }
+//}
+//
+//class TFManager : ObservableObject {
+//
+//  // @Published var maxCount: Int
+//
+//    @Published var text = ""{
+//        //were going to use didSet Function before assigning the new value...
+//        //so that we can check the count...
+//        didSet{
+//            if text.count > 15 && oldValue.count <= 15{
+//                text = oldValue
+//            }
+//        }
+//    }
+//}
