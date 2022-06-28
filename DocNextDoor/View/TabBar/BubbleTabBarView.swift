@@ -96,8 +96,8 @@ struct Home: View{
                             })
                         }
                         .frame(width: 25, height: 25)
-                        Text(image)
-                        
+                        //Text(image)
+                        Text(selectedtab == image ? getNom(image: "jhqsv") : "sds")
                     }
                     //On rajoute un spacer quand on a finit de parcourir le tableau image.
                     if image != tabs.last{Spacer(minLength: 0)}
@@ -129,6 +129,24 @@ struct Home: View{
             return Color.brown
         default:
             return Color.blue
+        }
+    }
+    
+    // Permet de choisir le nom de l'icone quand elle est active.. par exemple map = blue
+    
+    func getNom(image: String)->String{
+        
+        switch image {
+        case "list.bullet.circle":
+            return "Offers"
+        case "map":
+            return "Discover"
+        case "bookmark":
+            return "Favorites"
+        case "person.circle":
+            return "Profile"
+        default:
+            return ""
         }
     }
 }
