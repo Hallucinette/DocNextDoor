@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F6B0988285B78E600F06DCC /* DocNextDoorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6B0987285B78E600F06DCC /* DocNextDoorApp.swift */; };
+		4F6B098A285B78E600F06DCC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6B0989285B78E600F06DCC /* ContentView.swift */; };
+		5FC422DA286998D300005A18 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC422D9286998D300005A18 /* MapView.swift */; };
+		5FC422DC2869993A00005A18 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC422DB2869993A00005A18 /* MapViewModel.swift */; };
+		5FC422E028699DE600005A18 /* DataFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC422DF28699DE600005A18 /* DataFile.swift */; };
+		5FC422E22869A06B00005A18 /* AdsSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC422E12869A06B00005A18 /* AdsSearchView.swift */; };
+		5FDF690B286B22BA00CF567E /* TransportsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDF6905286B22BA00CF567E /* TransportsRow.swift */; };
+		5FDF690C286B22BA00CF567E /* medicCenterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDF6906286B22BA00CF567E /* medicCenterList.swift */; };
+		5FDF690D286B22BA00CF567E /* specialtiesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDF6907286B22BA00CF567E /* specialtiesList.swift */; };
+		5FDF690E286B22BA00CF567E /* FiltersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDF6908286B22BA00CF567E /* FiltersView.swift */; };
+		5FDF690F286B22BA00CF567E /* FiltersViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDF6909286B22BA00CF567E /* FiltersViewRow.swift */; };
 		7B0A7ABB286300D900E8DEA6 /* FredokaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B0A7ABA286300D900E8DEA6 /* FredokaOne-Regular.ttf */; };
 		7B31E4982865F1CF00DDBCF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B31E49A2865F1CF00DDBCF8 /* LaunchScreen.storyboard */; };
 		7B393FBE286AEED900430DA5 /* Textfield param.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B393F94286AEED800430DA5 /* Textfield param.swift */; };
@@ -39,6 +50,18 @@
 
 /* Begin PBXFileReference section */
 		4F6B0984285B78E600F06DCC /* DocNextDoor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DocNextDoor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F6B0987285B78E600F06DCC /* DocNextDoorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocNextDoorApp.swift; sourceTree = "<group>"; };
+		4F6B0989285B78E600F06DCC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4F6B098B285B78E700F06DCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5FC422D9286998D300005A18 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		5FC422DB2869993A00005A18 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		5FC422DF28699DE600005A18 /* DataFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataFile.swift; path = ../DataFile.swift; sourceTree = "<group>"; };
+		5FC422E12869A06B00005A18 /* AdsSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsSearchView.swift; sourceTree = "<group>"; };
+		5FDF6905286B22BA00CF567E /* TransportsRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransportsRow.swift; sourceTree = "<group>"; };
+		5FDF6906286B22BA00CF567E /* medicCenterList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = medicCenterList.swift; sourceTree = "<group>"; };
+		5FDF6907286B22BA00CF567E /* specialtiesList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = specialtiesList.swift; sourceTree = "<group>"; };
+		5FDF6908286B22BA00CF567E /* FiltersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiltersView.swift; sourceTree = "<group>"; };
+		5FDF6909286B22BA00CF567E /* FiltersViewRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiltersViewRow.swift; sourceTree = "<group>"; };
 		7B0A7ABA286300D900E8DEA6 /* FredokaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FredokaOne-Regular.ttf"; sourceTree = "<group>"; };
 		7B31E4992865F1CF00DDBCF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B393F94286AEED800430DA5 /* Textfield param.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Textfield param.swift"; sourceTree = "<group>"; };
@@ -98,9 +121,53 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		5FC422DD2869994A00005A18 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				5FC422D9286998D300005A18 /* MapView.swift */,
+				5FC422DB2869993A00005A18 /* MapViewModel.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		5FC422DE28699A5300005A18 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				5FC422E12869A06B00005A18 /* AdsSearchView.swift */,
+				5FDF6902286B22BA00CF567E /* Filters */,
+				5FC422DD2869994A00005A18 /* Map */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		5FDF6902286B22BA00CF567E /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				5FDF6904286B22BA00CF567E /* ChildViews */,
+				5FDF6908286B22BA00CF567E /* FiltersView.swift */,
+				5FDF6909286B22BA00CF567E /* FiltersViewRow.swift */,
+			);
+			path = Filters;
+			sourceTree = "<group>";
+		};
+		5FDF6904286B22BA00CF567E /* ChildViews */ = {
+			isa = PBXGroup;
+			children = (
+				5FDF6905286B22BA00CF567E /* TransportsRow.swift */,
+				5FDF6906286B22BA00CF567E /* medicCenterList.swift */,
+				5FDF6907286B22BA00CF567E /* specialtiesList.swift */,
+			);
+			path = ChildViews;
+			sourceTree = "<group>";
+		};
 		7B393F92286AEED800430DA5 /* DocNextDoor */ = {
 			isa = PBXGroup;
 			children = (
+				4F6B0987285B78E600F06DCC /* DocNextDoorApp.swift */,
+				4F6B0989285B78E600F06DCC /* ContentView.swift */,
+				5FC422DE28699A5300005A18 /* Search */,
+				5FC422DF28699DE600005A18 /* DataFile.swift */,
+				4F6B098B285B78E700F06DCC /* Assets.xcassets */,
 				7B393FB9286AEED900430DA5 /* Data */,
 				7B393F9F286AEED800430DA5 /* Helpers.swift */,
 				7B393FA7286AEED800430DA5 /* Model */,
@@ -284,7 +351,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F6B098A285B78E600F06DCC /* ContentView.swift in Sources */,
+				5FDF690B286B22BA00CF567E /* TransportsRow.swift in Sources */,
+				5FC422DC2869993A00005A18 /* MapViewModel.swift in Sources */,
+				5FC422E22869A06B00005A18 /* AdsSearchView.swift in Sources */,
+				4F6B0988285B78E600F06DCC /* DocNextDoorApp.swift in Sources */,
+				5FC422DA286998D300005A18 /* MapView.swift in Sources */,
+				5FC422DA286998D300005A18 /* MapView.swift in Sources */,
+				5FC422E028699DE600005A18 /* DataFile.swift in Sources */,
 				7B393FD1286AEED900430DA5 /* Profile.swift in Sources */,
+				5FDF690C286B22BA00CF567E /* medicCenterList.swift in Sources */,
 				7B393FCF286AEED900430DA5 /* FiltersViewRow.swift in Sources */,
 				7B393FDC286AEED900430DA5 /* ContentView.swift in Sources */,
 				7B393FD4286AEED900430DA5 /* AdDiscoverUIView.swift in Sources */,
@@ -293,11 +369,14 @@
 				7B393FC3286AEED900430DA5 /* AdsImage.swift in Sources */,
 				7B393FC7286AEED900430DA5 /* Helpers.swift in Sources */,
 				7B393FC5286AEED900430DA5 /* AdsPictogram.swift in Sources */,
+				5FDF690D286B22BA00CF567E /* specialtiesList.swift in Sources */,
+				5FDF690F286B22BA00CF567E /* FiltersViewRow.swift in Sources */,
 				7B393FD6286AEED900430DA5 /* CreationAdUIView.swift in Sources */,
 				7B393FDB286AEED900430DA5 /* DataFile.swift in Sources */,
 				7B393FBE286AEED900430DA5 /* Textfield param.swift in Sources */,
 				7B393FDD286AEED900430DA5 /* DocNextDoorApp.swift in Sources */,
 				7B393FC6286AEED900430DA5 /* AdsPicto.swift in Sources */,
+				5FDF690E286B22BA00CF567E /* FiltersView.swift in Sources */,
 				7B393FD0286AEED900430DA5 /* DetailedAdUIView.swift in Sources */,
 				7B393FCE286AEED900430DA5 /* FiltersView.swift in Sources */,
 				7B393FD2286AEED900430DA5 /* BubbleTabBarView.swift in Sources */,
