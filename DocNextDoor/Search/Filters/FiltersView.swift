@@ -40,13 +40,9 @@ struct FiltersView: View {
                     Group {
 
                         FiltersViewRow(sliderValue: $maxRent, sliderLabel: "Montant maximum du loyer", sliderUnit: "EUR", sliderRangeMin: 0.0, sliderRangeMax: 10_000.0, sliderStep: 50.0).tag("RentSlider")
-                            .tag("rentValue")
                         FiltersViewRow(sliderValue: $maxDistSchool, sliderLabel: "Distance maximum école / crèche", sliderUnit: "Km", sliderRangeMin: 0.0, sliderRangeMax: 100.0, sliderStep: 5.0).tag("DistSchoolSlider")
-                            .tag("schoolValue")
-                        FiltersViewRow(sliderValue: $maxDistIDZ, sliderLabel: "Distance maximum centre commercial / ZAC", sliderUnit: "Km", sliderRangeMin: 0.0, sliderRangeMax: 100.0, sliderStep: 5.0).tag("DistIDZSlider")
-                            .tag("IDZValue")
-                        FiltersViewRow(sliderValue: $maxDistHospital, sliderLabel: "Distance maximum hôpital / maison médicale de garde", sliderUnit: "Km", sliderRangeMin: 0.0, sliderRangeMax: 100.0, sliderStep: 5.0).tag("DistHospitalSlider")
-                            .tag("hospitalValue")
+                        FiltersViewRow(sliderValue: $maxDistIDZ, sliderLabel: "Distance maximum centre commercial / ZAC", sliderUnit: "Km", sliderRangeMin: 0.0, sliderRangeMax: 100.0, sliderStep: 5.0)
+                        FiltersViewRow(sliderValue: $maxDistHospital, sliderLabel: "Distance maximum hôpital / maison médicale de garde", sliderUnit: "Km", sliderRangeMin: 0.0, sliderRangeMax: 100.0, sliderStep: 5.0)
                     }
                     Group {
                         Text("Transports à proximité") // Logos
