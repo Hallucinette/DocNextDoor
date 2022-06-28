@@ -46,11 +46,10 @@ struct Home: View{
     var body: some View{
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)) {
             TabView(selection: $selectedtab){
-                
+                AdDiscoverUIView(ads: ads)
+                    .tag("list.bullet.circle")
                 Color.red //mettre ici la page
                     .ignoresSafeArea(.all, edges: .all)
-                    .tag("list.bullet.circle")
-                AdDiscoverUIView(ads: ads)
                     .tag("map")
                 Color.yellow
                     .ignoresSafeArea(.all, edges: .all)
@@ -131,19 +130,19 @@ struct Home: View{
         }
     }
     
-    // Permet de choisir le nom de l'icone quand elle est active.. par exemple map = blue
+    // Permet de choisir le nom de l'icone quand elle est active.
     
     func getNom(image: String)->String{
         
         switch image {
         case "list.bullet.circle":
-            return "Offers"
+            return "Annonces"
         case "map":
-            return "Discover"
+            return "Découverte"
         case "bookmark":
-            return "Favorites"
+            return "Favoris"
         case "person.circle":
-            return "Profile"
+            return "Profil"
         default:
             return ""
         }
