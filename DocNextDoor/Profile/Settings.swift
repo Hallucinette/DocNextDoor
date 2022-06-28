@@ -26,7 +26,10 @@ struct Settings: View {
                             Toggle( isOn: $profilUser.allowNotif, label: { Text("Notifications")}).tint(Color("Darkblue"))
                             Toggle( isOn: $profilUser.allowContact, label: { Text("J'accepte d'être contacté.e")}).tint(Color("Darkblue"))
                         }//fin section Contact
-                    }.frame(width: 410, height: 310)//fin form
+                        Section (header: Text("Docmuments tramsmis")) {
+                            Text("Changer votre Curriculum Vitæ")
+                        }//fin sction CV
+                    }.frame(width: 410, height: 410)//fin form
                     Text("CHANGER VOTRE IMAGE DE PROFIL").font(.footnote).foregroundColor(Color("Txtgrey")).frame(
                         maxWidth: .infinity,
                         alignment: .leading).frame(width: 325)

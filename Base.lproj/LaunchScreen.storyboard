@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gEh-wa-LZn"/>
+                        <viewControllerLayoutGuide type="bottom" id="miG-UJ-2du"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="UrD-aB-v10">
+                                <rect key="frame" x="62" y="745" width="290" height="4"/>
+                                <color key="tintColor" name="BackG"/>
+                            </progressView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Loading" translatesAutoresizingMaskIntoConstraints="NO" id="vUW-gH-MPG">
+                                <rect key="frame" x="30.5" y="198" width="353" height="178"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="353" id="YUC-2Z-3bz"/>
+                                    <constraint firstAttribute="height" constant="178" id="jrE-bk-pHz"/>
+                                </constraints>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Des opportunités pour lutter" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GnA-Nk-TjQ">
+                                <rect key="frame" x="54" y="560" width="306" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="xyH-dN-VAP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                <color key="textColor" name="Lightblue"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="les déserts médicaux !" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXZ-Al-isJ">
+                                <rect key="frame" x="54" y="591" width="306" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="fgT-jc-YB4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                <color key="textColor" name="Lightblue"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="name" translatesAutoresizingMaskIntoConstraints="NO" id="NW9-ym-aVP">
+                                <rect key="frame" x="25" y="474" width="364" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="364" id="XuJ-qb-RGp"/>
+                                    <constraint firstAttribute="height" constant="85" id="iTk-Hg-lw6"/>
+                                    <constraint firstAttribute="width" secondItem="NW9-ym-aVP" secondAttribute="height" multiplier="364:85" id="pln-2Q-e2P"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" name="Darkblue"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" notEnabled="YES"/>
+                        </accessibility>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="GXZ-Al-isJ" secondAttribute="bottom" constant="272" id="08k-FR-y7C"/>
+                            <constraint firstItem="vUW-gH-MPG" firstAttribute="centerX" secondItem="GnA-Nk-TjQ" secondAttribute="centerX" id="6eO-lF-hMh"/>
+                            <constraint firstAttribute="bottom" secondItem="GnA-Nk-TjQ" secondAttribute="bottom" constant="303" id="HxT-MA-6F5"/>
+                            <constraint firstItem="UrD-aB-v10" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="42" id="J5y-Gk-AcC"/>
+                            <constraint firstItem="vUW-gH-MPG" firstAttribute="top" secondItem="gEh-wa-LZn" secondAttribute="bottom" constant="154" id="KYW-bB-xlD"/>
+                            <constraint firstItem="vUW-gH-MPG" firstAttribute="centerX" secondItem="UrD-aB-v10" secondAttribute="centerX" id="Kw3-Uv-ZJ8"/>
+                            <constraint firstItem="GXZ-Al-isJ" firstAttribute="leading" secondItem="GnA-Nk-TjQ" secondAttribute="leading" id="YRW-NT-s00"/>
+                            <constraint firstItem="GnA-Nk-TjQ" firstAttribute="top" secondItem="NW9-ym-aVP" secondAttribute="bottom" constant="1" id="avL-OP-MwF"/>
+                            <constraint firstItem="GXZ-Al-isJ" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="34" id="bEp-JK-JcK"/>
+                            <constraint firstItem="GnA-Nk-TjQ" firstAttribute="centerX" secondItem="NW9-ym-aVP" secondAttribute="centerX" id="cK5-T9-QIy"/>
+                            <constraint firstItem="vUW-gH-MPG" firstAttribute="centerX" secondItem="GXZ-Al-isJ" secondAttribute="centerX" id="ln1-iI-3X2"/>
+                            <constraint firstItem="vUW-gH-MPG" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="n9I-rs-k9R"/>
+                            <constraint firstItem="miG-UJ-2du" firstAttribute="top" secondItem="UrD-aB-v10" secondAttribute="bottom" constant="113" id="vfq-Th-Ez0"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+    <resources>
+        <image name="Loading" width="3184" height="1607"/>
+        <image name="name" width="458" height="110"/>
+        <namedColor name="BackG">
+            <color red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Darkblue">
+            <color red="0.0" green="0.10980392156862745" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Lightblue">
+            <color red="0.51372549019607838" green="0.82745098039215681" blue="0.83137254901960789" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

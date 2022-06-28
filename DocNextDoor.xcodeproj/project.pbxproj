@@ -22,12 +22,14 @@
 		7B0A7AB12862176A00E8DEA6 /* SavedAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0A7AB02862176A00E8DEA6 /* SavedAds.swift */; };
 		7B0A7AB32862FB2400E8DEA6 /* AdPublished.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0A7AB22862FB2400E8DEA6 /* AdPublished.swift */; };
 		7B0A7AB52862FDF300E8DEA6 /* CVSent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0A7AB42862FDF300E8DEA6 /* CVSent.swift */; };
-		7B0A7AB72862FEB900E8DEA6 /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0A7AB62862FEB900E8DEA6 /* Loading.swift */; };
 		7B0A7ABB286300D900E8DEA6 /* FredokaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B0A7ABA286300D900E8DEA6 /* FredokaOne-Regular.ttf */; };
 		7B0A7ABE2863039D00E8DEA6 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0A7ABD2863039D00E8DEA6 /* Profile.swift */; };
 		7B0A7AC0286318B700E8DEA6 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0A7ABF286318B700E8DEA6 /* Settings.swift */; };
+		7B31E4982865F1CF00DDBCF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B31E49A2865F1CF00DDBCF8 /* LaunchScreen.storyboard */; };
 		7B339C82286494E600696C89 /* CV3.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7B339C81286494E600696C89 /* CV3.pdf */; };
 		7B339C862864BBE200696C89 /* Apply.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B339C852864BBE200696C89 /* Apply.swift */; };
+		7B6C3BF128699EE70037C70A /* Textfield param.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6C3BF028699EE70037C70A /* Textfield param.swift */; };
+		7BE0D0A4285CABF700F2A614 /* Structures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE0D0A3285CABF700F2A614 /* Structures.swift */; };
 		DB236C2B285CB12400DD5E75 /* AdDiscoverUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB236C2A285CB12400DD5E75 /* AdDiscoverUIView.swift */; };
 		DB236C2F2860AC1800DD5E75 /* CreationAdUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB236C2E2860AC1800DD5E75 /* CreationAdUIView.swift */; };
 		DB236C312861C05500DD5E75 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB236C302861C05500DD5E75 /* Helpers.swift */; };
@@ -53,12 +55,17 @@
 		7B0A7AB02862176A00E8DEA6 /* SavedAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedAds.swift; sourceTree = "<group>"; };
 		7B0A7AB22862FB2400E8DEA6 /* AdPublished.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdPublished.swift; sourceTree = "<group>"; };
 		7B0A7AB42862FDF300E8DEA6 /* CVSent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVSent.swift; sourceTree = "<group>"; };
-		7B0A7AB62862FEB900E8DEA6 /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
 		7B0A7ABA286300D900E8DEA6 /* FredokaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FredokaOne-Regular.ttf"; sourceTree = "<group>"; };
 		7B0A7ABD2863039D00E8DEA6 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		7B0A7ABF286318B700E8DEA6 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Settings.swift; path = ../Settings.swift; sourceTree = "<group>"; };
 		7B339C81286494E600696C89 /* CV3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = CV3.pdf; sourceTree = "<group>"; };
 		7B339C852864BBE200696C89 /* Apply.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apply.swift; sourceTree = "<group>"; };
+		7B0A7ABF286318B700E8DEA6 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		7B31E4992865F1CF00DDBCF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7B339C81286494E600696C89 /* CV3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = CV3.pdf; sourceTree = "<group>"; };
+		7B339C852864BBE200696C89 /* Apply.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apply.swift; sourceTree = "<group>"; };
+		7B6C3BF028699EE70037C70A /* Textfield param.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Textfield param.swift"; sourceTree = "<group>"; };
+		7BE0D0A3285CABF700F2A614 /* Structures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structures.swift; sourceTree = "<group>"; };
 		DB236C2A285CB12400DD5E75 /* AdDiscoverUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdDiscoverUIView.swift; sourceTree = "<group>"; };
 		DB236C2E2860AC1800DD5E75 /* CreationAdUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationAdUIView.swift; sourceTree = "<group>"; };
 		DB236C302861C05500DD5E75 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
@@ -82,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				7B0A7ABA286300D900E8DEA6 /* FredokaOne-Regular.ttf */,
+				7B31E49A2865F1CF00DDBCF8 /* LaunchScreen.storyboard */,
 				4F6B0986285B78E600F06DCC /* DocNextDoor */,
 				4F6B0985285B78E600F06DCC /* Products */,
 			);
@@ -108,7 +116,18 @@
 				7B339C81286494E600696C89 /* CV3.pdf */,
 				4F6B098B285B78E700F06DCC /* Assets.xcassets */,
 				4F6B098D285B78E700F06DCC /* Preview Content */,
+				7B31E49B286603B800DDBCF8 /* Apply */,
+				7B31E4922865EE6000DDBCF8 /* Profile */,
+				7BE0D0A3285CABF700F2A614 /* Structures.swift */,
+				5F2EF9D42861D39700CF9C70 /* SlidersView.swift */,
+				4F6B0989285B78E600F06DCC /* ContentView.swift */,
+				5F2EF9D62862411D00CF9C70 /* SlidersViewRow.swift */,
+				7B0A7AB22862FB2400E8DEA6 /* AdPublished.swift */,
+				7B0A7AB02862176A00E8DEA6 /* SavedAds.swift */,
+				DB236C2E2860AC1800DD5E75 /* CreationAdUIView.swift */,
 				DB236C302861C05500DD5E75 /* Helpers.swift */,
+				4F6B098B285B78E700F06DCC /* Assets.xcassets */,
+				4F6B098D285B78E700F06DCC /* Preview Content */,
 			);
 			path = DocNextDoor;
 			sourceTree = "<group>";
@@ -156,6 +175,24 @@
 				5F07CB2C2865EEF3006ECA2A /* FiltersView.swift */,
 			);
 			path = Filters;
+		7B31E4922865EE6000DDBCF8 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				7B339C81286494E600696C89 /* CV3.pdf */,
+				7B0A7ABD2863039D00E8DEA6 /* Profile.swift */,
+				7B0A7ABF286318B700E8DEA6 /* Settings.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		7B31E49B286603B800DDBCF8 /* Apply */ = {
+			isa = PBXGroup;
+			children = (
+				7B339C852864BBE200696C89 /* Apply.swift */,
+				7B0A7AB42862FDF300E8DEA6 /* CVSent.swift */,
+				7B6C3BF028699EE70037C70A /* Textfield param.swift */,
+			);
+			path = Apply;
 			sourceTree = "<group>";
 		};
 		DB236C342861CBE900DD5E75 /* View */ = {
@@ -254,6 +291,7 @@
 				4F6B098F285B78E700F06DCC /* Preview Assets.xcassets in Resources */,
 				7B339C82286494E600696C89 /* CV3.pdf in Resources */,
 				4F6B098C285B78E700F06DCC /* Assets.xcassets in Resources */,
+				7B31E4982865F1CF00DDBCF8 /* LaunchScreen.storyboard in Resources */,
 				7B0A7ABB286300D900E8DEA6 /* FredokaOne-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,6 +306,8 @@
 				4FE0C0212866420600F1C855 /* AdsPicto.swift in Sources */,
 				4F6B098A285B78E600F06DCC /* ContentView.swift in Sources */,
 				4FE0C0272866427A00F1C855 /* AdsPictogram.swift in Sources */,
+				7B6C3BF128699EE70037C70A /* Textfield param.swift in Sources */,
+				5F2EF9D52861D39700CF9C70 /* SlidersView.swift in Sources */,
 				7B339C862864BBE200696C89 /* Apply.swift in Sources */,
 				5F07CB2A2865ECDC006ECA2A /* FiltersViewRow.swift in Sources */,
 				7B0A7AB32862FB2400E8DEA6 /* AdPublished.swift in Sources */,
@@ -293,6 +333,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7B31E49A2865F1CF00DDBCF8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7B31E4992865F1CF00DDBCF8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		4F6B0990285B78E700F06DCC /* Debug */ = {
@@ -425,6 +476,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -436,7 +488,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -456,6 +508,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -467,7 +520,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
