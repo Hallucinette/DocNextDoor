@@ -41,7 +41,6 @@
 		7B393FDB286AEED900430DA5 /* DataFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B393FBA286AEED900430DA5 /* DataFile.swift */; };
 		7B393FDC286AEED900430DA5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B393FBB286AEED900430DA5 /* ContentView.swift */; };
 		7B393FDD286AEED900430DA5 /* DocNextDoorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B393FBC286AEED900430DA5 /* DocNextDoorApp.swift */; };
-		7B393FDE286AEED900430DA5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B393FBD286AEED900430DA5 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,7 +79,6 @@
 		7B393FBA286AEED900430DA5 /* DataFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataFile.swift; sourceTree = "<group>"; };
 		7B393FBB286AEED900430DA5 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7B393FBC286AEED900430DA5 /* DocNextDoorApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocNextDoorApp.swift; sourceTree = "<group>"; };
-		7B393FBD286AEED900430DA5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,7 +127,6 @@
 				7B393FB9286AEED900430DA5 /* Data */,
 				7B393FBB286AEED900430DA5 /* ContentView.swift */,
 				7B393FBC286AEED900430DA5 /* DocNextDoorApp.swift */,
-				7B393FBD286AEED900430DA5 /* Info.plist */,
 			);
 			path = DocNextDoor;
 			sourceTree = "<group>";
@@ -292,7 +289,6 @@
 			files = (
 				7B393FC9286AEED900430DA5 /* Preview Assets.xcassets in Resources */,
 				7B393FCB286AEED900430DA5 /* CV3.pdf in Resources */,
-				7B393FDE286AEED900430DA5 /* Info.plist in Resources */,
 				7B31E4982865F1CF00DDBCF8 /* LaunchScreen.storyboard in Resources */,
 				7B393FC8286AEED900430DA5 /* Assets.xcassets in Resources */,
 				7B0A7ABB286300D900E8DEA6 /* FredokaOne-Regular.ttf in Resources */,
