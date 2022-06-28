@@ -11,7 +11,7 @@ import SwiftUI
 struct DocNextDoorApp: App {
     var body: some Scene {
         WindowGroup {
-            //ContentView()
+            BubbleTabBarView()
         }
     }
 }
