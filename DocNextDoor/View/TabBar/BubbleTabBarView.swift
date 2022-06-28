@@ -96,8 +96,7 @@ struct Home: View{
                             })
                         }
                         .frame(width: 25, height: 25)
-                        //Text(image)
-                        Text(selectedtab == image ? getNom(image: "jhqsv") : "sds")
+                        Text(selectedtab == image ? getNom(image: image) : getNom(image: image))
                     }
                     //On rajoute un spacer quand on a finit de parcourir le tableau image.
                     if image != tabs.last{Spacer(minLength: 0)}
