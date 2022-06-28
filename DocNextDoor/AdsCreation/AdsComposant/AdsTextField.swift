@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AdsTextField: View {
+    @State var Title: String
     @State var name: String
     @State var maxCount: Int
     @State var text = ""{
@@ -20,81 +21,34 @@ struct AdsTextField: View {
             }
         }
     }
-    //@StateObject var manager = TFManager()
     
     // Animation Properites...
     @State var isTapped = false
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Name")
-            HStack {
-                TextField("name", text: $text)
-                   // .background(Color.gray.opacity(0.09))
+            Text(Title)
+                .foregroundColor(.gray)
+               // .font(Font.custom("name-of-font", size: 20))
+            HStack(alignment: .center , spacing: 10, content: {
+                TextField(Title, text: $text)
                 
                 Text("\(text.count)/\(maxCount)")
                     .font(.caption)
                     .foregroundColor(.gray)
                     .padding(.trailing)
                     .padding(.top,4)
-            }
-//            .background(Color.gray.opacity(0.09))
+                
+            })
             .textFieldStyle(RoundedBorderTextFieldStyle())
-            .frame(width: 250, height: 50)
-//            .background(Color.gray.opacity(0.09))
-//            .cornerRadius(20)
+            .frame(width: 350, height: 20)
+
         }
-        .padding()
+        .font(Font.custom("name-of-font", size: 20))
     }
 }
-//        VStack(alignment: .leading, spacing: 4, content: {
-//               // Rectangle({
-//                HStack{
-//                    TextField("", text: $text) { (status) in
-//
-//                        if status{
-//                        withAnimation(){
-////                                // moving hint to top..
-//                              // name = ""
-//                                isTapped = true
-//                            }
-//                        }
-//                    } onCommit: {
-////                        // it will fire when return button is pressed
-////                        // only if no text typed..
-//                        if text == ""{
-//                            withAnimation(){
-//                                isTapped = false
-//                            }
-//                        }
-//                   }
-//
-//                        .background(
-//
-//                            Text("\(name)")
-//                                .foregroundColor(isTapped ? .gray : .gray)
-//
-//                            ,alignment: .leading
-//
-//                        )
-//                        .frame(width: 250, height: 50)
-//
-//                    Text("\(text.count)/\(maxCount)")
-//                        .font(.caption)
-//                        .foregroundColor(.gray)
-//                        .padding(.trailing)
-//                        .padding(.top,4)
-//                }
-//            })
-//        .padding(.horizontal ,20)
-//                .background(Color.gray.opacity(0.09))
-//                .cornerRadius(20)
-//        }
-//       // .padding(.leading)
-//    }
-//}
 
 struct AdsTextField_Previews: PreviewProvider {
     static var previews: some View {
-        AdsTextField(name: "test", maxCount: 15)
+        AdsTextField(Title: "zip", name: "test", maxCount: 15)
     }
 }

@@ -18,24 +18,24 @@ struct AdsCreatV2: View {
 
 
     var body: some View {
-        NavigationView{
- //           ScrollView(.vertical){
-            VStack(){
-           //     Adsimage()
-          //      VStack(){
-     //       List{
-                TextField("Titre : ", text: $ads[0].title)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-//                    .keyboardType(.numberPad)
-              //      AdsEdit(name: "Test", maxCount: 17)
-  //              }
+        NavigationView(){
+            ScrollView{
+                Spacer(minLength: 60)
+                VStack(spacing: 12.0){
+                AdsTextField(Title: "Titre", name: ads[0].title, maxCount: 10)
+                AdsTextField(Title: "Spécialité", name: ads[0].speciality, maxCount: 10)
+                AdsTextField(Title: "Ville", name: ads[0].town, maxCount: 15)
+                AdsTextField(Title: "Code Postal", name: ads[0].zipCode, maxCount: 5)
+                AdsTextField(Title: "Nom", name: ads[0].contact.name, maxCount: 10)
+                AdsTextField(Title: "Mail", name: ads[0].contact.mail, maxCount: 30)
+                
                 }
                 .navigationTitle("Crée votre annonce")
                 .navigationBarTitleDisplayMode(.inline)
                 }
             }
 //        }
-//  }
+  }
 }
 
 struct AdsCreatV2_Previews: PreviewProvider {
