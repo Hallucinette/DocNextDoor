@@ -38,14 +38,14 @@ struct PDFKitView: UIViewRepresentable {
 }
 
 struct Profile: View {
-    @State var profilUser : ProfilUser
+    @Binding var profilUser : ProfilUser
     var body: some View {
         ZStack { //background
             Color("BackG").ignoresSafeArea()
             VStack {
                 HStack {
                     Spacer()
-                    NavigationLink(destination: Settings(profilUser: profilUser)){ //add param profilUser
+                    NavigationLink(destination: Settings(profilUser: $profilUser)){ //add param profilUser
                         Image(systemName: "gearshape").foregroundColor(Color("Darkblue")).font(.system(size: 30))
                     }//fin navigation view
                 }.frame(width: 370)//fin Hstack param
@@ -94,9 +94,10 @@ struct Profile: View {
         }//fin ZStack background
     }//fin body
 }//fin Profile view
-
+/*
 struct Profile_Previews: PreviewProvider {
     static var previews: some View {
-        Profile(profilUser: .init(isDoc: true, name: "Isabella Zoe", pp: "Female3", speciality: "Médecin généraliste", description: "J'ai fait l'école de médecine de Marseille, dont je suis diplomée depuis 2020.", contact: .init(name:  "Annie lhation", mail: "isabella.zoe@gmail.com", phone: "06 62 80 75 18"), allowContact: true, allowNotif: true, adsApplied: [], adsFav: [Advertisement.init( title: "Médecin à Plumebec", town: "Plumebec", zipCode: "51420", description: "En Morbihan Sud, la commune de Plumelec se situant à 20 min de Vannes,1 heure de Rennes et 1heure30 de Nantes recherche un médecin généraliste. Cette commune de 2750 habitants concilie tranquillité de la campagne, vitalité économique et touristique . En effet Plumelec regroupe tous les services nécessaire pour bien y vivre : nombreux artisans et commerces; nombreuses associations; nombreux équipements sportifs et culturels; un nouveau centre de secours comptant 33 pompiers volontaires ainsi qu'un pôle médical regroupant plusieurs professionnels de la santé : 1 médecin, un pédicure podologue, 4 infirmières, 3 kinés et un orthophoniste. Hors pôle médical la commune compte également un dentiste, un ostéopathe, un service associatif de soins et de maintien à domicile, un service", contact: .init(name: "Mairie de PLUMELEC", mail: ""), pict: [""], speciality: "Médecin généraliste", patientsList: true, accomodationProvided: true), Advertisement.init( title: "Médecin à Tours", town: "Tours", zipCode: "XXXXX", description: "En Morbihan Sud, la commune de Plumelec se situant à 20 min de Vannes,1 heure de Rennes et 1heure30 de Nantes recherche un médecin généraliste. Cette commune de 2750 habitants concilie tranquillité de la campagne, vitalité économique et touristique . En effet Plumelec regroupe tous les services nécessaire pour bien y vivre : nombreux artisans et commerces; nombreuses associations; nombreux équipements sportifs et culturels; un nouveau centre de secours comptant 33 pompiers volontaires ainsi qu'un pôle médical regroupant plusieurs professionnels de la santé : 1 médecin, un pédicure podologue, 4 infirmières, 3 kinés et un orthophoniste. Hors pôle médical la commune compte également un dentiste, un ostéopathe, un service associatif de soins et de maintien à domicile, un service", contact: .init(name: "Mairie de PLUMELEC", mail: ""), pict: [""], speciality: "Médecin généraliste", patientsList: true, accomodationProvided: true)])).previewDevice(PreviewDevice(rawValue: "iPhone 13"))
+        Profile(profilUser: profilUser).previewDevice(PreviewDevice(rawValue: "iPhone 13"))
     }
 }
+*/

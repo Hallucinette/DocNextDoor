@@ -8,7 +8,7 @@ import SwiftUI
 import Foundation
 
 struct SavedAds : View {
-    @State var profilUser : ProfilUser //a passer en binding ?
+    @Binding var profilUser : ProfilUser //a passer en binding ?
     @State var pickerList = 0
     
     func deleteAdF(ad: Advertisement) {
@@ -126,7 +126,7 @@ struct SavedAds : View {
         }//fin ZStack background color
     }//end body
 }//end Favorites View
-
+/*
 struct SavedAds_Previews: PreviewProvider {
     static var previews: some View {
         //SavedAds(profilUser: <#ProfilUser#>)
@@ -134,3 +134,4 @@ struct SavedAds_Previews: PreviewProvider {
 }
 
 }
+*/
