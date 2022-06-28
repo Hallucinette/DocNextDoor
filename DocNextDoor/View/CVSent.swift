@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CVSent: View {
+    //@Binding var profilUser : ProfilUser
     var body: some View {
         ZStack { //background
             Color("BackG").ignoresSafeArea()
@@ -19,8 +20,13 @@ struct CVSent: View {
                 Text("Bientöt le poste fait pour vous !").font(.title3).italic().multilineTextAlignment(.center).foregroundColor(Color("Txtgrey")).frame(width: 350)
                 Rectangle().frame(width: 80, height: 3, alignment: .center).foregroundColor(Color("Lightblue")).padding(20)
                 Spacer()
-            }
-        }
+                Spacer()
+            }//fin VStack
+        }.onTapGesture {
+            /*NavigationLink {
+                SavedAds(profilUser: profilUser)
+            }//fin navlink*/
+        }//fin on tap
     }
 }
 

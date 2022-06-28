@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AdPublished: View {
+    //@Binding var profilUser : ProfilUser
     var body: some View {
         ZStack { //background
             Color("BackG").ignoresSafeArea()
@@ -19,8 +20,13 @@ struct AdPublished: View {
                 Text("Bientöt le candidat fait pour vous !").font(.title3).italic().multilineTextAlignment(.center).foregroundColor(Color("Txtgrey")).frame(width: 350)
                 Rectangle().frame(width: 80, height: 3, alignment: .center).foregroundColor(Color("Lightblue")).padding(20)
                 Spacer()
-            }
-        }
+                Spacer()
+            }//fin Vastck
+        }.onTapGesture {
+            /*NavigationLink {
+                ManageAds(profilUser: profilUser)
+            }//fin navlink*/
+        }//fin on tap
     }
 }
 

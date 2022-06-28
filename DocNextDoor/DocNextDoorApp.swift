@@ -11,7 +11,6 @@ import SwiftUI
 struct DocNextDoorApp: App {
     var body: some Scene {
         WindowGroup {
-            Loading()
             //ContentView()
         }
     }
