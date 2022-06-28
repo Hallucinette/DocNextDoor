@@ -55,7 +55,7 @@ struct Apply: View {
                                  .foregroundColor(.white)
                                  .padding(20)
                      }
-                 }
+                 }//fin button
                         
                         //a check si pas dans fav = eviter les doublons ni dans ad applied avant = si pas deja postuler
                         
