@@ -50,6 +50,12 @@ struct AdsSearchView: View {
             }
             .pickerStyle(.segmented)
             //            }
+            
+            if researchMode == 0 {
+                FiltersView()
+            } else {
+                medicCenterList()
+            }
         }
         .navigationTitle("Annonces")
         //            .navigationTitle("Filtres")
