@@ -15,6 +15,7 @@
 		4FB38B4C286B37B1002ECF0D /* AdsCreatV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB38B48286B37B1002ECF0D /* AdsCreatV2.swift */; };
 		4FB38B4E286B3867002ECF0D /* AdsImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB38B4D286B3867002ECF0D /* AdsImage.swift */; };
 		4FB38B50286B387A002ECF0D /* AdsPicto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB38B4F286B387A002ECF0D /* AdsPicto.swift */; };
+		4FB38B52286C349A002ECF0D /* SendMail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB38B51286C349A002ECF0D /* SendMail.swift */; };
 		5FC422DA286998D300005A18 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC422D9286998D300005A18 /* MapView.swift */; };
 		5FC422DC2869993A00005A18 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC422DB2869993A00005A18 /* MapViewModel.swift */; };
 		5FC422E22869A06B00005A18 /* AdsSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC422E12869A06B00005A18 /* AdsSearchView.swift */; };
@@ -54,6 +55,7 @@
 		4FB38B48286B37B1002ECF0D /* AdsCreatV2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdsCreatV2.swift; sourceTree = "<group>"; };
 		4FB38B4D286B3867002ECF0D /* AdsImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdsImage.swift; sourceTree = "<group>"; };
 		4FB38B4F286B387A002ECF0D /* AdsPicto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdsPicto.swift; sourceTree = "<group>"; };
+		4FB38B51286C349A002ECF0D /* SendMail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMail.swift; sourceTree = "<group>"; };
 		5FC422D9286998D300005A18 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		5FC422DB2869993A00005A18 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		5FC422E12869A06B00005A18 /* AdsSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsSearchView.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				4FB38B45286B37B1002ECF0D /* Button_Annonce.swift */,
+				4FB38B51286C349A002ECF0D /* SendMail.swift */,
 				4FB38B4D286B3867002ECF0D /* AdsImage.swift */,
 				4FB38B4F286B387A002ECF0D /* AdsPicto.swift */,
 				4FB38B46286B37B1002ECF0D /* ImagePicker.swift */,
@@ -351,6 +354,7 @@
 				7B393FDB286AEED900430DA5 /* DataFile.swift in Sources */,
 				4FB38B4A286B37B1002ECF0D /* ImagePicker.swift in Sources */,
 				7B393FBE286AEED900430DA5 /* Textfield param.swift in Sources */,
+				4FB38B52286C349A002ECF0D /* SendMail.swift in Sources */,
 				5FDF690E286B22BA00CF567E /* FiltersView.swift in Sources */,
 				7B393FD0286AEED900430DA5 /* DetailedAdUIView.swift in Sources */,
 				4FB38B49286B37B1002ECF0D /* Button_Annonce.swift in Sources */,

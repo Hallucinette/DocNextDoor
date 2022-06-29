@@ -165,7 +165,7 @@ struct Settings: View {
 }//fin view settings
 /*struct Settings_Previews: PreviewProvider {
     static var previews: some View {
-        //Settings(profilUser:  ).previewDevice(PreviewDevice(rawValue: "iPhone 13"))
+        Settings(profilUser:  ).previewDevice(PreviewDevice(rawValue: "iPhone 13"))
     }
 }
 */
