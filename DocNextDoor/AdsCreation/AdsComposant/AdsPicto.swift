@@ -14,8 +14,8 @@ import SwiftUI
 struct AdsPicto: View {
     
   //  @State var test: ColoredIcons
-    var nameIcon: String = "tram.circle"
-    var nameIconColored: String = "figure.wave"
+    var nameIcon: String = "metroG"
+    var nameIconColored: String = "metroC"
     @State var isColored: Bool
    // @State var newIcon: String
 
@@ -33,12 +33,15 @@ struct AdsPicto: View {
                 VStack{
                    // Image(systemName: newIcon)
                     if isColored == false {
-                        Image(systemName: nameIcon)
+                        Image(nameIcon)
+                            .resizable()
+                            .
+                            .padding()
                         //isColored = true
                     }
                     else
                     {
-                        Image(systemName: nameIconColored)
+                        Image(nameIconColored)
                       //  isColored = false
                     }
                 }

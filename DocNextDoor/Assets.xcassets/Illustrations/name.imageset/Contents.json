@@ -1,7 +1,11 @@
 {
   "images" : [
     {
+<<<<<<< HEAD
       "filename" : "Capture d’écran 2022-06-27 à 00.47.47.png",
+=======
+      "filename" : "Capture d’écran 2022-06-27 à 00.47.47-1.png",
+>>>>>>> 9e62694864d58eb86cc39391c6ddbbb6d381af4d
       "idiom" : "universal",
       "scale" : "1x"
     },
