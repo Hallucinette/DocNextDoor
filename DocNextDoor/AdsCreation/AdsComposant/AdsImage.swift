@@ -25,14 +25,13 @@ struct Adsimage: View {
                             .font(.title)
                             .padding()
                             .foregroundColor(.white)
-                            .background(Color.blue)
+                            .background(Color("Lightblue"))
                             .cornerRadius(40)
                 }
             }
             .padding(.top, 150)
             .padding(.leading, 280)
         }
-            
     }
 }
 

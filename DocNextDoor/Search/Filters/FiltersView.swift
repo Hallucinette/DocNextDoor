@@ -38,11 +38,11 @@ struct FiltersView: View {
                         Text("Logement mis à disposition")  // toggleswitch
                     }
                     Group {
-                        FiltersViewRow(sliderValue: maxRent, sliderLabel: "Montant maximum du loyer", sliderUnit: "EUR", sliderRangeMin: 0.0, sliderRangeMax: 10_000.0, sliderStep: 50.0).tag("RentSlider")
-                        FiltersViewRow(sliderValue: maxDistSchool, sliderLabel: "Distance maximum école / crèche", sliderUnit: "Km", sliderRangeMin: 0.0, sliderRangeMax: 100.0, sliderStep: 5.0).tag("DistSchoolSlider")
-                        FiltersViewRow(sliderValue: maxDistIDZ, sliderLabel: "Distance maximum centre commercial / ZAC", sliderUnit: "Km", sliderRangeMin: 0.0, sliderRangeMax: 100.0, sliderStep: 5.0).tag("DistIDZSlider")
-                        FiltersViewRow(sliderValue: maxDistHospital, sliderLabel: "Distance maximum hôpital / maison médicale de garde", sliderUnit: "Km", sliderRangeMin: 0.0, sliderRangeMax: 100.0, sliderStep: 5.0).tag("DistHospitalSlider")
-                        
+
+                        FiltersViewRow(sliderValue: $maxRent, sliderLabel: "Montant maximum du loyer", sliderUnit: "EUR", sliderRangeMin: 0.0, sliderRangeMax: 10_000.0, sliderStep: 50.0).tag("RentSlider")
+                        FiltersViewRow(sliderValue: $maxDistSchool, sliderLabel: "Distance maximum école / crèche", sliderUnit: "Km", sliderRangeMin: 0.0, sliderRangeMax: 100.0, sliderStep: 5.0).tag("DistSchoolSlider")
+                        FiltersViewRow(sliderValue: $maxDistIDZ, sliderLabel: "Distance maximum centre commercial / ZAC", sliderUnit: "Km", sliderRangeMin: 0.0, sliderRangeMax: 100.0, sliderStep: 5.0)
+                        FiltersViewRow(sliderValue: $maxDistHospital, sliderLabel: "Distance maximum hôpital / maison médicale de garde", sliderUnit: "Km", sliderRangeMin: 0.0, sliderRangeMax: 100.0, sliderStep: 5.0)
                     }
                     Group {
                         Text("Transports à proximité") // Logos
@@ -51,7 +51,7 @@ struct FiltersView: View {
                 }
                 .padding()
                 .navigationTitle("Filtres")
-                Button {
+                Button{ //(alignment: .center)
                     // apply and save userFilters
                     //                .onTapGesture {
                     //                       print("Filtres appliqués")
@@ -61,11 +61,12 @@ struct FiltersView: View {
                         .background(.blue)
                         .foregroundColor(.white)
                         .clipShape(Capsule())
-                }
+                } // .alignment(center)
                 
                 //            Text("sliderValue.maxRent:\(sliderValue.maxRent)") //aTest
                 //            var aTest = RentSlider.maxRent
                 //            Text("aTest:\(aTest)")
+                Text("La valeur de maxRent est de: \(maxRent)") //rentValue.maxRent, $maxRent.sliderValue
             }
         }
     }
@@ -73,7 +74,9 @@ struct FiltersView: View {
 
 struct FiltersView_Previews: PreviewProvider {
     static var previews: some View {
-        FiltersView()
+        NavigationView{
+            FiltersView()
+        }
     }
 }
 

@@ -24,7 +24,7 @@ struct AdDiscoverUIView: View {
                         Spacer().frame(width : 5)
                         
                         HStack{
-                            NavigationLink(destination:AdsCreat()) {
+                            NavigationLink(destination: AdsCreatV2()) {
                                 Image(systemName: "pencil.circle")
                                     .resizable()
                                     .renderingMode(.template)

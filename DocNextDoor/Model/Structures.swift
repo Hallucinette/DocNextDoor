@@ -62,8 +62,9 @@ struct Advertisement : Identifiable {
     //    var adShowing: Bool = true
 }
 
-struct ProfilUser : Identifiable {
+struct ProfilUser : Identifiable  {
     var id = UUID()
+    
     let isDoc : Bool //gérer le double profil commune/docteur ??
     
     let name : String

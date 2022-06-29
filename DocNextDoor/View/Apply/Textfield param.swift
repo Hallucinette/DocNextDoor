@@ -90,3 +90,17 @@ struct TxtFieldApply: View{
 }
 
 
+class TFManager : ObservableObject {
+
+  // @Published var maxCount: Int
+
+    @Published var text = ""{
+        //were going to use didSet Function before assigning the new value...
+        //so that we can check the count...
+        didSet{
+            if text.count > 15 && oldValue.count <= 15{
+                text = oldValue
+            }
+        }
+    }
+}

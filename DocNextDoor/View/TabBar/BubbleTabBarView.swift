@@ -26,12 +26,11 @@ struct BubbleTabBarView: View {
 
 struct BubbleTabBarView_Previews: PreviewProvider {
     static var previews: some View {
-        BubbleTabBarView()
+        BubbleTabBarView().environmentObject(ProfileControl())
     }
 }
 
 struct Home: View{
-    
     @State var selectedtab = "list.bullet.circle"
     
     init(){
@@ -42,20 +41,20 @@ struct Home: View{
     @State var xAxis: CGFloat = 0
     
     @Namespace var animation
-    
+    @EnvironmentObject var profilControl : ProfileControl
     var body: some View{
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)) {
             TabView(selection: $selectedtab){
+                
                 AdDiscoverUIView(ads: ads)
-                    .tag("list.bullet.circle")
-                Color.red //mettre ici la page
                     .ignoresSafeArea(.all, edges: .all)
+                    .tag("list.bullet.circle")
+                Color.blue
                     .tag("map")
-                Color.yellow
+                SavedAds().navigationTitle("").navigationBarHidden(true).navigationBarBackButtonHidden(true)
                     .ignoresSafeArea(.all, edges: .all)
                     .tag("bookmark")
-                Color.brown
-                    .ignoresSafeArea(.all, edges: .all)
+                Profile().navigationTitle("").navigationBarHidden(true).navigationBarBackButtonHidden(true)
                     .tag("person.circle")
             }
             
@@ -84,7 +83,7 @@ struct Home: View{
                                     .padding(selectedtab == image ? 15 : 0)
                                     .background(Color.white.opacity(selectedtab == image ? 1 : 0) .clipShape(Circle()))
                                     .matchedGeometryEffect(id: image, in:animation)
-                                    .offset(x: selectedtab == image ? (reader.frame(in: .global).minX - reader.frame(in: .global).midX) : 0,y: selectedtab == image ? -50 : 0)
+                                    .offset(x: selectedtab == image ? (reader.frame(in: .global).minX+20 - reader.frame(in: .global).midX+20) : 20,y: selectedtab == image ? -50 : 0)
                             })
                             .onAppear(perform: {
                                 
@@ -94,11 +93,13 @@ struct Home: View{
                                 
                             })
                         }
-                        .frame(width: 25, height: 25)
-                        Text(selectedtab == image ? getNom(image: image) : getNom(image: image))
+                        .frame(width: 75, height: 40).ignoresSafeArea()
+                        Text(selectedtab == image ? getNom(image: image) : getNom(image: image)).font(.footnote).foregroundColor(Color("Txtgrey")).padding(.bottom, 4)
+
+                        
                     }
                     //On rajoute un spacer quand on a finit de parcourir le tableau image.
-                    if image != tabs.last{Spacer(minLength: 0)}
+                    if image != tabs.last{Spacer(minLength: 10)}
                 }
             }
             // rectangle blanc derriere la tab bar
@@ -107,7 +108,7 @@ struct Home: View{
             .background(Color.white.clipShape(CustomShape(xAxis: xAxis)).cornerRadius(12)) // rounded
             .padding(.horizontal)
             // Bottom Edge...
-            .padding(.bottom,34)
+            //.padding(.bottom,34)
         }
         .ignoresSafeArea(.all, edges: .bottom)
     }
@@ -118,33 +119,34 @@ struct Home: View{
         
         switch image {
         case "list.bullet.circle":
-            return Color.red
+            return Color("Darkblue")
         case "map":
-            return Color.blue
+            return Color("Darkblue")
         case "bookmark":
-            return Color.yellow
+            return Color("Darkblue")
         case "person.circle":
-            return Color.brown
+            return Color("Darkblue")
         default:
-            return Color.blue
+            return Color("Darkblue")
         }
     }
     
     // Permet de choisir le nom de l'icone quand elle est active.
-    
-    func getNom(image: String)->String{
-        
-        switch image {
-        case "list.bullet.circle":
-            return "Annonces"
-        case "map":
-            return "Découverte"
-        case "bookmark":
-            return "Favoris"
-        case "person.circle":
-            return "Profil"
-        default:
-            return ""
+
+        func getNom(image: String)->String{
+
+            switch image {
+            case "list.bullet.circle":
+                return "A découvrir"
+            case "map":
+                return "Recherche"
+            case "bookmark":
+                return "Favoris"
+            case "person.circle":
+                return "Profil"
+            default:
+                return ""
+            }
         }
     }
 }
@@ -175,9 +177,9 @@ struct CustomShape : Shape {
             path.addLine(to: CGPoint(x: rect.width, y: rect.height))
             path.addLine(to: CGPoint(x: 0, y: rect.height))
             
-            let center = xAxis
+            let center = xAxis+35
             
-            path.move(to: CGPoint(x: center - 50, y: 0))
+            path.move(to: CGPoint(x: center - 70, y: 0))
             
             //cote gauche
             let to1 = CGPoint(x: center, y: 35)
@@ -185,7 +187,7 @@ struct CustomShape : Shape {
             let control2 = CGPoint(x: center - 25, y: 35)
             
             //cote droit
-            let to2 = CGPoint(x: center + 50, y: 0)
+            let to2 = CGPoint(x: center + 70, y: 0)
             let control3 = CGPoint(x: center + 25, y: 35)
             let control4 = CGPoint(x: center + 25, y: 0)
             
@@ -194,3 +196,5 @@ struct CustomShape : Shape {
         }
     }
 }
+
+

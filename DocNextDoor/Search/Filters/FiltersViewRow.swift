@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FiltersViewRow: View {
     
-    @State var sliderValue: Double
+    @Binding var sliderValue: Double
     var sliderLabel: String
     var sliderUnit: String
     var sliderRangeMin: Double
@@ -31,6 +31,6 @@ struct FiltersViewRow: View {
 
 struct FiltersViewRow_Previews: PreviewProvider {
     static var previews: some View {
-        FiltersViewRow(sliderValue: 0.0, sliderLabel: "Descriptif", sliderUnit: "EUR", sliderRangeMin: 0.0, sliderRangeMax: 10_000.0, sliderStep: 50.0)
+        FiltersViewRow(sliderValue: .constant(0.0), sliderLabel: "Descriptif", sliderUnit: "EUR", sliderRangeMin: 0.0, sliderRangeMax: 10_000.0, sliderStep: 50.0)
     }
 }
