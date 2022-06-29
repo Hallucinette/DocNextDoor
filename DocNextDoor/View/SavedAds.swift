@@ -86,9 +86,9 @@ struct SavedAds : View {
                                         }.frame(
                                             maxWidth: .infinity,
                                             alignment: .leading)
-                                        HStack {
+                                        /*HStack {
                                             Text(ad.description).foregroundColor(Color("Txtgrey")).font(.footnote).padding(3)
-                                        }.frame(height: 50)
+                                        }.frame(height: 50)*/
                                     }//fin Vsatck txt liste = titre, specialités, ville + CP et debut description
                                     .navigationTitle("").navigationBarHidden(true)
                                 }//fin navigationLink

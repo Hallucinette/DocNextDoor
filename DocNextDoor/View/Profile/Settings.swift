@@ -6,6 +6,8 @@
 //
 import SwiftUI
 
+
+
 struct Settings: View {
     @EnvironmentObject var profilControl : ProfileControl
     var body: some View {
@@ -16,7 +18,8 @@ struct Settings: View {
                     Text("Paramètres").bold().font(.title2).padding(2)
                     Rectangle().frame(width: 600, height: 3, alignment: .center).foregroundColor(Color("Lightblue")).padding(5)
                 }//fin Vstack Header
-                    Form {
+                ScrollView {
+                    List {
                         Section (header: Text("Paramètres du compte")) {
                             Text("Changer votre mot de passe")
                             Text("Changer votre mail")
@@ -28,7 +31,8 @@ struct Settings: View {
                         Section (header: Text("Docmuments tramsmis")) {
                             Text("Changer votre Curriculum Vitæ")
                         }//fin sction CV
-                    }.frame(width: 410, height: 410)//fin form
+                    }.onAppear { UITableView.appearance().isScrollEnabled = false }
+                        .onDisappear{ UITableView.appearance().isScrollEnabled = true }.frame(width: 410, height: 410)//fin form
                     Text("CHANGER VOTRE IMAGE DE PROFIL").font(.footnote).foregroundColor(Color("Txtgrey")).frame(
                         maxWidth: .infinity,
                         alignment: .leading).frame(width: 325)
@@ -159,13 +163,16 @@ struct Settings: View {
                     }//fin Hstack male
                 }.frame(width: 365, height: 180).background(Color(.white)).cornerRadius(15)//fin Vstack PP
                 Spacer()
+                    Rectangle().foregroundColor(Color("BackG")).frame(width: 100, height: 150)
+                }.frame(height: 670, alignment: .leading)//fin scroll view
+                Spacer()
             }//fin VSTAck full view
         }//fin Background ZStack
     }//fin body
 }//fin view settings
-/*struct Settings_Previews: PreviewProvider {
+struct Settings_Previews: PreviewProvider {
     static var previews: some View {
-        //Settings(profilUser:  ).previewDevice(PreviewDevice(rawValue: "iPhone 13"))
+        Settings().environmentObject(ProfileControl()).previewDevice(PreviewDevice(rawValue: "iPhone 13"))
     }
 }
-*/
+
