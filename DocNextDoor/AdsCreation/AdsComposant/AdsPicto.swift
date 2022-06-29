@@ -9,15 +9,12 @@ import SwiftUI
 
 //Creation des boutons Transport
 
-//   var transport : [ColoredIcons]? //avec [Bool = True]
-
 struct AdsPicto: View {
     
-  //  @State var test: ColoredIcons
-    var nameIcon: String = "tram.circle"
-    var nameIconColored: String = "figure.wave"
+    var nameIcon: String
+    var nameIconColored: String
     @State var isColored: Bool
-   // @State var newIcon: String
+
 
     
     var body: some View {
@@ -31,14 +28,19 @@ struct AdsPicto: View {
                 }
             } label: {
                 VStack{
-                   // Image(systemName: newIcon)
                     if isColored == false {
-                        Image(systemName: nameIcon)
+                        Image(nameIcon)
+
+                            .resizable()
+                          //  .frame(width: 60, height: 60)
+                            .frame(width: 50, height: 60)
                         //isColored = true
                     }
                     else
                     {
-                        Image(systemName: nameIconColored)
+                        Image(nameIconColored)
+                            .resizable()
+                            .frame(width: 50, height: 60)
                       //  isColored = false
                     }
                 }
@@ -52,6 +54,6 @@ struct AdsPicto: View {
 
 struct AdsPicto_Previews: PreviewProvider {
     static var previews: some View {
-        AdsPicto(nameIcon: "tram.circle", nameIconColored: "figure.wave", isColored: false)
+        AdsPicto(nameIcon: "trainG", nameIconColored: "trainC", isColored: false)
     }
 }

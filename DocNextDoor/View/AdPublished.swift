@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct AdPublished: View {
-    //@Binding var profilUser : ProfilUser
     var body: some View {
+        //NavigationLink(destination : ManageAds().navigationBarHidden(true).navigationBarBackButtonHidden(true)) {}
         ZStack { //background
             Color("BackG").ignoresSafeArea()
             VStack {
@@ -22,11 +22,7 @@ struct AdPublished: View {
                 Spacer()
                 Spacer()
             }//fin Vastck
-        }.onTapGesture {
-            /*NavigationLink {
-                ManageAds(profilUser: profilUser)
-            }//fin navlink*/
-        }//fin on tap
+        }//fin ZStack
     }
 }
 
