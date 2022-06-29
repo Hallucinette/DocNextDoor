@@ -30,7 +30,10 @@ struct AdsCreatV2: View {
                     Group {
                         Text("Job")
                             .padding(.vertical)
-                        .font(.title2)
+                            .font(.callout)
+                           // .italic()
+                            //.bold()
+                      //  .font(.title2)
                         AdsTextField(Title: "Titre", name: ads[0].title, maxCount: 10)
                         AdsTextField(Title: "Spécialité", name: ads[0].speciality, maxCount: 10)
                     }
@@ -66,25 +69,34 @@ struct AdsCreatV2: View {
                         ScrollView(.horizontal, showsIndicators: true){
                                 HStack(){
                             AdsPicto(nameIcon: "figure.walk.circle", nameIconColored: "figure.wave", isColored: false)
-                            AdsPicto(nameIcon: "figure.walk.circle", nameIconColored: "figure.wave", isColored: false)
-                            AdsPicto(nameIcon: "figure.walk.circle", nameIconColored: "figure.wave", isColored: false)
+                            AdsPicto(nameIcon: "metroG", nameIconColored: "metroC", isColored: false)
+                            AdsPicto(nameIcon: "tainG", nameIconColored: "trainC", isColored: false)
                                 }
                             }
                         .padding(.vertical)
                     }
                     VStack(spacing: 20) {
                         Toggle("Vente Patientel", isOn: $ads[0].patientsList)
+                            .tint(Color("Darblue"))
                         Toggle("Solution logement compris", isOn: $ads[0].accomodationProvided)
                         }
                     .padding(.horizontal)
                     
                     HStack {
                          //   Apply_Ads(txt: "Annuler", colorCustom: "Orange")
-                            NavigationLink {
-                                //
-                            } label: {
-                                Apply_Ads(txt: "Annuler", colorCustom: "Orange")
-                            }
+                        
+                        NavigationLink {
+                            AdPublished()
+                        } label: {
+                            Apply_Ads(txt: "Publier", colorCustom: "Darkblue")
+                        }
+
+//                          // EmailHelper.shared.sendEmail(subject: "Anything...", body: "", to: "")
+//                            AdPublished()
+//                         }) {
+//                             //Text("Send Email")
+//                             Apply_Ads(txt: "Publier", colorCustom: "Darkblue")
+//                         }
                         
                        // Apply_Ads(txt: "Annuler", colorCustom: "Orange")
                         //Apply_Ads(txt: "Postuler", colorCustom: "Darkblue")
