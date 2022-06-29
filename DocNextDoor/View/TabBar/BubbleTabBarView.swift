@@ -149,7 +149,7 @@ struct Home: View{
             }
         }
     }
-}
+
 
 //ici je cree un tableau de mes icone. elle me permet d'en quitter un ou d 'en mettre plus sans trop impacteer le reste du cote
 var tabs = ["list.bullet.circle", "map", "bookmark", "person.circle"]
