@@ -38,16 +38,18 @@ struct PDFKitView: UIViewRepresentable {
 }
 
 struct Profile: View {
+    @State private var scrollViewContentSize: CGSize = .zero
     @EnvironmentObject var profilControl : ProfileControl
     var body: some View {
+        NavigationView {
         ZStack { //background
             Color("BackG").ignoresSafeArea()
             VStack {
                 HStack {
                     Spacer()
-                    NavigationLink(destination: Settings()){ //add param profilUser
+                    NavigationLink(destination: Settings().navigationBarTitleDisplayMode(.inline)){
                         Image(systemName: "gearshape").foregroundColor(Color("Darkblue")).font(.system(size: 30))
-                    }//fin navigation view
+                    }//fin navigation link
                 }.frame(width: 370)//fin Hstack param
                 HStack {
                     Image(profilControl.profilUser.pp).resizable().overlay(Circle().stroke(Color("Darkblue"), lineWidth: 7)).clipShape(Circle())
@@ -77,7 +79,7 @@ struct Profile: View {
                         alignment: .leading).padding(1)
                 }.frame(width: 350)//Fin Vstcak coord + biographie
                 HStack {
-                    NavigationLink(destination: PDFUIView()) {
+                    NavigationLink(destination: PDFUIView().navigationBarTitleDisplayMode(.inline)) {
                         ZStack {
                             Color(.white)
                             HStack {
@@ -92,12 +94,13 @@ struct Profile: View {
                 Spacer()
             }//fin VSTACK full view
         }//fin ZStack background
+        .navigationTitle("").navigationBarHidden(true).navigationBarBackButtonHidden(true)
+        }.accentColor(Color("Darkblue"))
     }//fin body
 }//fin Profile view
-/*
+
 struct Profile_Previews: PreviewProvider {
     static var previews: some View {
-        Profile(profilUser: profilUser).previewDevice(PreviewDevice(rawValue: "iPhone 13"))
+        Profile().environmentObject(ProfileControl()).previewDevice(PreviewDevice(rawValue: "iPhone 13"))
     }
 }
-*/

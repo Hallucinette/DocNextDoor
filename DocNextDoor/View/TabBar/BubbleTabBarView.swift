@@ -46,15 +46,15 @@ struct Home: View{
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)) {
             TabView(selection: $selectedtab){
                 
-                Color.red//AdDiscoverUIView(ads: ads)
+                AdDiscoverUIView(ads: ads)
                     .ignoresSafeArea(.all, edges: .all)
                     .tag("list.bullet.circle")
                 Color.blue
                     .tag("map")
-                SavedAds()
+                SavedAds().navigationTitle("").navigationBarHidden(true).navigationBarBackButtonHidden(true)
                     .ignoresSafeArea(.all, edges: .all)
                     .tag("bookmark")
-                Profile()
+                Profile().navigationTitle("").navigationBarHidden(true).navigationBarBackButtonHidden(true)
                     .tag("person.circle")
             }
             
@@ -83,7 +83,7 @@ struct Home: View{
                                     .padding(selectedtab == image ? 15 : 0)
                                     .background(Color.white.opacity(selectedtab == image ? 1 : 0) .clipShape(Circle()))
                                     .matchedGeometryEffect(id: image, in:animation)
-                                    .offset(x: selectedtab == image ? (reader.frame(in: .global).minX - reader.frame(in: .global).midX) : 0,y: selectedtab == image ? -50 : 0)
+                                    .offset(x: selectedtab == image ? (reader.frame(in: .global).minX+20 - reader.frame(in: .global).midX+20) : 20,y: selectedtab == image ? -50 : 0)
                             })
                             .onAppear(perform: {
                                 
@@ -93,8 +93,8 @@ struct Home: View{
                                 
                             })
                         }
-                        .frame(width: 25, height: 25)
-                        Text(selectedtab == image ? getNom(image: image) : getNom(image: image)).font(.footnote)
+                        .frame(width: 75, height: 40).ignoresSafeArea()
+                        Text(selectedtab == image ? getNom(image: image) : getNom(image: image)).font(.footnote).foregroundColor(Color("Txtgrey")).padding(.bottom, 4)
 
                         
                     }
@@ -108,7 +108,7 @@ struct Home: View{
             .background(Color.white.clipShape(CustomShape(xAxis: xAxis)).cornerRadius(12)) // rounded
             .padding(.horizontal)
             // Bottom Edge...
-            .padding(.bottom,34)
+            //.padding(.bottom,34)
         }
         .ignoresSafeArea(.all, edges: .bottom)
     }
@@ -119,15 +119,15 @@ struct Home: View{
         
         switch image {
         case "list.bullet.circle":
-            return Color.red
+            return Color("Darkblue")
         case "map":
-            return Color.blue
+            return Color("Darkblue")
         case "bookmark":
-            return Color.yellow
+            return Color("Darkblue")
         case "person.circle":
-            return Color.brown
+            return Color("Darkblue")
         default:
-            return Color.blue
+            return Color("Darkblue")
         }
     }
     // Permet de choisir le nom de l'icone quand elle est active.
@@ -175,7 +175,7 @@ struct CustomShape : Shape {
             path.addLine(to: CGPoint(x: rect.width, y: rect.height))
             path.addLine(to: CGPoint(x: 0, y: rect.height))
             
-            let center = xAxis
+            let center = xAxis+35
             
             path.move(to: CGPoint(x: center - 70, y: 0))
             

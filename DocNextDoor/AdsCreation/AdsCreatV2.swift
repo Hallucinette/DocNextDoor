@@ -20,7 +20,7 @@ struct AdsCreatV2: View {
     var body: some View {
         NavigationView(){
             VStack {//Vstack header
-            Text("Crée votre annonce").bold().font(.title2).padding(10)
+            Text("Créer votre annonce").bold().font(.title2).padding(10)
             Rectangle().frame(width: 600, height: 3, alignment: .center).foregroundColor(Color("Lightblue")).padding(5)
             ScrollView{
                 
@@ -48,7 +48,7 @@ struct AdsCreatV2: View {
                             .padding(.vertical)
                         .font(.title2)
                         AdsTextField(Title: "Ville", name: ads[0].town, maxCount: 15)
-                        AdsTextField(Title: "Code Postal", name: ads[0].zipCode, maxCount: 5)
+                        AdsTextField(Title: "Code postal", name: ads[0].zipCode, maxCount: 5)
                     }
                     
                     Group {
