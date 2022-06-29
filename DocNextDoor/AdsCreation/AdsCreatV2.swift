@@ -29,8 +29,9 @@ struct AdsCreatV2: View {
                     
                     Group {
                         Text("Job")
-                            .padding(.vertical)
-                            .font(.callout)
+//                            .multilineTextAlignment(.leading)
+//                            .padding(.vertical)
+//                            .font(.callout)
                            // .italic()
                             //.bold()
                       //  .font(.title2)
@@ -68,17 +69,18 @@ struct AdsCreatV2: View {
                         .font(.title2)
                         ScrollView(.horizontal, showsIndicators: true){
                                 HStack(){
-                            AdsPicto(nameIcon: "figure.walk.circle", nameIconColored: "figure.wave", isColored: false)
+                            AdsPicto(nameIcon: "avionG", nameIconColored: "avionC", isColored: false)
                             AdsPicto(nameIcon: "metroG", nameIconColored: "metroC", isColored: false)
-                            AdsPicto(nameIcon: "tainG", nameIconColored: "trainC", isColored: false)
+                            AdsPicto(nameIcon: "trainG", nameIconColored: "trainC", isColored: false)
                                 }
                             }
                         .padding(.vertical)
                     }
                     VStack(spacing: 20) {
                         Toggle("Vente Patientel", isOn: $ads[0].patientsList)
-                            .tint(Color("Darblue"))
+                            .toggleStyle(SwitchToggleStyle(tint: Color("Darkblue")))
                         Toggle("Solution logement compris", isOn: $ads[0].accomodationProvided)
+                            .toggleStyle(SwitchToggleStyle(tint: Color("Darkblue")))
                         }
                     .padding(.horizontal)
                     
