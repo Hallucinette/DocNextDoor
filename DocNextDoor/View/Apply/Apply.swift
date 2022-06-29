@@ -45,7 +45,7 @@ struct Apply: View {
                 Button(action: {
                     profilUser.adsApplied.append(ad)
                  }) {
-                     NavigationLink(destination: CVSent(profilUser: $profilUser).navigationBarBackButtonHidden(true).navigationBarHidden(true)) {
+                     NavigationLink(destination: CVSent().navigationBarBackButtonHidden(true).navigationBarHidden(true)) {
                          Text("Postuler")
                                      .font(.title3).bold()
                              .padding(10)

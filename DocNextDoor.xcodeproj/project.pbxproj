@@ -178,8 +178,8 @@
 		7B393F92286AEED800430DA5 /* DocNextDoor */ = {
 			isa = PBXGroup;
 			children = (
-				4FB38B43286B37B1002ECF0D /* AdsCreation */,
 				4F6B0987285B78E600F06DCC /* DocNextDoorApp.swift */,
+				4FB38B43286B37B1002ECF0D /* AdsCreation */,
 				5FC422DE28699A5300005A18 /* Search */,
 				4F6B098B285B78E700F06DCC /* Assets.xcassets */,
 				7B393FB9286AEED900430DA5 /* Data */,
