@@ -9,20 +9,24 @@ import SwiftUI
 
 struct TransportsRow: View {
     
+//@Binding: nameIconColored = false
+    
     var body: some View {
         
         VStack {
             Text("Transports à proximité")
             HStack {
-                AdsPicto(nameIcon: "Aéroport", nameIconColored: "airplane.circle", isColored: false)
-                AdsPicto(nameIcon: "Gare", nameIconColored: "snowflake", isColored: false)
-                AdsPicto(nameIcon: "Tram / Métro", nameIconColored: "sun.fill", isColored: false)
+                AdsPicto(nameIcon: "Aéroport", nameIconColored: "airplane.circle", isColored: true)
+                AdsPicto(nameIcon: "Gare", nameIconColored: "train.side.front.car", isColored: true)
+                AdsPicto(nameIcon: "Tram / Métro", nameIconColored: "tram", isColored: true)
             }
+//            AdsPicto.isColored == true ? nameIconColored : nameIcon
+//            if AdsPicto.isColored == true {
+//                nameIconColored
+//            } else {
+//                nameIcon
+//            }
             
-            //        VStack {
-            //            Image(systemName: "airplane.circle")
-            //            Text("Aéroport")
-            //        }
         }
     }
 }

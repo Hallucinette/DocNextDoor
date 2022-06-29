@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct medicCenterList: View {
+//    @AppStorage var storeWorkPlaceTypes = selectWorkPlaceType
     @State private var selectWorkPlaceType = Set<String>()
     
     let medicCenters = [

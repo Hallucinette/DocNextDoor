@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4F6B0988285B78E600F06DCC /* DocNextDoorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6B0987285B78E600F06DCC /* DocNextDoorApp.swift */; };
+		5F2B5F84286C40CC00781526 /* ListSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2B5F83286C40CC00781526 /* ListSearchView.swift */; };
+		5F2B5F87286C40FC00781526 /* ListSearchRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2B5F86286C40FC00781526 /* ListSearchRow.swift */; };
 		5FC422DA286998D300005A18 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC422D9286998D300005A18 /* MapView.swift */; };
 		5FC422DC2869993A00005A18 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC422DB2869993A00005A18 /* MapViewModel.swift */; };
 		5FC422E22869A06B00005A18 /* AdsSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC422E12869A06B00005A18 /* AdsSearchView.swift */; };
@@ -46,6 +48,8 @@
 		4F6B0984285B78E600F06DCC /* DocNextDoor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DocNextDoor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F6B0987285B78E600F06DCC /* DocNextDoorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocNextDoorApp.swift; sourceTree = "<group>"; };
 		4F6B098B285B78E700F06DCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5F2B5F83286C40CC00781526 /* ListSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSearchView.swift; sourceTree = "<group>"; };
+		5F2B5F86286C40FC00781526 /* ListSearchRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSearchRow.swift; sourceTree = "<group>"; };
 		5FC422D9286998D300005A18 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		5FC422DB2869993A00005A18 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		5FC422E12869A06B00005A18 /* AdsSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsSearchView.swift; sourceTree = "<group>"; };
@@ -109,6 +113,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		5F2B5F85286C40D100781526 /* ListSearch */ = {
+			isa = PBXGroup;
+			children = (
+				5F2B5F83286C40CC00781526 /* ListSearchView.swift */,
+				5F2B5F86286C40FC00781526 /* ListSearchRow.swift */,
+			);
+			path = ListSearch;
+			sourceTree = "<group>";
+		};
 		5FC422DD2869994A00005A18 /* Map */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				5FC422E12869A06B00005A18 /* AdsSearchView.swift */,
+				5F2B5F85286C40D100781526 /* ListSearch */,
 				5FDF6902286B22BA00CF567E /* Filters */,
 				5FC422DD2869994A00005A18 /* Map */,
 			);
@@ -131,9 +145,9 @@
 		5FDF6902286B22BA00CF567E /* Filters */ = {
 			isa = PBXGroup;
 			children = (
-				5FDF6904286B22BA00CF567E /* ChildViews */,
 				5FDF6908286B22BA00CF567E /* FiltersView.swift */,
 				5FDF6909286B22BA00CF567E /* FiltersViewRow.swift */,
+				5FDF6904286B22BA00CF567E /* ChildViews */,
 			);
 			path = Filters;
 			sourceTree = "<group>";
@@ -327,6 +341,7 @@
 			files = (
 				5FDF690B286B22BA00CF567E /* TransportsRow.swift in Sources */,
 				5FC422DC2869993A00005A18 /* MapViewModel.swift in Sources */,
+				5F2B5F84286C40CC00781526 /* ListSearchView.swift in Sources */,
 				5FC422E22869A06B00005A18 /* AdsSearchView.swift in Sources */,
 				4F6B0988285B78E600F06DCC /* DocNextDoorApp.swift in Sources */,
 				5FC422DA286998D300005A18 /* MapView.swift in Sources */,
@@ -354,6 +369,7 @@
 				7B393FD7286AEED900430DA5 /* AdPublished.swift in Sources */,
 				7B393FC2286AEED900430DA5 /* AdsCreat.swift in Sources */,
 				7B393FDA286AEED900430DA5 /* CVSent.swift in Sources */,
+				5F2B5F87286C40FC00781526 /* ListSearchRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

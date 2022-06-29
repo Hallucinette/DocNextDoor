@@ -13,8 +13,6 @@ struct AdsSearchView: View {
     @State private var searchField = ""
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-        
         VStack {
             //                Text("Annonces")
             //                    .font(.largeTitle)
@@ -51,10 +49,11 @@ struct AdsSearchView: View {
             .pickerStyle(.segmented)
             //            }
             
+//            researchMode == 0 ? FiltersView() : medicCenterList()
             if researchMode == 0 {
-                FiltersView()
+                ListSearchView() 
             } else {
-                medicCenterList()
+                medicCenterList() // MapView()
             }
         }
         .navigationTitle("Annonces")

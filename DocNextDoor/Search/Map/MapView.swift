@@ -29,7 +29,7 @@
 //    @StateObject var viewModel = MapViewModel()
 //
 //
-//    var computeLocations: [String] = ads + contacts // concatenate all Strings arrays to display on Map.
+////    var computeLocations: [String] = ads + contacts // concatenate all Strings arrays to display on Map.
 //    let locations = [
 //        Location(name: "DoctorOnVacation", color: .red, coordinate: CLLocationCoordinate2D(latitude: 40.005514, longitude: -105.192256))
 //        // boucler for userLocation in Location Ads.location || Users.location
