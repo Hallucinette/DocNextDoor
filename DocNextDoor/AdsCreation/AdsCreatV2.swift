@@ -79,8 +79,15 @@ struct AdsCreatV2: View {
                     .padding(.horizontal)
                     
                     HStack {
-                        Apply_Ads(txt: "Annuler", colorCustom: "Orange")
-                        Apply_Ads(txt: "Postuler", colorCustom: "Darkblue")
+                         //   Apply_Ads(txt: "Annuler", colorCustom: "Orange")
+                            NavigationLink {
+                                //
+                            } label: {
+                                Apply_Ads(txt: "Annuler", colorCustom: "Orange")
+                            }
+                        
+                       // Apply_Ads(txt: "Annuler", colorCustom: "Orange")
+                        //Apply_Ads(txt: "Postuler", colorCustom: "Darkblue")
                         }
                     }
                 }
