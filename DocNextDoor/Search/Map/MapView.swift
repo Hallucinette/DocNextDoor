@@ -1,17 +1,17 @@
-////
-////  MapView.swift
-////  DocNextDoor
-////
-////  Created by apprenant55 on 20/06/2022.
-////
 //
-//// On importe le framework MapKit et CoreLocation pour récupérer les updates de la postion user
+//  MapView.swift
+//  DocNextDoor
+//
+//  Created by apprenant55 on 20/06/2022.
+//
+//
+// On importe le framework MapKit et CoreLocation pour récupérer les updates de la postion user
 //
 //import SwiftUI
 //import MapKit
 //import CoreLocation
 //
-//// Structure de donnée pour les points GPS à afficher sur la Map
+// Structure de donnée pour les points GPS à afficher sur la Map
 //
 //struct Location: Identifiable {
 //    let id = UUID()
@@ -20,7 +20,7 @@
 //    let coordinate: CLLocationCoordinate2D
 //}
 //
-//// Propriété StateObject observable appelle le ViewModel MapViewModel()
+// Propriété StateObject observable appelle le ViewModel MapViewModel()
 //
 //
 //
