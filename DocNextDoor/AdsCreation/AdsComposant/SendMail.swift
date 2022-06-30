@@ -1,3 +1,4 @@
+/*
 //
 //  SendMail.swift
 //  DocNextDoor
@@ -43,3 +44,4 @@ class EmailHelper: NSObject, MFMailComposeViewControllerDelegate {
          UIApplication.shared.windows.first?.rootViewController
     }
 }
+*/

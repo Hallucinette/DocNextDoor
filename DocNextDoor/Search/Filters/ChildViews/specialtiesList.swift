@@ -26,6 +26,7 @@ struct specialtiesList: View {
         .navigationTitle("Spécialité")
         .toolbar {
             EditButton()
+                
         }
         
     }
