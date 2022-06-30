@@ -54,9 +54,12 @@ struct AdDiscoverUIView: View {
                         NavigationLink(destination:DetailedAdUIView(ad: ad)) {
                             HStack{
                                 AdView(ad: ad)
+                                AdView(ad: ad)
                             }
                         }.navigationBarTitleDisplayMode(.inline)
                     }
+                    .onAppear { UITableView.appearance().isScrollEnabled = false }
+                    .onDisappear{ UITableView.appearance().isScrollEnabled = true }
                 }//end full view vstck
                 .navigationBarHidden(true)
             }// nav link
@@ -66,7 +69,23 @@ struct AdDiscoverUIView: View {
     }
 }
 
+//pour les rounded corners des petits blocks d'annonces
+extension View {
+    func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
+        clipShape( RoundedCorner(radius: radius, corners: corners) )
+    }
+}
 
+struct RoundedCorner: Shape {
+
+    var radius: CGFloat = .infinity
+    var corners: UIRectCorner = .allCorners
+
+    func path(in rect: CGRect) -> Path {
+        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        return Path(path.cgPath)
+    }
+}
 
 // A view that shows the data for one Ad.
 struct AdView: View {
@@ -74,39 +93,37 @@ struct AdView: View {
     
     var body: some View {
         
-        /*VStack{
-         HStack {
-         VStack{
+        /* VStack {
          Text(ad.title).padding(.horizontal).formatText()
          Image(ad.pict[0]).resizable().formatSmallImage()
-         }
          
-         Spacer()
+         }.background(Color("BackG"))
+         Divider()
+         
          VStack {
          Text(ad.title).padding(.horizontal).formatText()
          Image(ad.pict[0]).resizable().formatSmallImage()
-         }
-         }
-         HStack {
-         Rectangle()
-         .fill(Color.white)
-         }
          
-         
-         }*/
-        //HStack (spacing: 0) {
-        
-        VStack {
-            Text(ad.title).padding(.horizontal).formatText()
-            Image(ad.pict[0]).resizable().formatSmallImage()
+         }.background(Color("BackG"))*/
+        ZStack {
+            Image(ad.pict[0]).resizable().frame(width: 180, height: 170).aspectRatio(contentMode: .fit).cornerRadius(20).overlay(
+                GeometryReader { geometry in
+                    ZStack {
+                        Rectangle().frame(width: 200, height: 60, alignment: .topLeading)
+                        .cornerRadius(20, corners: [.topLeft, .topRight])
+                            .foregroundColor(Color(.white))
+                        HStack {
+                            Text(ad.title).font(.callout).bold().padding(5)
+                        }.frame(width: 200, height: 70)
+                        
+                        Spacer()
+                    }
+                    .position(x: 100, y: 30)
+                }
+            )
             
         }
-        Divider()
-        
-        
     }
-    
-    
 }
 
 

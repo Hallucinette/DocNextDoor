@@ -115,7 +115,7 @@ struct Home: View{
     
     // Permet de choisir la couleur de l'icone quand elle est active. ici on passe du gris par default a la couleur choisi. par exemple map = blue
     
-    func getColor(image: String)->Color{
+    func getColor(image: String)->Color {
         
         switch image {
         case "list.bullet.circle":
@@ -133,7 +133,7 @@ struct Home: View{
     
     // Permet de choisir le nom de l'icone quand elle est active.
 
-        func getNom(image: String)->String{
+        func getNom(image: String)->String {
 
             switch image {
             case "list.bullet.circle":

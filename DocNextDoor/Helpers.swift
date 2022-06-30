@@ -29,8 +29,8 @@ extension View {
     }
     func formatIcon()  -> some View {
         self.aspectRatio(contentMode: .fit)
-            .frame(width: 25, height: 25)
-            .foregroundColor(Color("Lightblue"))
+            .frame(width: 40, height: 40)
+            .foregroundColor(Color("Darkblue"))
     }
     func formatSmallImage()  -> some View {
         self.frame(width: 120, height: 90)

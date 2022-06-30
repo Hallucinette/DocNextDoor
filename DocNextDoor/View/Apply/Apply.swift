@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct Apply: View {
-    @Binding var profilUser : ProfilUser
+    @EnvironmentObject var profilControl : ProfileControl
+    //@Binding var profilUser : ProfilUser
     @Binding var ad : Advertisement
     var body: some View {
         ZStack { //background
@@ -43,7 +44,7 @@ struct Apply: View {
                 Text("Ajouter ou modifier votre CV depuis les paramètres.").font(.footnote).italic().multilineTextAlignment(.leading).foregroundColor(Color("Txtgrey")).frame(width: 350, height: 20, alignment: .leading)
                 Spacer()
                 Button(action: {
-                    profilUser.adsApplied.append(ad)
+                    profilControl.profilUser.adsApplied.append(ad)
                  }) {
                      NavigationLink(destination: CVSent().navigationBarBackButtonHidden(true).navigationBarHidden(true)) {
                          Text("Postuler")
