@@ -125,6 +125,8 @@
 				5F2B5F86286C40FC00781526 /* ListSearchRow.swift */,
 			);
 			path = ListSearch;
+            sourceTree = "<group>";
+        };
 		4FB38B43286B37B1002ECF0D /* AdsCreation */ = {
 			isa = PBXGroup;
 			children = (
