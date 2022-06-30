@@ -42,21 +42,22 @@ struct Home: View{
     
     @Namespace var animation
     @EnvironmentObject var profilControl : ProfileControl
-    var body: some View{
+    var body: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)) {
-            TabView(selection: $selectedtab){
-                
-                AdDiscoverUIView(ads: ads)
-                    .ignoresSafeArea(.all, edges: .all)
-                    .tag("list.bullet.circle")
-                Color.blue
-                    .tag("map")
-                SavedAds().navigationTitle("").navigationBarHidden(true).navigationBarBackButtonHidden(true)
-                    .ignoresSafeArea(.all, edges: .all)
-                    .tag("bookmark")
-                Profile().navigationTitle("").navigationBarHidden(true).navigationBarBackButtonHidden(true)
-                    .tag("person.circle")
-            }
+            //GeometryReader { proxy in
+                TabView(selection: $selectedtab){
+                    
+                    AdDiscoverUIView(ads: ads)
+                        .ignoresSafeArea(.all, edges: .all)
+                        .tag("list.bullet.circle")
+                    Color.blue
+                        .tag("map")
+                    SavedAds()
+                        .tag("bookmark")
+                    Profile().navigationTitle("").navigationBarHidden(true).navigationBarBackButtonHidden(true)
+                        .tag("person.circle")
+                }//.frame(width: proxy.size.width)
+            //}
             
             // Custom tab Bar...
             
@@ -99,11 +100,12 @@ struct Home: View{
                         
                     }
                     //On rajoute un spacer quand on a finit de parcourir le tableau image.
-                    if image != tabs.last{Spacer(minLength: 10)}
+                    //if image != tabs.last{Spacer(minLength: 10)}
                 }
             }
             // rectangle blanc derriere la tab bar
-            .padding(.horizontal,34) // sa position horizontal
+             // sa position horizontal
+            .padding(.horizontal, 34)
             .padding(.vertical) // sa position hauteur
             .background(Color.white.clipShape(CustomShape(xAxis: xAxis)).cornerRadius(12)) // rounded
             .padding(.horizontal)

@@ -122,11 +122,7 @@ struct SavedAds : View {
                                 }//fin else button
                             }//fin action on swipe//fin HSatck 1 element de la liste
                         }.listRowBackground(Color("BackG"))
-
-        
-
-                    }.frame(width: 420, alignment: .center)//fin list
-
+                    }//fin list
                 }//fin else list non vide
             }//fin Vstack full view
         }//fin ZStack background color
