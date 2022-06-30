@@ -49,7 +49,7 @@ extension View {
         )
     }
     func addBlueLine()  -> some View {
-        Rectangle().frame(width: 450, height: 3, alignment: .center).foregroundColor(Color("Lightblue"))
+        Rectangle().frame(width: 390, height: 3, alignment: .center).foregroundColor(Color("Lightblue"))
     }
 }
 

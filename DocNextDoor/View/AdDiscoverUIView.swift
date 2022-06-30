@@ -19,8 +19,7 @@ struct AdDiscoverUIView: View {
                 VStack {//full view vstck
                     HStack (spacing: 25){//Hstack header
                         Text("Annonces à la une")
-                            .bold()
-                            .font(.title2)
+                            .bold().font(.title2).padding(10)
                         Spacer().frame(width : 5)
                         
                         HStack{
@@ -54,12 +53,14 @@ struct AdDiscoverUIView: View {
                         NavigationLink(destination:DetailedAdUIView(ad: ad)) {
                             HStack{
                                 AdView(ad: ad)
+                                Spacer(minLength: 15)
                                 AdView(ad: ad)
-                            }
+                            }//.frame(width: 390, alignment: .leading)
                         }.navigationBarTitleDisplayMode(.inline)
                     }
                     .onAppear { UITableView.appearance().isScrollEnabled = false }
                     .onDisappear{ UITableView.appearance().isScrollEnabled = true }
+                    
                 }//end full view vstck
                 .navigationBarHidden(true)
             }// nav link
@@ -92,21 +93,9 @@ struct AdView: View {
     var ad: Advertisement
     
     var body: some View {
-        
-        /* VStack {
-         Text(ad.title).padding(.horizontal).formatText()
-         Image(ad.pict[0]).resizable().formatSmallImage()
-         
-         }.background(Color("BackG"))
-         Divider()
-         
-         VStack {
-         Text(ad.title).padding(.horizontal).formatText()
-         Image(ad.pict[0]).resizable().formatSmallImage()
-         
-         }.background(Color("BackG"))*/
+ 
         ZStack {
-            Image(ad.pict[0]).resizable().frame(width: 180, height: 170).aspectRatio(contentMode: .fit).cornerRadius(20).overlay(
+            Image(ad.pict[0]).resizable().frame(width: 200, height: 170).aspectRatio(contentMode: .fit).cornerRadius(20).overlay(
                 GeometryReader { geometry in
                     ZStack {
                         Rectangle().frame(width: 200, height: 60, alignment: .topLeading)
@@ -114,7 +103,7 @@ struct AdView: View {
                             .foregroundColor(Color(.white))
                         HStack {
                             Text(ad.title).font(.callout).bold().padding(5)
-                        }.frame(width: 200, height: 70)
+                        }.frame(width: 180, height: 70)
                         
                         Spacer()
                     }

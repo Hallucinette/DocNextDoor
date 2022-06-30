@@ -18,7 +18,7 @@ struct Apply: View {
             VStack { //full view
                 VStack {//Vstack header
                     Text("Rédiger votre candidature").bold().font(.title2).padding(10)
-                    Rectangle().frame(width: 600, height: 3, alignment: .center).foregroundColor(Color("Lightblue")).padding(5)
+                    Rectangle().frame(width: 390, height: 3, alignment: .center).foregroundColor(Color("Lightblue")).padding(5)
                 }//fin Vstack header
                 Text("Écrivez votre lettre de motivation").font(.body).bold().frame(
                     maxWidth: .infinity,
@@ -62,7 +62,7 @@ struct Apply: View {
                         //a check si pas dans fav = eviter les doublons ni dans ad applied avant = si pas deja postuler
                         
                 //}//fin navLink
-            }.frame(width: 400)//fin VStcak full view
+            }.frame(width: 380)//fin VStcak full view
         }//fin Zstack backG
     }
 }

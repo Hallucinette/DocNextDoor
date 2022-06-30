@@ -16,7 +16,7 @@ struct Settings: View {
             VStack {//full view
                 VStack {//Vstack header
                     Text("Paramètres").bold().font(.title2).padding(2)
-                    Rectangle().frame(width: 600, height: 3, alignment: .center).foregroundColor(Color("Lightblue")).padding(5)
+                    Rectangle().frame(width: 390, height: 3, alignment: .center).foregroundColor(Color("Lightblue")).padding(5)
                 }//fin Vstack Header
                 ScrollView {
                     List {
@@ -32,7 +32,7 @@ struct Settings: View {
                             Text("Changer votre Curriculum Vitæ")
                         }//fin sction CV
                     }.onAppear { UITableView.appearance().isScrollEnabled = false }
-                        .onDisappear{ UITableView.appearance().isScrollEnabled = true }.frame(width: 410, height: 410)//fin form
+                        .onDisappear{ UITableView.appearance().isScrollEnabled = true }.frame(width: 390, height: 410)//fin form
                     Text("CHANGER VOTRE IMAGE DE PROFIL").font(.footnote).foregroundColor(Color("Txtgrey")).frame(
                         maxWidth: .infinity,
                         alignment: .leading).frame(width: 325)
