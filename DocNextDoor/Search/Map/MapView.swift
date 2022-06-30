@@ -1,17 +1,17 @@
+////
+////  MapView.swift
+////  DocNextDoor
+////
+////  Created by apprenant55 on 20/06/2022.
 //
-//  MapView.swift
-//  DocNextDoor
 //
-//  Created by apprenant55 on 20/06/2022.
-//
-//
-// On importe le framework MapKit et CoreLocation pour récupérer les updates de la postion user
+//// On importe le framework MapKit et CoreLocation pour récupérer les updates de la postion user
 //
 //import SwiftUI
 //import MapKit
 //import CoreLocation
 //
-// Structure de donnée pour les points GPS à afficher sur la Map
+//// Structure de donnée pour les points GPS à afficher sur la Map
 //
 //struct Location: Identifiable {
 //    let id = UUID()
@@ -20,27 +20,20 @@
 //    let coordinate: CLLocationCoordinate2D
 //}
 //
-// Propriété StateObject observable appelle le ViewModel MapViewModel()
-//
-//
 //
 //struct MapView: View {
-//
+//    
+//    // Propriété StateObject observable appelle le ViewModel MapViewModel()
 //    @StateObject var viewModel = MapViewModel()
 //
-//
-////    var computeLocations: [String] = ads + contacts // concatenate all Strings arrays to display on Map.
-//    let locations = [
-//        Location(name: "DoctorOnVacation", color: .red, coordinate: CLLocationCoordinate2D(latitude: 40.005514, longitude: -105.192256))
-//        // boucler for userLocation in Location Ads.location || Users.location
-//    ]
+//    let locations = [ads]
 //
 //    var body: some View {
-//        Map(coordinateRegion: $viewModel.mapRegion, showsUserLocation = true, annotationsItems: computeLocations) { computeLocation
-//            MapMarker(coordinate: computeLocation.coordinate / location.coordinate, tint: computeLocations.color / location.color)
+//        Map(coordinateRegion: $viewModel.mapRegion, showsUserLocation = true, annotationsItems: locations) { location
+//            MapMarker(coordinate: location.coordinate, tint: location.color)
 //        }
 //        .ignoresSafeArea()
-//        .accentColor(Color(.systemRed))
+//        .accentColor(Color("Darkblue"))
 //        .onAppear {
 //            viewModel.checkUserLocationAuthorization()
 //        }

@@ -9,49 +9,53 @@ import SwiftUI
 
 struct ListSearchRow: View {
     
-    @Binding var ad: Advertisement
-    @Binding var starIcon : ColoredIcons
-    @Binding var user : ProfilUser
-    @State var favIcon: String = "star"
+    var ad: Advertisement
+    @EnvironmentObject var profilControl : ProfileControl
+    
+    func deleteAdF(ad: Advertisement) {
+        profilControl.profilUser.adsFav.removeAll { ad2 in
+            return ad.id == ad2.id
+        }
+    }
+    
     
     var body: some View {
-//        NavigationLink {
-//            // Destination View(ad: ad)
-//        } label: {
+        
+        
+        var favIcon: String = "star"
+        
+        //        NavigationLink {
+        //            // Destination View(ad: ad)
+        //        } label: {
         HStack {
-            Image(ad.pict[0])
-                .resizable()
-                .clipShape(Circle())
-                .frame(maxWidth: 72, maxHeight: 72)
-                .overlay(Circle()
-                    .stroke(Color("Darkblue"), lineWidth: 2))
-                .padding()
-            VStack(alignment: .leading){
-                Text(ad.title)
-                    .bold()
-                    .textCase(.uppercase)
-                    .padding(.bottom, 1)
-                Text(ad.speciality)
-                    .bold()
-                    .italic()
-                    .foregroundColor(Color("Darkblue"))
-                Text(ad.zipCode+" "+ad.town)
-                    .bold()
-                    .padding(.bottom, 0.5)
-                Text(ad.description)
-                    .foregroundColor(.gray)
-            }
-//        }
+            Image(ad.pict[0]).resizable().overlay(Circle().stroke(Color("Darkblue"), lineWidth: 4)).clipShape(Circle())//stroke Color = "\(ad.speciality)Color"
+                .frame(width: 55, height: 55).padding(20)
+            VStack {
+                HStack{
+                    Text(ad.title).font(.callout).bold().foregroundColor(.black).multilineTextAlignment(.leading).frame(
+                    maxWidth: .infinity,
+                    alignment: .leading).padding(0.2)
+                }.frame(height: 45, alignment: .leading)
+                HStack { //Txt Color = "\(ad.speciality)Color"
+                    HStack {
+                        Text(ad.speciality).font(.footnote).italic().bold()
+                            .foregroundColor(Color("Darkblue")).padding(0.2)
+                    }.frame(height:20)
+                    Text("à \(ad.zipCode) \(ad.town)").font(.footnote).foregroundColor(.black).padding(0.2)
+                }
+//                HStack {
+//                    Text(ad.description).foregroundColor(Color("Txtgrey")).font(.footnote).padding(0.5)
+//                }.frame(height: 50)
+            }//fin Vsatck txt liste = titre, specialités, ville + CP et debut description
+            .navigationTitle("").navigationBarHidden(true)
+            
+            //        }
             Button (action: {
                 if favIcon == "star" {
-                    user.adsFav.append(ad)
+//                    profilControl.profilUser.adsFav.append(ad)
                     favIcon = "star.fill"
                 } else {
-                    func removeFav(ad: Advertisement) {
-                        user.adsFav.removeAll { deletedValue in
-                            return ad.id == deletedValue.id
-                        }
-                    }
+//                    deleteAdF(ad: ad)
                     favIcon = "star"
                 }
                 
@@ -60,13 +64,9 @@ struct ListSearchRow: View {
                     .font(.largeTitle)
                     .padding()
                     .foregroundColor(Color("Darkblue"))
+            
                 
-                //                Image(starIcon.isColored == true ? starIcon.nameIconColored : starIcon.nameIcon)
-                //                    .font(.largeTitle)
-                //                    .foregroundColor(Color("Darkblue"))
-                //                    .frame(maxWidth: 8, maxHeight: 8)
-                
-            }) // .clipShape(Circle())
+            })
         }
         
         
@@ -84,8 +84,8 @@ struct ListSearchRow: View {
 
 struct ListSearchRow_Previews: PreviewProvider {
     static var previews: some View {
-//        NavigationView {
-        ListSearchRow(ad: .constant (Advertisement(title: "MedGen à Toulon", town: "Toulon", zipCode: "83000", description: "Plage et beau temps, patientèle patiente.", benefits: "Facilités d'installation", contact: Contact(name: "SEA Nirre", mail: "vacHealth@fake.com", phone: "0601020304"), icons: ["ecoleC", "shopC"], transport: [ColoredIcons(nameIcon: "metroG", nameIconColored: "metroC", isColored: true), ColoredIcons(nameIcon: "trainG", nameIconColored: "trainC", isColored: true)], zone: [ColoredIcons(nameIcon: "arsG", nameIconColored: "arsC", isColored: true),ColoredIcons(nameIcon: "zacG", nameIconColored: "zacC", isColored: true)], pict: ["Grande-synthe"], speciality: "Médecine générale", patientsList: true, accomodationProvided: false)), starIcon: .constant (ColoredIcons(nameIcon: "star", nameIconColored: "star.fill", isColored: true)), user: .constant (ProfilUser(id: UUID(), isDoc: true, name: "Isabella Zoe", pp: "Female4", speciality: "medGen", description: "J'ai fait l'école de médecine de Marseille, dont je suis diplomée depuis 2020.", contact: Contact(name: "Isabella Zoe", mail: "monmail@lol.fr", phone: "0600000000"), adsPublished: [Advertisement(title: "Cardiologue à Lille", town: "Lille", zipCode: "59000", description: "Mauvais temps, beaucoup de travail, pas de vie", benefits: "Soutien moral et bières.", contact: Contact(name: "Enjoy LIFE", mail: "sossauvezmoi@help.com", phone: "0070070070"), icons: ["ecoleC", "shopC"], transport: [ColoredIcons(nameIcon: "metroG", nameIconColored: "metroC", isColored: true), ColoredIcons(nameIcon: "trainG", nameIconColored: "trainC", isColored: true)], zone: [ColoredIcons(nameIcon: "arsG", nameIconColored: "arsC", isColored: true),ColoredIcons(nameIcon: "zacG", nameIconColored: "zacC", isColored: true)], pict: ["Plumebec"], speciality: "Psychologue", patientsList: false, accomodationProvided: false)], cv: "CV3", allowContact: true, allowNotif: true, adsApplied: [Advertisement(title: "Farniente à Pau", town: "Pau", zipCode: "64000", description: "Vaches, cochons, et accessoiremment êtres humains à soigner", benefits: "Transat fourni", contact: Contact(name: "Jean FOUPASUNE", mail: "poildanslamain@injoignable.fr", phone: "0700000000"), icons: ["ecoleC", "shopC"], transport: [ColoredIcons(nameIcon: "metroG", nameIconColored: "metroC", isColored: true), ColoredIcons(nameIcon: "trainG", nameIconColored: "trainC", isColored: true)], zone: [ColoredIcons(nameIcon: "arsG", nameIconColored: "arsC", isColored: true),ColoredIcons(nameIcon: "zacG", nameIconColored: "zacC", isColored: true)], pict: ["Plumebec"], speciality: "Podologue", patientsList: false, accomodationProvided: false)], adsFav: [])))
-//        }
+        //        NavigationView {
+        ListSearchRow(ad: ads[0])
+        //        }
     }
 }

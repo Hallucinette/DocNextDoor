@@ -51,7 +51,7 @@ struct AdsSearchView: View {
             
 //            researchMode == 0 ? FiltersView() : medicCenterList()
             if researchMode == 0 {
-                ListSearchView() 
+                ListSearchView(ads: ads) 
             } else {
                 medicCenterList() // MapView()
             }
