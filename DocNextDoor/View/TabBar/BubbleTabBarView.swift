@@ -49,7 +49,7 @@ struct Home: View{
                 AdDiscoverUIView(ads: ads)
                     .ignoresSafeArea(.all, edges: .all)
                     .tag("list.bullet.circle")
-                Color.blue
+                AdsSearchView()
                     .tag("map")
                 SavedAds().navigationTitle("").navigationBarHidden(true).navigationBarBackButtonHidden(true)
                     .ignoresSafeArea(.all, edges: .all)

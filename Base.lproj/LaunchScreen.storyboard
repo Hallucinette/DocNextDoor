@@ -40,7 +40,7 @@
                                 <color key="textColor" name="BackG"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="les déserts médicaux !" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXZ-Al-isJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="contre les déserts médicaux !" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXZ-Al-isJ">
                                 <rect key="frame" x="54" y="591" width="306" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="fgT-jc-YB4"/>

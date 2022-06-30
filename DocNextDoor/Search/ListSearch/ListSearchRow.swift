@@ -17,12 +17,12 @@ struct ListSearchRow: View {
             return ad.id == ad2.id
         }
     }
-    
+  @State var favIcon: String = "star"
     
     var body: some View {
         
         
-        var favIcon: String = "star"
+     
         
         //        NavigationLink {
         //            // Destination View(ad: ad)
@@ -52,11 +52,13 @@ struct ListSearchRow: View {
             //        }
             Button (action: {
                 if favIcon == "star" {
-//                    profilControl.profilUser.adsFav.append(ad)
                     favIcon = "star.fill"
+//                    profilControl.profilUser.adsFav.append(ad)
+                    
                 } else {
-//                    deleteAdF(ad: ad)
                     favIcon = "star"
+//                    deleteAdF(ad: ad)
+                    
                 }
                 
             }, label: {
