@@ -17,10 +17,11 @@ struct AdDiscoverUIView: View {
             // ScrollView {
             NavigationView {
                 VStack {//full view vstck
-                    HStack (spacing: 25){//Hstack header
+                    HStack (spacing: 35){//Hstack header
+                        //Spacer()
                         Text("Annonces à la une")
                             .bold().font(.title2).padding(10)
-                        Spacer().frame(width : 50)
+                       // Spacer().frame(width : 50)
                         
                         HStack{
                             

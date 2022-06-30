@@ -48,13 +48,12 @@ struct Home: View{
                 TabView(selection: $selectedtab){
                     
                     AdDiscoverUIView(ads: ads)
-                        .ignoresSafeArea(.all, edges: .all)
                         .tag("list.bullet.circle")
                     Color.blue
                         .tag("map")
                     SavedAds()
                         .tag("bookmark")
-                    Profile().navigationTitle("").navigationBarHidden(true).navigationBarBackButtonHidden(true)
+                    Profile()
                         .tag("person.circle")
                 }
                 
@@ -80,7 +79,7 @@ struct Home: View{
                                         .renderingMode(.template)
                                         .aspectRatio(contentMode: .fit)
                                         .frame(width: 25, height: 25)
-                                        .foregroundColor(selectedtab == image ? getColor(image: image) : Color.gray) // couleurs gris si pas selectionné
+                                        .foregroundColor(selectedtab == image ? Color("Darkblue") : Color.gray) // couleurs gris si pas selectionné
                                         .padding(selectedtab == image ? 15 : 0)
                                         .background(Color.white.opacity(selectedtab == image ? 1 : 0) .clipShape(Circle()))
                                         .matchedGeometryEffect(id: image, in:animation)
@@ -112,23 +111,6 @@ struct Home: View{
         }
     }
     
-    // Permet de choisir la couleur de l'icone quand elle est active. ici on passe du gris par default a la couleur choisi. par exemple map = blue
-    
-    func getColor(image: String)->Color {
-        
-        switch image {
-            case "list.bullet.circle":
-                return Color("Darkblue")
-            case "map":
-                return Color("Darkblue")
-            case "bookmark":
-                return Color("Darkblue")
-            case "person.circle":
-                return Color("Darkblue")
-            default:
-                return Color("Darkblue")
-        }
-    }
     
     // Permet de choisir le nom de l'icone quand elle est active.
     
