@@ -30,7 +30,6 @@ struct AdsPicto: View {
                 VStack{
                     if isColored == false {
                         Image(nameIcon)
-
                             .resizable()
                           //  .frame(width: 60, height: 60)
                             .frame(width: 50, height: 60)
