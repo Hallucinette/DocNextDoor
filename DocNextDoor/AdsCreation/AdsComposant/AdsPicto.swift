@@ -38,8 +38,11 @@ struct AdsPicto: View {
                     else
                     {
                         Image(nameIconColored)
+                            /*.resizable()
+                            .frame(width: 50, height: 60)*/
                             .resizable()
-                            .frame(width: 50, height: 60)
+                            .renderingMode(.template)
+                            .formatIcon()
                       //  isColored = false
                     }
                 }

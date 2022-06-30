@@ -49,12 +49,22 @@ extension View {
         self.frame(width: 300, height: 150)
             .cornerRadius(10.0)
             .overlay(
-            RoundedRectangle(cornerRadius: 10)
-                .stroke(Color("Darkblue"), lineWidth: 2)
-        )
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color("Darkblue"), lineWidth: 2)
+            )
     }
     func addBlueLine()  -> some View {
         Rectangle().frame(width: 390, height: 3, alignment: .center).foregroundColor(Color("Lightblue"))
+    }
+    func addBlueButton()  -> some View {
+        self.font(.title3)
+            .padding(10)
+            .padding(.horizontal, 30)
+            .background(Color("Darkblue"))
+            .cornerRadius(45)
+            .foregroundColor(.white)
+            .padding(20)
+        
     }
 }
 

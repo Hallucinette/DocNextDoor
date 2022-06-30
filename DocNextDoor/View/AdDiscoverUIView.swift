@@ -51,7 +51,7 @@ struct AdDiscoverUIView: View {
                         
                     }//.background(.white)
                     HStack {
-                        List(ads.dropLast().dropFirst().reversed()) { ad in
+                        List(ads.dropFirst().dropLast().reversed()) { ad in
                             NavigationLink(destination:DetailedAdUIView(ad: ad)) {
                                 HStack{
                                     AdView(ad: ad)
@@ -64,8 +64,8 @@ struct AdDiscoverUIView: View {
                         .onDisappear{ UITableView.appearance().isScrollEnabled = true }
                     }
                 }//end full view vstck
-                .navigationBarHidden(true)
-            }// nav link
+                .navigationTitle("").navigationBarHidden(true).navigationBarBackButtonHidden(true)
+            }// nav view
             
             //}
         }

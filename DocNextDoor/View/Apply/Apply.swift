@@ -18,7 +18,8 @@ struct Apply: View {
             VStack { //full view
                 VStack {//Vstack header
                     Text("Rédiger votre candidature").bold().font(.title2).padding(10)
-                    Rectangle().frame(width: 390, height: 3, alignment: .center).foregroundColor(Color("Lightblue")).padding(5)
+                    addBlueLine()
+                    /*Rectangle().frame(width: 390, height: 3, alignment: .center).foregroundColor(Color("Lightblue")).padding(5)*/
                 }//fin Vstack header
                 Text("Écrivez votre lettre de motivation").font(.body).bold().frame(
                     maxWidth: .infinity,
@@ -43,25 +44,19 @@ struct Apply: View {
                     }//fin NavigationLink
                 }.padding(.horizontal, 20)//fin Hstack CV
                 Text("Ajouter ou modifier votre CV depuis les paramètres.").font(.footnote).italic().multilineTextAlignment(.leading).foregroundColor(Color("Txtgrey")).frame(width: 350, height: 20, alignment: .leading)
-
+                
                 Button(action: {
                     profilControl.profilUser.adsApplied.append(ad)
-                 }) {
-                     NavigationLink(destination: CVSent().navigationBarBackButtonHidden(true).navigationBarHidden(true)) {
-                         Text("Postuler")
-                                     .font(.title3).bold()
-                             .padding(10)
-                             .padding(.horizontal, 30)
-                                 .background(Color("Darkblue"))
-                                 .cornerRadius(45)
-                                 .foregroundColor(.white)
-                                 .padding(20)
-                     }
-                 }.padding(15)
-                Spacer()//fin button
-                        
-                        //a check si pas dans fav = eviter les doublons ni dans ad applied avant = si pas deja postuler
-                        
+                }) {
+                    NavigationLink(destination: CVSent().navigationBarBackButtonHidden(true).navigationBarHidden(true)) {
+                        Text("Postuler").bold()
+                            .addBlueButton()
+                    }
+                }.padding(15)
+                Spacer().padding(.bottom, 150)//fin button
+                
+                //a check si pas dans fav = eviter les doublons ni dans ad applied avant = si pas deja postuler
+                
                 //}//fin navLink
             }.frame(width: 380)//fin VStcak full view
         }//fin Zstack backG
