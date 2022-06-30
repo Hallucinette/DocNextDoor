@@ -14,7 +14,7 @@ struct Settings: View {
             VStack {//full view
                 VStack {//Vstack header
                     Text("Paramètres").bold().font(.title2).padding(2)
-                    Rectangle().frame(width: 600, height: 3, alignment: .center).foregroundColor(Color("Lightblue")).padding(5)
+                    Rectangle().frame(width: 390, height: 3, alignment: .center).foregroundColor(Color("Lightblue")).padding(5)
                 }//fin Vstack Header
                     Form {
                         Section (header: Text("Paramètres du compte")) {
