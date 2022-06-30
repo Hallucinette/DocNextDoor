@@ -50,7 +50,7 @@ struct SavedAds : View {
                                         Text("Annonces favorites").tag(0)
                                         Text("Annonces candiatées").tag(1)
                                     }.pickerStyle(.segmented).padding(30)
-                    }.frame(width: 390, height: 40).padding()
+                    }.frame(height: 40).padding()
                 }//fin Vstack header
                 Spacer()
                 if profilControl.profilUser.adsApplied.isEmpty && pickerList == 1 {
@@ -130,11 +130,9 @@ struct SavedAds : View {
         }.accentColor(Color("Darkblue"))
     }//end body
 }//end Favorites View
-
 struct SavedAds_Previews: PreviewProvider {
     static var previews: some View {
         SavedAds().environmentObject(ProfileControl())//.previewDevice(PreviewDevice(rawValue: "iPhone 13"))
 }
 
 }
-
