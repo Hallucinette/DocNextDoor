@@ -120,7 +120,7 @@ struct AdDetailView: View {
                                 .background(Color("Darkblue"))
                                 .cornerRadius(15)
                         }
-                    NavigationLink(destination:CreationAdUIView()) {
+                    NavigationLink(destination: Apply(ad: ad)) {
                     }
                    // }
                 }

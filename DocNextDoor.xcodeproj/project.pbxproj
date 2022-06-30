@@ -39,7 +39,6 @@
 		7B393FD2286AEED900430DA5 /* BubbleTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B393FB0286AEED800430DA5 /* BubbleTabBarView.swift */; };
 		7B393FD4286AEED900430DA5 /* AdDiscoverUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B393FB2286AEED900430DA5 /* AdDiscoverUIView.swift */; };
 		7B393FD5286AEED900430DA5 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B393FB3286AEED900430DA5 /* Settings.swift */; };
-		7B393FD6286AEED900430DA5 /* CreationAdUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B393FB4286AEED900430DA5 /* CreationAdUIView.swift */; };
 		7B393FD7286AEED900430DA5 /* AdPublished.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B393FB5286AEED900430DA5 /* AdPublished.swift */; };
 		7B393FD8286AEED900430DA5 /* SavedAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B393FB6286AEED900430DA5 /* SavedAds.swift */; };
 		7B393FDA286AEED900430DA5 /* CVSent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B393FB8286AEED900430DA5 /* CVSent.swift */; };
@@ -81,7 +80,6 @@
 		7B393FB0286AEED800430DA5 /* BubbleTabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleTabBarView.swift; sourceTree = "<group>"; };
 		7B393FB2286AEED900430DA5 /* AdDiscoverUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdDiscoverUIView.swift; sourceTree = "<group>"; };
 		7B393FB3286AEED900430DA5 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
-		7B393FB4286AEED900430DA5 /* CreationAdUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreationAdUIView.swift; sourceTree = "<group>"; };
 		7B393FB5286AEED900430DA5 /* AdPublished.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdPublished.swift; sourceTree = "<group>"; };
 		7B393FB6286AEED900430DA5 /* SavedAds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedAds.swift; sourceTree = "<group>"; };
 		7B393FB8286AEED900430DA5 /* CVSent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVSent.swift; sourceTree = "<group>"; };
@@ -250,7 +248,6 @@
 				7B393FAD286AEED800430DA5 /* DetailedAdUIView.swift */,
 				7B393FAF286AEED800430DA5 /* TabBar */,
 				7B393FB2286AEED900430DA5 /* AdDiscoverUIView.swift */,
-				7B393FB4286AEED900430DA5 /* CreationAdUIView.swift */,
 				7B393FB5286AEED900430DA5 /* AdPublished.swift */,
 				7B393FB6286AEED900430DA5 /* SavedAds.swift */,
 			);
@@ -366,7 +363,6 @@
 				4FB38B4E286B3867002ECF0D /* AdsImage.swift in Sources */,
 				5FDF690D286B22BA00CF567E /* specialtiesList.swift in Sources */,
 				5FDF690F286B22BA00CF567E /* FiltersViewRow.swift in Sources */,
-				7B393FD6286AEED900430DA5 /* CreationAdUIView.swift in Sources */,
 				7B393FDB286AEED900430DA5 /* DataFile.swift in Sources */,
 				4FB38B4A286B37B1002ECF0D /* ImagePicker.swift in Sources */,
 				4FB38B52286C349A002ECF0D /* SendMail.swift in Sources */,
