@@ -47,6 +47,7 @@ struct Profile: View {
             VStack {
                 HStack {
                     Spacer()
+                    
                     NavigationLink(destination: Settings().navigationBarTitleDisplayMode(.inline)){
                         Image(systemName: "gearshape").foregroundColor(Color("Darkblue")).font(.system(size: 30))
                     }//fin navigation link

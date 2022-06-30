@@ -20,11 +20,12 @@ struct AdDiscoverUIView: View {
                     HStack (spacing: 25){//Hstack header
                         Text("Annonces à la une")
                             .bold().font(.title2).padding(10)
-                        Spacer().frame(width : 5)
+                        Spacer().frame(width : 50)
                         
                         HStack{
+                            
                             NavigationLink(destination: AdsCreatV2()) {
-                                Image(systemName: "pencil.circle")
+                                Image(systemName: "doc.badge.plus")
                                     .resizable()
                                     .renderingMode(.template)
                                     .formatIcon()
