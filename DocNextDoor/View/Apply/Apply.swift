@@ -43,7 +43,7 @@ struct Apply: View {
                     }//fin NavigationLink
                 }.padding(.horizontal, 20)//fin Hstack CV
                 Text("Ajouter ou modifier votre CV depuis les paramètres.").font(.footnote).italic().multilineTextAlignment(.leading).foregroundColor(Color("Txtgrey")).frame(width: 350, height: 20, alignment: .leading)
-                Spacer()
+
                 Button(action: {
                     profilControl.profilUser.adsApplied.append(ad)
                  }) {
@@ -57,7 +57,8 @@ struct Apply: View {
                                  .foregroundColor(.white)
                                  .padding(20)
                      }
-                 }//fin button
+                 }.padding(15)
+                Spacer()//fin button
                         
                         //a check si pas dans fav = eviter les doublons ni dans ad applied avant = si pas deja postuler
                         

@@ -20,7 +20,8 @@ struct Contact {
     var phone : String?
 }
 
-struct Speciality {
+struct Speciality : Identifiable {
+    var id = UUID()
     
     let nameCategory: String
     

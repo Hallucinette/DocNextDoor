@@ -88,7 +88,7 @@ struct AdsCreatV2: View {
                          //   Apply_Ads(txt: "Annuler", colorCustom: "Orange")
                         
                         NavigationLink {
-                            AdPublished()
+                            AdPublished().navigationBarBackButtonHidden(true).navigationBarHidden(true)
                         } label: {
                             Apply_Ads(txt: "Publier", colorCustom: "Darkblue")
                         }

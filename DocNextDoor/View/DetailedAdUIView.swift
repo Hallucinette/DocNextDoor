@@ -107,20 +107,16 @@ struct AdDetailView: View {
                 }
                 //NavigationView{
                 Group{
-                    NavigationLink(destination:CreationAdUIView()) {
                     
-                        Button {
-                            print("Pressed!")
-                          
-                        } label: {
-                            Text("Postuler")
-                                .font(.headline)
-                                .foregroundColor(.white)
-                                .bold()
-                                .frame(width: 150, height: 50)
-                                .background(Color("Darkblue"))
-                                .cornerRadius(15)
-                        }
+                        
+                    NavigationLink(destination: Apply(ad: ad)) {
+                        Text("Postuler")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .bold()
+                            .frame(width: 150, height: 50)
+                            .background(Color("Darkblue"))
+                            .cornerRadius(15)
                     }
                     Spacer().padding(.bottom)
                     Spacer().padding(.bottom)
