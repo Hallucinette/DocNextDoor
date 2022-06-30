@@ -21,7 +21,7 @@ struct AdsCreatV2: View {
         NavigationView(){
             VStack {//Vstack header
             Text("Créer votre annonce").bold().font(.title2).padding(10)
-            Rectangle().frame(width: 380, height: 3, alignment: .center).foregroundColor(Color("Lightblue")).padding(5)
+            Rectangle().frame(width: 390, height: 3, alignment: .center).foregroundColor(Color("Lightblue")).padding(5)
             ScrollView{
                 
                 Spacer()//minLength: 60)

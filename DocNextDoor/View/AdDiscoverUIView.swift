@@ -49,7 +49,7 @@ struct AdDiscoverUIView: View {
                         
                     }.background(.white)
                     
-                    List(ads) { ad in
+                    List(ads.dropFirst().reversed()) { ad in
                         NavigationLink(destination:DetailedAdUIView(ad: ad)) {
                             HStack{
                                 AdView(ad: ad)
