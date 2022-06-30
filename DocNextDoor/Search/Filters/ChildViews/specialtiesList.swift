@@ -9,7 +9,9 @@ import SwiftUI
 
 struct specialtiesList: View {
     
-    @State private var selectSpecialty: String?
+  //  @AppStorage var storeValuesOne = String<selectSpecialty>()
+    @State var selectSpecialty: String?
+
     
     let specialties = [
         "MedGen",
