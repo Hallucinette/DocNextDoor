@@ -107,7 +107,8 @@ struct AdDetailView: View {
                 }
                 //NavigationView{
                 Group{
-                   
+                    NavigationLink(destination:CreationAdUIView()) {
+                    
                         Button {
                             print("Pressed!")
                           
@@ -120,8 +121,11 @@ struct AdDetailView: View {
                                 .background(Color("Darkblue"))
                                 .cornerRadius(15)
                         }
-                    NavigationLink(destination:CreationAdUIView()) {
                     }
+                    Spacer().padding(.bottom)
+                    Spacer().padding(.bottom)
+                    Spacer().padding(.bottom)
+                    Spacer().padding(.bottom)
                    // }
                 }
             }
