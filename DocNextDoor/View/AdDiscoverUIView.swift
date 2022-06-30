@@ -27,10 +27,10 @@ struct AdDiscoverUIView: View {
                                 Image(systemName: "pencil.circle")
                                     .resizable()
                                     .renderingMode(.template)
-                                    .formatIcon()
+                                    .formatSmallIcon()
                                 
                             }.navigationBarTitleDisplayMode(.inline)
-                                .buttonStyle(PlainButtonStyle())
+                               // .buttonStyle(PlainButtonStyle())
                         }
                     }//fin Hstack header
                     addBlueLine()

@@ -27,6 +27,11 @@ extension View {
     func formatTitle()  -> some View {
         self.font(.body)
     }
+    func formatSmallIcon()  -> some View {
+        self.aspectRatio(contentMode: .fit)
+            .frame(width: 25, height: 25)
+            .foregroundColor(Color("Darkblue"))
+    }
     func formatIcon()  -> some View {
         self.aspectRatio(contentMode: .fit)
             .frame(width: 40, height: 40)
