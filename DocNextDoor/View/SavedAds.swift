@@ -44,13 +44,13 @@ struct SavedAds : View {
             VStack { //full view
                 VStack {//Vstack header
                     Text("Annonces sauvegardées").bold().font(.title2).padding(10)
-                    Rectangle().frame(width: 600, height: 3, alignment: .center).foregroundColor(Color("Lightblue")).padding(5)
+                    Rectangle().frame(width: 390, height: 3, alignment: .center).foregroundColor(Color("Lightblue")).padding(5)
                     HStack { //Picker
                         Picker("List to show", selection: $pickerList) {
                                         Text("Annonces favorites").tag(0)
                                         Text("Annonces candiatées").tag(1)
                                     }.pickerStyle(.segmented).padding(30)
-                    }.frame(width: 400, height: 40).padding()
+                    }.frame(width: 390, height: 40).padding()
                 }//fin Vstack header
                 Spacer()
                 if profilControl.profilUser.adsApplied.isEmpty && pickerList == 1 {
@@ -122,7 +122,7 @@ struct SavedAds : View {
                                 }//fin else button
                             }//fin action on swipe//fin HSatck 1 element de la liste
                         }.listRowBackground(Color("BackG"))
-                    }.frame(width: 440, alignment: .center)//fin list
+                    }.frame(width: 390, alignment: .center)//fin list
                 }//fin else list non vide
             }//fin Vstack full view
         }//fin ZStack background color

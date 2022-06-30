@@ -92,18 +92,11 @@ struct AdsCreatV2: View {
                         } label: {
                             Apply_Ads(txt: "Publier", colorCustom: "Darkblue")
                         }
-
-//                          // EmailHelper.shared.sendEmail(subject: "Anything...", body: "", to: "")
-//                            AdPublished()
-//                         }) {
-//                             //Text("Send Email")
-//                             Apply_Ads(txt: "Publier", colorCustom: "Darkblue")
-//                         }
                         
-                       // Apply_Ads(txt: "Annuler", colorCustom: "Orange")
-                        //Apply_Ads(txt: "Postuler", colorCustom: "Darkblue")
                         }
                     }
+                Spacer()
+                Spacer()
                 }
             .navigationBarHidden(true)
             }
