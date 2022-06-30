@@ -27,10 +27,10 @@ struct CVSent: View {
         }//fin navlink
     }
 }
-/*
- struct CVSent_Previews: PreviewProvider {
- static var previews: some View {
- CVSent(profilUser: profilUser).previewDevice(PreviewDevice(rawValue: "iPhone 13"))
- }
- }
- */
+
+struct CVSent_Previews: PreviewProvider {
+    static var previews: some View {
+        CVSent().previewDevice(PreviewDevice(rawValue: "iPhone 13"))
+    }
+}
+

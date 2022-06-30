@@ -61,7 +61,8 @@ struct Profile: View {
                             .foregroundColor(Color("Darkblue")).padding(1)
                     }.padding(20)
                 }//fin Hstack PP et nom
-                Rectangle().frame(width: 400, height: 3, alignment: .center).foregroundColor(Color("Lightblue")).padding(15)
+               /* Rectangle().frame(width: 400, height: 3, alignment: .center).foregroundColor(Color("Lightblue")).padding(15)*/
+                addBlueLine()
                 VStack {
                     Text("Coordonnées").font(.body).bold().frame(
                         maxWidth: .infinity,
