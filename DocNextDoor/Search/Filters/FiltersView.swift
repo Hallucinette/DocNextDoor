@@ -9,10 +9,10 @@ import SwiftUI
 
 struct FiltersView: View {
     
-    @State var maxRent = 0.0
-    @State var maxDistSchool = 0.0
-    @State var maxDistIDZ = 0.0
-    @State var maxDistHospital = 0.0
+    @AppStorage ("maxRent") var maxRent = 0.0
+    @AppStorage ("maxDistSchool") var maxDistSchool = 0.0
+    @AppStorage ("maxDistIDZ") var maxDistIDZ = 0.0
+    @AppStorage ("maxDistHospital") var maxDistHospital = 0.0
     //    @Binding var patientsList = false
     //  var aTest = maxRent
     
@@ -38,7 +38,7 @@ struct FiltersView: View {
                         Text("Logement mis à disposition")  // toggleswitch
                     }
                     Group {
-
+                        
                         FiltersViewRow(sliderValue: $maxRent, sliderLabel: "Montant maximum du loyer", sliderUnit: "EUR", sliderRangeMin: 0.0, sliderRangeMax: 10_000.0, sliderStep: 50.0).tag("RentSlider")
                         FiltersViewRow(sliderValue: $maxDistSchool, sliderLabel: "Distance maximum école / crèche", sliderUnit: "Km", sliderRangeMin: 0.0, sliderRangeMax: 100.0, sliderStep: 5.0).tag("DistSchoolSlider")
                         FiltersViewRow(sliderValue: $maxDistIDZ, sliderLabel: "Distance maximum centre commercial / ZAC", sliderUnit: "Km", sliderRangeMin: 0.0, sliderRangeMax: 100.0, sliderStep: 5.0)
@@ -51,22 +51,16 @@ struct FiltersView: View {
                 }
                 .padding()
                 .navigationTitle("Filtres")
-                Button{ //(alignment: .center)
-                    // apply and save userFilters
-                    //                .onTapGesture {
-                    //                       print("Filtres appliqués")
+                
+                NavigationLink { //(alignment: .center) (alignment: .center)
+                    AdsSearchView()
                 } label: {
                     Text("Appliquer les filtres")
                         .padding()
-                        .background(.blue)
+                        .background(.blue) // .tint(Color("Darkblue"))
                         .foregroundColor(.white)
                         .clipShape(Capsule())
-                } // .alignment(center)
-                
-                //            Text("sliderValue.maxRent:\(sliderValue.maxRent)") //aTest
-                //            var aTest = RentSlider.maxRent
-                //            Text("aTest:\(aTest)")
-                Text("La valeur de maxRent est de: \(maxRent)") //rentValue.maxRent, $maxRent.sliderValue
+                }
             }
         }
     }
