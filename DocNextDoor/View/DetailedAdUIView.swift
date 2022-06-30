@@ -70,15 +70,15 @@ struct AdDetailView: View {
                     HStack(alignment: .center){
                         
                         ForEach(0 ..< (ad.icons?.count ?? 3))
-                        {value in
-                            Image(ad.icons?[value] ?? "plane" )
+                        { value in
+                            Image(ad.icons?[value] ?? "" )
                                 .resizable()
                                 .renderingMode(.template)
                                 .formatIcon()
                         }
-                    }
+                    }.frame( maxWidth: .infinity,  maxHeight: .infinity)
                     HStack(alignment: .center){
-                        //Image(ad.transport?[0])
+                        //Image(ad.transport[0])
                         /*ForEach(0 ..< (ad.transport?.count ?? 1))
                          {value in
                          Image(ad.transport.[0] ?? "plane" )

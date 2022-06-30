@@ -47,20 +47,20 @@ struct AdDiscoverUIView: View {
                             }
                         }.navigationBarTitleDisplayMode(.inline)
                         
-                    }.background(.white)
-                    
-                    List(ads.dropFirst().reversed()) { ad in
-                        NavigationLink(destination:DetailedAdUIView(ad: ad)) {
-                            HStack{
-                                AdView(ad: ad)
-                                Spacer(minLength: 15)
-                                AdView(ad: ad)
-                            }//.frame(width: 390, alignment: .leading)
-                        }.navigationBarTitleDisplayMode(.inline)
+                    }//.background(.white)
+                    HStack {
+                        List(ads.dropLast().dropFirst().reversed()) { ad in
+                            NavigationLink(destination:DetailedAdUIView(ad: ad)) {
+                                HStack{
+                                    AdView(ad: ad)
+                                    Spacer(minLength: 15)
+                                    AdView(ad: ad)
+                                }//.frame(width: 390, alignment: .leading)
+                            }.navigationBarTitleDisplayMode(.inline)//.background(.green)
+                        }
+                        .onAppear { UITableView.appearance().isScrollEnabled = false }
+                        .onDisappear{ UITableView.appearance().isScrollEnabled = true }
                     }
-                    .onAppear { UITableView.appearance().isScrollEnabled = false }
-                    .onDisappear{ UITableView.appearance().isScrollEnabled = true }
-                    
                 }//end full view vstck
                 .navigationBarHidden(true)
             }// nav link
@@ -78,10 +78,10 @@ extension View {
 }
 
 struct RoundedCorner: Shape {
-
+    
     var radius: CGFloat = .infinity
     var corners: UIRectCorner = .allCorners
-
+    
     func path(in rect: CGRect) -> Path {
         let path = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
         return Path(path.cgPath)
@@ -93,13 +93,14 @@ struct AdView: View {
     var ad: Advertisement
     
     var body: some View {
- 
+        
         ZStack {
+            //Color("BackG").ignoresSafeArea()
             Image(ad.pict[0]).resizable().frame(width: 200, height: 170).aspectRatio(contentMode: .fit).cornerRadius(20).overlay(
                 GeometryReader { geometry in
                     ZStack {
                         Rectangle().frame(width: 200, height: 60, alignment: .topLeading)
-                        .cornerRadius(20, corners: [.topLeft, .topRight])
+                            .cornerRadius(20, corners: [.topLeft, .topRight])
                             .foregroundColor(Color(.white))
                         HStack {
                             Text(ad.title).font(.callout).bold().padding(5)
