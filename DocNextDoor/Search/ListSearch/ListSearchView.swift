@@ -24,6 +24,7 @@ struct ListSearchView: View {
                 } // Fin NavigationLink
             } // FIn ForEach
         } // Fin VSTack Full view
+        Spacer()
     } // Fin body
 } // Fin View
 

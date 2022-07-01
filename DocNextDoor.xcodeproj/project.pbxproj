@@ -18,6 +18,9 @@
 		4FB38B4E286B3867002ECF0D /* AdsImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB38B4D286B3867002ECF0D /* AdsImage.swift */; };
 		4FB38B50286B387A002ECF0D /* AdsPicto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB38B4F286B387A002ECF0D /* AdsPicto.swift */; };
 		4FB38B52286C349A002ECF0D /* SendMail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB38B51286C349A002ECF0D /* SendMail.swift */; };
+		5F187341286EFE46003B25B5 /* ContentSpecialityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F187340286EFE45003B25B5 /* ContentSpecialityView.swift */; };
+		5F187343286EFEC6003B25B5 /* SpecialtyHeaderRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F187342286EFEC6003B25B5 /* SpecialtyHeaderRowView.swift */; };
+		5F187345286F1E99003B25B5 /* MapSimple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F187344286F1E99003B25B5 /* MapSimple.swift */; };
 		7B0A7ABB286300D900E8DEA6 /* FredokaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B0A7ABA286300D900E8DEA6 /* FredokaOne-Regular.ttf */; };
 		7B31E4982865F1CF00DDBCF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B31E49A2865F1CF00DDBCF8 /* LaunchScreen.storyboard */; };
 		7B393FBF286AEED900430DA5 /* Apply.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B393F95286AEED800430DA5 /* Apply.swift */; };
@@ -45,7 +48,6 @@
 		7B393FFF286DE9E000430DA5 /* ListSearchRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B393FF4286DE9E000430DA5 /* ListSearchRow.swift */; };
 		7B394000286DE9E000430DA5 /* ListSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B393FF5286DE9E000430DA5 /* ListSearchView.swift */; };
 		7B394001286DE9E000430DA5 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B393FF7286DE9E000430DA5 /* MapView.swift */; };
-		7B394002286DE9E000430DA5 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B393FF8286DE9E000430DA5 /* MapViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +63,9 @@
 		4FB38B4D286B3867002ECF0D /* AdsImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdsImage.swift; sourceTree = "<group>"; };
 		4FB38B4F286B387A002ECF0D /* AdsPicto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdsPicto.swift; sourceTree = "<group>"; };
 		4FB38B51286C349A002ECF0D /* SendMail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMail.swift; sourceTree = "<group>"; };
+		5F187340286EFE45003B25B5 /* ContentSpecialityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentSpecialityView.swift; path = ../../../../../../../Documents/BCK/01072022/115800/spongeBob/DocNextDoor/Search/Filters/ChildViews/ContentSpecialityView.swift; sourceTree = "<group>"; };
+		5F187342286EFEC6003B25B5 /* SpecialtyHeaderRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpecialtyHeaderRowView.swift; path = ../../../../../../../Documents/BCK/01072022/115800/spongeBob/DocNextDoor/Search/Filters/ChildViews/SpecialtyHeaderRowView.swift; sourceTree = "<group>"; };
+		5F187344286F1E99003B25B5 /* MapSimple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSimple.swift; sourceTree = "<group>"; };
 		7B0A7ABA286300D900E8DEA6 /* FredokaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FredokaOne-Regular.ttf"; sourceTree = "<group>"; };
 		7B31E4992865F1CF00DDBCF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B393F95286AEED800430DA5 /* Apply.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Apply.swift; sourceTree = "<group>"; };
@@ -88,7 +93,6 @@
 		7B393FF4286DE9E000430DA5 /* ListSearchRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListSearchRow.swift; sourceTree = "<group>"; };
 		7B393FF5286DE9E000430DA5 /* ListSearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListSearchView.swift; sourceTree = "<group>"; };
 		7B393FF7286DE9E000430DA5 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
-		7B393FF8286DE9E000430DA5 /* MapViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,7 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				7B393FF7286DE9E000430DA5 /* MapView.swift */,
-				7B393FF8286DE9E000430DA5 /* MapViewModel.swift */,
+				5F187344286F1E99003B25B5 /* MapSimple.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -374,6 +378,8 @@
 				7B393FBF286AEED900430DA5 /* Apply.swift in Sources */,
 				7B393FCD286AEED900430DA5 /* Structures.swift in Sources */,
 				7B393FFB286DE9E000430DA5 /* specialtiesList.swift in Sources */,
+				5F187345286F1E99003B25B5 /* MapSimple.swift in Sources */,
+				5F187343286EFEC6003B25B5 /* SpecialtyHeaderRowView.swift in Sources */,
 				7B393FC7286AEED900430DA5 /* Helpers.swift in Sources */,
 				4FB38B4E286B3867002ECF0D /* AdsImage.swift in Sources */,
 				7B393FDB286AEED900430DA5 /* DataFile.swift in Sources */,
@@ -383,7 +389,6 @@
 				4FB38B49286B37B1002ECF0D /* Button_Annonce.swift in Sources */,
 				7B393FD2286AEED900430DA5 /* BubbleTabBarView.swift in Sources */,
 				7B393FF9286DE9E000430DA5 /* TransportsRow.swift in Sources */,
-				7B394002286DE9E000430DA5 /* MapViewModel.swift in Sources */,
 				7B393FD5286AEED900430DA5 /* Settings.swift in Sources */,
 				7B393FFF286DE9E000430DA5 /* ListSearchRow.swift in Sources */,
 				7B393FD8286AEED900430DA5 /* SavedAds.swift in Sources */,
