@@ -27,6 +27,7 @@
 		5F1CDC1C286DA21A005E6CD9 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1CDC12286DA21A005E6CD9 /* MapView.swift */; };
 		5F1CDC1D286DA21A005E6CD9 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1CDC13286DA21A005E6CD9 /* MapViewModel.swift */; };
 		5F1CDC1F286E0BAF005E6CD9 /* SpecialtyHeaderRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1CDC1E286E0BAF005E6CD9 /* SpecialtyHeaderRowView.swift */; };
+		5F1CDC23286EDFEA005E6CD9 /* ContentSpecialityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1CDC22286EDFEA005E6CD9 /* ContentSpecialityView.swift */; };
 		7B0A7ABB286300D900E8DEA6 /* FredokaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B0A7ABA286300D900E8DEA6 /* FredokaOne-Regular.ttf */; };
 		7B31E4982865F1CF00DDBCF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B31E49A2865F1CF00DDBCF8 /* LaunchScreen.storyboard */; };
 		7B393FBF286AEED900430DA5 /* Apply.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B393F95286AEED800430DA5 /* Apply.swift */; };
@@ -70,6 +71,7 @@
 		5F1CDC12286DA21A005E6CD9 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		5F1CDC13286DA21A005E6CD9 /* MapViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		5F1CDC1E286E0BAF005E6CD9 /* SpecialtyHeaderRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialtyHeaderRowView.swift; sourceTree = "<group>"; };
+		5F1CDC22286EDFEA005E6CD9 /* ContentSpecialityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentSpecialityView.swift; sourceTree = "<group>"; };
 		7B0A7ABA286300D900E8DEA6 /* FredokaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FredokaOne-Regular.ttf"; sourceTree = "<group>"; };
 		7B31E4992865F1CF00DDBCF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B393F95286AEED800430DA5 /* Apply.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Apply.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				5F1CDC08286DA21A005E6CD9 /* TransportsRow.swift */,
 				5F1CDC09286DA21A005E6CD9 /* medicCenterList.swift */,
 				5F1CDC0A286DA21A005E6CD9 /* specialtiesList.swift */,
+				5F1CDC22286EDFEA005E6CD9 /* ContentSpecialityView.swift */,
 				5F1CDC1E286E0BAF005E6CD9 /* SpecialtyHeaderRowView.swift */,
 			);
 			path = ChildViews;
@@ -376,6 +379,7 @@
 				4FB38B52286C349A002ECF0D /* SendMail.swift in Sources */,
 				7B393FD0286AEED900430DA5 /* DetailedAdUIView.swift in Sources */,
 				4FB38B49286B37B1002ECF0D /* Button_Annonce.swift in Sources */,
+				5F1CDC23286EDFEA005E6CD9 /* ContentSpecialityView.swift in Sources */,
 				7B393FD2286AEED900430DA5 /* BubbleTabBarView.swift in Sources */,
 				5F1CDC16286DA21A005E6CD9 /* specialtiesList.swift in Sources */,
 				7B393FD5286AEED900430DA5 /* Settings.swift in Sources */,

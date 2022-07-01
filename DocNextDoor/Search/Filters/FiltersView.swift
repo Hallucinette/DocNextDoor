@@ -24,7 +24,7 @@ struct FiltersView: View {
             List {
                 Group {
                     NavigationLink {
-                        specialtiesList()
+//                        specialtiesList()
                     } label: {
                         Text("Spécialité")
                     }
