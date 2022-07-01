@@ -9,22 +9,23 @@ import SwiftUI
 
 struct TaskSpecialityRow: View {
     var specility : Speciality
-    
-    @State private var selectSpecialty = Set<String>()
-    
+
     var body: some View {
         
         
-                ForEach((0..<specility.subCategory.count)) { index in
-                    Text(specility.subCategory[index])
-                }
+        ForEach(specility.subCategory, id: \.self) { category in
+            Text(category)
+        }
+
     }
 }
 struct ContentSpecialityView: View {
     var specilities : [Speciality]
+   @State private var selectSpecialty = Set<String>()
+    
     var body: some View {
         NavigationView{
-            List {
+            List(selection: $selectSpecialty) {
                 ForEach(specilities) { specility in
                     Section(header: Text(specility.nameCategory)) {
                         TaskSpecialityRow(specility:specility)
@@ -33,8 +34,8 @@ struct ContentSpecialityView: View {
                 }
                 
             }.navigationTitle("List Selection")
-               .toolbar {
-                 EditButton()
+                .toolbar {
+                    EditButton()
                 }
         }
     }
