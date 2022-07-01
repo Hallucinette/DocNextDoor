@@ -15,15 +15,32 @@ struct AdsSearchView: View {
     var body: some View {
         NavigationView{
             VStack {
-                VStack {
-                    Text("Recherche").bold().font(.title2).padding(10)
-                    Rectangle().frame(width: 390, height: 3, alignment: .center).foregroundColor(Color("Lightblue")).padding(5)
-                }
+                //                Text("Annonces")
+                //                    .font(.largeTitle)
+                //                    .bold()
                 Text("\(searchField)") //Rechercher un
                     .searchable(text: $searchField, prompt: "Rechercher dans les annonces")
                 //                                .navigationTitle("")
                 
-
+                
+                //                List {
+                
+                //                    ForEach( researchMode ? adsListView() : adsListMap()) { ad in
+                //
+                //                    }
+                //                }
+                
+                /*
+                 List {
+                 ForEach( pickerList == 0 ? AdvertisementData.ads : MapView()) {  ad in
+                 // List
+                 */
+                
+                //            NavigationLink(destination: ) {
+                //                var whereToGo {
+                //                    researchMode == 0 ? adsListView() : adsListMap()
+                //                }
+                //            } label: {
                 Picker("Mode de recherche: ", selection: $researchMode) {
                     Text("Liste") //adsListView()
                         .tag(0)
@@ -38,13 +55,16 @@ struct AdsSearchView: View {
                     ListSearchView(ads: ads)
                         .padding()
                 } else {
-                    MapSimple(ads: ads) // MapView()
+                    medicCenterList() // MapView()
                         .padding()
                 }
             }
-//            .navigationTitle("")
-//            .padding()
-
+            .navigationTitle("Annonces")
+            .padding()
+            //            .navigationTitle("Filtres")
+            //            .navigationBarTitleDisplayMode(.inline)//.alignment(.trailing)
+            
+            //        isTapped ? Color.accentColor : Color.gray
         }
     }
 } // Fin de View
