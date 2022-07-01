@@ -59,6 +59,7 @@ struct Apply: View {
                 
                 //}//fin navLink
             }.frame(width: 380)//fin VStcak full view
+                .navigationTitle("").navigationBarHidden(true).navigationBarBackButtonHidden(false)
         }//fin Zstack backG
     }
 }
