@@ -17,14 +17,16 @@ struct AdDiscoverUIView: View {
             // ScrollView {
             NavigationView {
                 VStack {//full view vstck
-                    HStack (spacing: 25){//Hstack header
+                    HStack (spacing: 35){//Hstack header
+                        //Spacer()
                         Text("Annonces à la une")
                             .bold().font(.title2).padding(10)
-                        Spacer().frame(width : 5)
+                       // Spacer().frame(width : 50)
                         
                         HStack{
+                            
                             NavigationLink(destination: AdsCreatV2()) {
-                                Image(systemName: "pencil.circle")
+                                Image(systemName: "doc.badge.plus")
                                     .resizable()
                                     .renderingMode(.template)
                                     .formatSmallIcon()
@@ -36,6 +38,38 @@ struct AdDiscoverUIView: View {
                     addBlueLine()
                     
                     HStack {
+                          NavigationLink(destination:DetailedAdUIView(ad: ads[0])) {
+                              VStack {
+                                  AdMainView(ad: ads[0])
+                              }
+                          }
+                    }.padding(.bottom, 10)
+                    HStack {
+                        NavigationLink(destination:DetailedAdUIView(ad: ads[1])) {
+                            VStack {
+                                AdView(ad: ads[1])
+                            }
+                        }
+                        NavigationLink(destination:DetailedAdUIView(ad: ads[2])) {
+                            VStack {
+                                AdView(ad: ads[2])
+                            }
+                        }
+                    }.padding(.bottom, 10)
+                    HStack {
+                        NavigationLink(destination:DetailedAdUIView(ad: ads[3])) {
+                            VStack {
+                                AdView(ad: ads[3])
+                            }
+                        }
+                        NavigationLink(destination:DetailedAdUIView(ad: ads[0])) {
+                            VStack {
+                                AdView(ad: ads[0])
+                            }
+                        }
+                    }.padding(.bottom, 10)
+                    Spacer()
+                  /*  HStack {
                         
                         NavigationLink(destination:DetailedAdUIView(ad: ads[0])) {
                             VStack {
@@ -49,7 +83,7 @@ struct AdDiscoverUIView: View {
                         
                     }//.background(.white)
                     HStack {
-                        List(ads.dropLast().dropFirst().reversed()) { ad in
+                        List(ads.dropFirst().dropLast().reversed()) { ad in
                             NavigationLink(destination:DetailedAdUIView(ad: ad)) {
                                 HStack{
                                     AdView(ad: ad)
@@ -60,10 +94,10 @@ struct AdDiscoverUIView: View {
                         }
                         .onAppear { UITableView.appearance().isScrollEnabled = false }
                         .onDisappear{ UITableView.appearance().isScrollEnabled = true }
-                    }
+                    }*/
                 }//end full view vstck
-                .navigationBarHidden(true)
-            }// nav link
+                .navigationTitle("").navigationBarHidden(true).navigationBarBackButtonHidden(true)
+            }// nav view
             
             //}
         }
@@ -95,20 +129,19 @@ struct AdView: View {
     var body: some View {
         
         ZStack {
-            //Color("BackG").ignoresSafeArea()
-            Image(ad.pict[0]).resizable().frame(width: 200, height: 170).aspectRatio(contentMode: .fit).cornerRadius(20).overlay(
+            Image(ad.pict[0]).resizable().frame(width: 170, height: 130).aspectRatio(contentMode: .fit).cornerRadius(20).overlay(
                 GeometryReader { geometry in
                     ZStack {
-                        Rectangle().frame(width: 200, height: 60, alignment: .topLeading)
+                        Rectangle().frame(width: 179, height: 60, alignment: .topLeading)
                             .cornerRadius(20, corners: [.topLeft, .topRight])
                             .foregroundColor(Color(.white))
                         HStack {
-                            Text(ad.title).font(.callout).bold().padding(5)
-                        }.frame(width: 180, height: 70)
+                            Text(ad.title).font(.callout).bold().padding(5).foregroundColor(.black)
+                        }.frame(width: 160, height: 70)
                         
                         Spacer()
                     }
-                    .position(x: 100, y: 30)
+                    .position(x: 80, y: 20)
                 }
             )
             
@@ -116,6 +149,32 @@ struct AdView: View {
     }
 }
 
+// A view that shows the data for one main Ad.
+struct AdMainView: View {
+    var ad: Advertisement
+    
+    var body: some View {
+        
+        ZStack {
+            Image(ad.pict[0]).resizable().frame(width: 300, height: 170).aspectRatio(contentMode: .fit).cornerRadius(20).overlay(
+                GeometryReader { geometry in
+                    ZStack {
+                        Rectangle().frame(width: 300, height: 50, alignment: .topLeading)
+                            .cornerRadius(20, corners: [.topLeft, .topRight])
+                            .foregroundColor(Color(.white))
+                        HStack {
+                            Text(ad.title).font(.callout).bold().padding(5).foregroundColor(.black)
+                        }.frame(width: 300, height: 50)
+                        
+                        Spacer()
+                    }
+                    .position(x: 150, y: 20)
+                }
+            )
+            
+        }
+    }
+}
 
 
 

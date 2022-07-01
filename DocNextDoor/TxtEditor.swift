@@ -45,7 +45,7 @@ struct AdsTextEditor: View {
                
             })
             .textFieldStyle(RoundedBorderTextFieldStyle())
-            .frame(width: 350, height: 220)
+            .frame(width: 350, height: 270)
 
         }
         .font(Font.custom("name-of-font", size: 14))

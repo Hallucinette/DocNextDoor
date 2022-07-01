@@ -105,28 +105,14 @@ struct AdDetailView: View {
                         Text("Logement disponible pour l'installation : \(ad.accomodationProvided ? "Oui" : "Non")").formatText()
                     }
                 }
-                //NavigationView{
+            
                 Group{
-                    NavigationLink(destination:CreationAdUIView()) {
-                    
-                        Button {
-                            print("Pressed!")
-                          
-                        } label: {
-                            Text("Postuler")
-                                .font(.headline)
-                                .foregroundColor(.white)
-                                .bold()
-                                .frame(width: 150, height: 50)
-                                .background(Color("Darkblue"))
-                                .cornerRadius(15)
-                        }
+                    NavigationLink(destination: Apply(ad: ad)) {
+                        Text("Postuler").bold()
+                            .addBlueButton()
+                            
                     }
-                    Spacer().padding(.bottom)
-                    Spacer().padding(.bottom)
-                    Spacer().padding(.bottom)
-                    Spacer().padding(.bottom)
-                   // }
+                    Spacer().padding(.bottom, 150)
                 }
             }
             

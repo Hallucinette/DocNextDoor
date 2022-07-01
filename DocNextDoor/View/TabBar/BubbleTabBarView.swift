@@ -42,100 +42,81 @@ struct Home: View{
     
     @Namespace var animation
     @EnvironmentObject var profilControl : ProfileControl
-    var body: some View{
-        ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)) {
-            TabView(selection: $selectedtab){
-                
-                AdDiscoverUIView(ads: ads)
-                    .ignoresSafeArea(.all, edges: .all)
-                    .tag("list.bullet.circle")
-                AdsSearchView()
-                    .tag("map")
-                SavedAds().navigationTitle("").navigationBarHidden(true).navigationBarBackButtonHidden(true)
-                    .ignoresSafeArea(.all, edges: .all)
-                    .tag("bookmark")
-                Profile().navigationTitle("").navigationBarHidden(true).navigationBarBackButtonHidden(true)
-                    .tag("person.circle")
-            }
-            
-            // Custom tab Bar...
-            
-            HStack(spacing: 0){
-                
-                ForEach(tabs, id: \.self){image in
-                    VStack{
-                        GeometryReader {reader in
-                            Button(action: {
-                                //permet l'effet de "glisade" de la vague d'une icone a l'autre
-                                withAnimation(.spring()){
-                                    selectedtab = image
-                                    xAxis = reader.frame(in: .global).minX
-                                }
-                            }, label: {
-                                // fait apparait chaque icone contenue dans tabs. Leurs donne les meme contraintes.
-                                
-                                Image(systemName: image)
-                                    .resizable()
-                                    .renderingMode(.template)
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 25, height: 25)
-                                    .foregroundColor(selectedtab == image ? getColor(image: image) : Color.gray) // couleurs gris si pas selectionné
-                                    .padding(selectedtab == image ? 15 : 0)
-                                    .background(Color.white.opacity(selectedtab == image ? 1 : 0) .clipShape(Circle()))
-                                    .matchedGeometryEffect(id: image, in:animation)
-                                    .offset(x: selectedtab == image ? (reader.frame(in: .global).minX+20 - reader.frame(in: .global).midX+20) : 20,y: selectedtab == image ? -50 : 0)
-                            })
-                            .onAppear(perform: {
-                                
-                                if image == tabs.first{
-                                    xAxis = reader.frame(in: .global).minX
-                                }
-                                
-                            })
-                        }
-                        .frame(width: 75, height: 40).ignoresSafeArea()
-                        Text(selectedtab == image ? getNom(image: image) : getNom(image: image)).font(.footnote).foregroundColor(Color("Txtgrey")).padding(.bottom, 4)
-
-                        
-                    }
-                    //On rajoute un spacer quand on a finit de parcourir le tableau image.
-                    if image != tabs.last{Spacer(minLength: 10)}
+    var body: some View {
+        GeometryReader { proxy in
+            ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)) {
+                TabView(selection: $selectedtab){
+                    
+                    AdDiscoverUIView(ads: ads)
+                        .tag("list.bullet.circle")
+                    AdsSearchView()
+                        .tag("map")
+                    SavedAds()
+                        .tag("bookmark")
+                    Profile()
+                        .tag("person.circle")
                 }
+                
+                
+                // Custom tab Bar...
+                
+                HStack(spacing: 0){
+                    
+                    ForEach(tabs, id: \.self){image in
+                        VStack{
+                            GeometryReader {reader in
+                                Button(action: {
+                                    //permet l'effet de "glisade" de la vague d'une icone a l'autre
+                                    withAnimation(.spring()){
+                                        selectedtab = image
+                                        xAxis = reader.frame(in: .global).minX
+                                    }
+                                }, label: {
+                                    // fait apparait chaque icone contenue dans tabs. Leurs donne les meme contraintes.
+                                    
+                                    Image(systemName: image)
+                                        .resizable()
+                                        .renderingMode(.template)
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width: 25, height: 25)
+                                        .foregroundColor(selectedtab == image ? Color("Darkblue") : Color.gray) // couleurs gris si pas selectionné
+                                        .padding(selectedtab == image ? 15 : 0)
+                                        .background(Color.white.opacity(selectedtab == image ? 1 : 0) .clipShape(Circle()))
+                                        .matchedGeometryEffect(id: image, in:animation)
+                                        .offset(x: selectedtab == image ? (reader.frame(in: .global).minX+24 - reader.frame(in: .global).midX+20) : 20,y: selectedtab == image ? -50 : 0)
+                                })
+                                .onAppear(perform: {
+                                    
+                                    if image == tabs.first{
+                                        xAxis = reader.frame(in: .global).minX
+                                    }
+                                    
+                                })
+                            }
+                            .frame(width: 75, height: 40).ignoresSafeArea()
+                            Text(selectedtab == image ? getNom(image: image) : getNom(image: image)).font(.footnote).foregroundColor(Color("Txtgrey")).padding(.bottom, 4)
+                            
+                            
+                        }
+                        //On rajoute un spacer quand on a finit de parcourir le tableau image.
+                        if image != tabs.last{Spacer(minLength: 10)}
+                    }
+                }
+                .padding(.horizontal, 34)
+                .frame(width: proxy.size.width) //force la largeur pour faire la même que l'écran
+                .padding(.vertical) // sa position hauteur
+                .background(Color.white.clipShape(CustomShape(xAxis: xAxis)).cornerRadius(12)) // rounded rectangle blanc derriere la tab bar
             }
-            // rectangle blanc derriere la tab bar
-            .padding(.horizontal,34) // sa position horizontal
-            .padding(.vertical) // sa position hauteur
-            .background(Color.white.clipShape(CustomShape(xAxis: xAxis)).cornerRadius(12)) // rounded
-            .padding(.horizontal)
-            // Bottom Edge...
-            //.padding(.bottom,34)
-        }
-        .ignoresSafeArea(.all, edges: .bottom)
-    }
-    
-    // Permet de choisir la couleur de l'icone quand elle est active. ici on passe du gris par default a la couleur choisi. par exemple map = blue
-    
-    func getColor(image: String)->Color {
-        
-        switch image {
-        case "list.bullet.circle":
-            return Color("Darkblue")
-        case "map":
-            return Color("Darkblue")
-        case "bookmark":
-            return Color("Darkblue")
-        case "person.circle":
-            return Color("Darkblue")
-        default:
-            return Color("Darkblue")
+            .ignoresSafeArea(.all, edges: .bottom)
         }
     }
+    
     
     // Permet de choisir le nom de l'icone quand elle est active.
-
-        func getNom(image: String)->String {
-
-            switch image {
+    
+    func getNom(image: String)->String {
+        
+        switch image {
             case "list.bullet.circle":
                 return "A découvrir"
             case "map":
@@ -146,9 +127,9 @@ struct Home: View{
                 return "Profil"
             default:
                 return ""
-            }
         }
     }
+}
 
 
 //ici je cree un tableau de mes icone. elle me permet d'en quitter un ou d 'en mettre plus sans trop impacteer le reste du cote

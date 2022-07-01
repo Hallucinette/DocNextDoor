@@ -11,13 +11,15 @@ struct Apply_Ads: View {
     @State var txt: String
     @State var colorCustom: String
     var body: some View {
-        Text(txt)
+        /*Text(txt)
             .font(.headline)
                 .padding(15)
                 .background(Color(colorCustom))
                 .cornerRadius(45)
                 .foregroundColor(.white)
-                .padding(30)
+                .padding(30)*/
+        Text(txt).bold()
+            .addBlueButton()
     }
 }
 

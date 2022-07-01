@@ -40,6 +40,7 @@
                                 <color key="textColor" name="BackG"/>
                                 <nil key="highlightedColor"/>
                             </label>
+<<<<<<< HEAD
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="contre les déserts médicaux !" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXZ-Al-isJ">
                                 <rect key="frame" x="54" y="591" width="306" height="33"/>
                                 <constraints>
@@ -49,6 +50,8 @@
                                 <color key="textColor" name="BackG"/>
                                 <nil key="highlightedColor"/>
                             </label>
+=======
+>>>>>>> 2ffa8b58e87d7427e1770f7c49210bd4ea6e2c33
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="name" translatesAutoresizingMaskIntoConstraints="NO" id="NW9-ym-aVP">
                                 <rect key="frame" x="25" y="474" width="364" height="85"/>
                                 <constraints>
@@ -57,6 +60,15 @@
                                     <constraint firstAttribute="width" secondItem="NW9-ym-aVP" secondAttribute="height" multiplier="364:85" id="pln-2Q-e2P"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="les déserts médicaux !" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXZ-Al-isJ" userLabel="contre les déserts médicaux !">
+                                <rect key="frame" x="54" y="591" width="335" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="fgT-jc-YB4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                <color key="textColor" name="BackG"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" name="Darkblue"/>
                         <accessibility key="accessibilityConfiguration">
