@@ -69,33 +69,8 @@ struct AdDiscoverUIView: View {
                         }
                     }.padding(.bottom, 10)
                     Spacer()
-                  /*  HStack {
-                        
-                        NavigationLink(destination:DetailedAdUIView(ad: ads[0])) {
-                            VStack {
-                                Text(ads[0].title)
-                                    .padding(.horizontal)
-                                    .formatLargeText()
-                                    .foregroundColor(.black)
-                                Image(ads[0].pict[0]).resizable().formatMediumImage()
-                            }
-                        }.navigationBarTitleDisplayMode(.inline)
-                        
-                    }//.background(.white)
-                    HStack {
-                        List(ads.dropFirst().dropLast().reversed()) { ad in
-                            NavigationLink(destination:DetailedAdUIView(ad: ad)) {
-                                HStack{
-                                    AdView(ad: ad)
-                                    Spacer(minLength: 15)
-                                    AdView(ad: ad)
-                                }//.frame(width: 390, alignment: .leading)
-                            }.navigationBarTitleDisplayMode(.inline)//.background(.green)
-                        }
-                        .onAppear { UITableView.appearance().isScrollEnabled = false }
-                        .onDisappear{ UITableView.appearance().isScrollEnabled = true }
-                    }*/
                 }//end full view vstck
+                .background(Color("BackG"))
                 .navigationTitle("").navigationBarHidden(true).navigationBarBackButtonHidden(true)
             }// nav view
             

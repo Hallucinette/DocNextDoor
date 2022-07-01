@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F567F0A286F1D7800E0D835 /* ContentSpecialityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F567F09286F1D7800E0D835 /* ContentSpecialityView.swift */; };
+		4F567F0C286F1D8400E0D835 /* SpecialtyHeaderRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F567F0B286F1D8400E0D835 /* SpecialtyHeaderRowView.swift */; };
 		4F6B0988285B78E600F06DCC /* DocNextDoorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6B0987285B78E600F06DCC /* DocNextDoorApp.swift */; };
 		4F6B098A285B78E600F06DCC /* (null) in Sources */ = {isa = PBXBuildFile; };
 		4FB38B49286B37B1002ECF0D /* Button_Annonce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB38B45286B37B1002ECF0D /* Button_Annonce.swift */; };
@@ -49,6 +51,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F567F09286F1D7800E0D835 /* ContentSpecialityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentSpecialityView.swift; sourceTree = "<group>"; };
+		4F567F0B286F1D8400E0D835 /* SpecialtyHeaderRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialtyHeaderRowView.swift; sourceTree = "<group>"; };
 		4F6B0984285B78E600F06DCC /* DocNextDoor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DocNextDoor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F6B0987285B78E600F06DCC /* DocNextDoorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocNextDoorApp.swift; sourceTree = "<group>"; };
 		4F6B098B285B78E700F06DCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -257,11 +261,11 @@
 		7B393FEC286DE9E000430DA5 /* ChildViews */ = {
 			isa = PBXGroup;
 			children = (
-				5F187340286EFE45003B25B5 /* ContentSpecialityView.swift */,
+				4F567F09286F1D7800E0D835 /* ContentSpecialityView.swift */,
 				7B393FED286DE9E000430DA5 /* TransportsRow.swift */,
 				7B393FEE286DE9E000430DA5 /* medicCenterList.swift */,
 				7B393FEF286DE9E000430DA5 /* specialtiesList.swift */,
-				5F187342286EFEC6003B25B5 /* SpecialtyHeaderRowView.swift */,
+				4F567F0B286F1D8400E0D835 /* SpecialtyHeaderRowView.swift */,
 			);
 			path = ChildViews;
 			sourceTree = "<group>";
@@ -358,18 +362,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B393FFC286DE9E000430DA5 /* FiltersView.swift in Sources */,
+				4F567F0C286F1D8400E0D835 /* SpecialtyHeaderRowView.swift in Sources */,
 				4F6B098A285B78E600F06DCC /* (null) in Sources */,
 				4FB38B50286B387A002ECF0D /* AdsPicto.swift in Sources */,
 				7B394000286DE9E000430DA5 /* ListSearchView.swift in Sources */,
 				4FB38B50286B387A002ECF0D /* AdsPicto.swift in Sources */,
 				7B393FFD286DE9E000430DA5 /* FiltersViewRow.swift in Sources */,
 				4FB38B4B286B37B1002ECF0D /* AdsTextField.swift in Sources */,
+				4F567F0A286F1D7800E0D835 /* ContentSpecialityView.swift in Sources */,
 				7B393FE0286C82FD00430DA5 /* TxtEditor.swift in Sources */,
 				4F6B0988285B78E600F06DCC /* DocNextDoorApp.swift in Sources */,
 				7B393FD1286AEED900430DA5 /* Profile.swift in Sources */,
 				7B393FD4286AEED900430DA5 /* AdDiscoverUIView.swift in Sources */,
 				7B394001286DE9E000430DA5 /* MapView.swift in Sources */,
-				5F187341286EFE46003B25B5 /* ContentSpecialityView.swift in Sources */,
 				7B393FBF286AEED900430DA5 /* Apply.swift in Sources */,
 				7B393FCD286AEED900430DA5 /* Structures.swift in Sources */,
 				7B393FFB286DE9E000430DA5 /* specialtiesList.swift in Sources */,
