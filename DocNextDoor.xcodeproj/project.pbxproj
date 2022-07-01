@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4F567F0A286F1D7800E0D835 /* ContentSpecialityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F567F09286F1D7800E0D835 /* ContentSpecialityView.swift */; };
-		4F567F0C286F1D8400E0D835 /* SpecialtyHeaderRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F567F0B286F1D8400E0D835 /* SpecialtyHeaderRowView.swift */; };
 		4F6B0988285B78E600F06DCC /* DocNextDoorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6B0987285B78E600F06DCC /* DocNextDoorApp.swift */; };
 		4F6B098A285B78E600F06DCC /* (null) in Sources */ = {isa = PBXBuildFile; };
 		4FB38B49286B37B1002ECF0D /* Button_Annonce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB38B45286B37B1002ECF0D /* Button_Annonce.swift */; };
@@ -18,9 +17,8 @@
 		4FB38B4E286B3867002ECF0D /* AdsImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB38B4D286B3867002ECF0D /* AdsImage.swift */; };
 		4FB38B50286B387A002ECF0D /* AdsPicto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB38B4F286B387A002ECF0D /* AdsPicto.swift */; };
 		4FB38B52286C349A002ECF0D /* SendMail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB38B51286C349A002ECF0D /* SendMail.swift */; };
-		5F187341286EFE46003B25B5 /* ContentSpecialityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F187340286EFE45003B25B5 /* ContentSpecialityView.swift */; };
-		5F187343286EFEC6003B25B5 /* SpecialtyHeaderRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F187342286EFEC6003B25B5 /* SpecialtyHeaderRowView.swift */; };
 		5F187345286F1E99003B25B5 /* MapSimple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F187344286F1E99003B25B5 /* MapSimple.swift */; };
+		5F187349286F354B003B25B5 /* SpecialtyHeaderRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F187348286F354B003B25B5 /* SpecialtyHeaderRowView.swift */; };
 		7B0A7ABB286300D900E8DEA6 /* FredokaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B0A7ABA286300D900E8DEA6 /* FredokaOne-Regular.ttf */; };
 		7B31E4982865F1CF00DDBCF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B31E49A2865F1CF00DDBCF8 /* LaunchScreen.storyboard */; };
 		7B393FBF286AEED900430DA5 /* Apply.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B393F95286AEED800430DA5 /* Apply.swift */; };
@@ -52,7 +50,6 @@
 
 /* Begin PBXFileReference section */
 		4F567F09286F1D7800E0D835 /* ContentSpecialityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentSpecialityView.swift; sourceTree = "<group>"; };
-		4F567F0B286F1D8400E0D835 /* SpecialtyHeaderRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialtyHeaderRowView.swift; sourceTree = "<group>"; };
 		4F6B0984285B78E600F06DCC /* DocNextDoor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DocNextDoor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F6B0987285B78E600F06DCC /* DocNextDoorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocNextDoorApp.swift; sourceTree = "<group>"; };
 		4F6B098B285B78E700F06DCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -63,9 +60,8 @@
 		4FB38B4D286B3867002ECF0D /* AdsImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdsImage.swift; sourceTree = "<group>"; };
 		4FB38B4F286B387A002ECF0D /* AdsPicto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdsPicto.swift; sourceTree = "<group>"; };
 		4FB38B51286C349A002ECF0D /* SendMail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMail.swift; sourceTree = "<group>"; };
-		5F187340286EFE45003B25B5 /* ContentSpecialityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentSpecialityView.swift; path = ../../../../../../../Documents/BCK/01072022/115800/spongeBob/DocNextDoor/Search/Filters/ChildViews/ContentSpecialityView.swift; sourceTree = "<group>"; };
-		5F187342286EFEC6003B25B5 /* SpecialtyHeaderRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpecialtyHeaderRowView.swift; path = ../../../../../../../Documents/BCK/01072022/115800/spongeBob/DocNextDoor/Search/Filters/ChildViews/SpecialtyHeaderRowView.swift; sourceTree = "<group>"; };
 		5F187344286F1E99003B25B5 /* MapSimple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSimple.swift; sourceTree = "<group>"; };
+		5F187348286F354B003B25B5 /* SpecialtyHeaderRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialtyHeaderRowView.swift; sourceTree = "<group>"; };
 		7B0A7ABA286300D900E8DEA6 /* FredokaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FredokaOne-Regular.ttf"; sourceTree = "<group>"; };
 		7B31E4992865F1CF00DDBCF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B393F95286AEED800430DA5 /* Apply.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Apply.swift; sourceTree = "<group>"; };
@@ -113,7 +109,6 @@
 				7B31E49A2865F1CF00DDBCF8 /* LaunchScreen.storyboard */,
 				7B393F92286AEED800430DA5 /* DocNextDoor */,
 				4F6B0985285B78E600F06DCC /* Products */,
-				5F18733F286EFCBD003B25B5 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -145,13 +140,6 @@
 				4FB38B47286B37B1002ECF0D /* AdsTextField.swift */,
 			);
 			path = AdsComposant;
-			sourceTree = "<group>";
-		};
-		5F18733F286EFCBD003B25B5 /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		7B393F92286AEED800430DA5 /* DocNextDoor */ = {
@@ -242,6 +230,7 @@
 			children = (
 				7B393FEB286DE9E000430DA5 /* Filters */,
 				7B393FF2286DE9E000430DA5 /* AdsSearchView.swift */,
+				5F187348286F354B003B25B5 /* SpecialtyHeaderRowView.swift */,
 				7B393FF3286DE9E000430DA5 /* ListSearch */,
 				7B393FF6286DE9E000430DA5 /* Map */,
 			);
@@ -265,7 +254,6 @@
 				7B393FED286DE9E000430DA5 /* TransportsRow.swift */,
 				7B393FEE286DE9E000430DA5 /* medicCenterList.swift */,
 				7B393FEF286DE9E000430DA5 /* specialtiesList.swift */,
-				4F567F0B286F1D8400E0D835 /* SpecialtyHeaderRowView.swift */,
 			);
 			path = ChildViews;
 			sourceTree = "<group>";
@@ -362,7 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B393FFC286DE9E000430DA5 /* FiltersView.swift in Sources */,
-				4F567F0C286F1D8400E0D835 /* SpecialtyHeaderRowView.swift in Sources */,
+				5F187349286F354B003B25B5 /* SpecialtyHeaderRowView.swift in Sources */,
 				4F6B098A285B78E600F06DCC /* (null) in Sources */,
 				4FB38B50286B387A002ECF0D /* AdsPicto.swift in Sources */,
 				7B394000286DE9E000430DA5 /* ListSearchView.swift in Sources */,
@@ -379,7 +367,6 @@
 				7B393FCD286AEED900430DA5 /* Structures.swift in Sources */,
 				7B393FFB286DE9E000430DA5 /* specialtiesList.swift in Sources */,
 				5F187345286F1E99003B25B5 /* MapSimple.swift in Sources */,
-				5F187343286EFEC6003B25B5 /* SpecialtyHeaderRowView.swift in Sources */,
 				7B393FC7286AEED900430DA5 /* Helpers.swift in Sources */,
 				4FB38B4E286B3867002ECF0D /* AdsImage.swift in Sources */,
 				7B393FDB286AEED900430DA5 /* DataFile.swift in Sources */,
