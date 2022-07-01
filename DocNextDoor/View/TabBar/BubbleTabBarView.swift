@@ -49,7 +49,7 @@ struct Home: View{
                     
                     AdDiscoverUIView(ads: ads)
                         .tag("list.bullet.circle")
-                    Color.blue
+                    AdsSearchView()
                         .tag("map")
                     SavedAds()
                         .tag("bookmark")

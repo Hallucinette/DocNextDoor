@@ -58,9 +58,9 @@ struct Advertisement : Identifiable {
     
     var accomodationProvided : Bool //si True alors logement compris
     
-    //    var adLocation : CLLocationCoordinate2D? // coordonnees GPS pour MapKit
+    var adLocation : CLLocationCoordinate2D? // coordonnees GPS pour MapKit
     
-    //    var adShowing: Bool = true
+    var adShowing: Bool = true
 }
 
 struct ProfilUser : Identifiable  {
@@ -90,9 +90,9 @@ struct ProfilUser : Identifiable  {
     
     var adsFav : [Advertisement]
     
-    //   var userPosition : CLLocationCoordinate2D? // coordonnees GPS pour MapKit
+    var userPosition : CLLocationCoordinate2D? // coordonnees GPS pour MapKit
     
-    //  var userShowing: Bool = true
+    var userShowing: Bool = true
     
     
 }
